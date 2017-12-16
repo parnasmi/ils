@@ -36,6 +36,22 @@ script.
 		
 		
 	})();
+	(function(){
+		var myMap2;
+			ymaps.ready(init);
+			
+			function init () {
+				myMap2 = new ymaps.Map('ilsMap2', {
+					center:[55.76, 37.64], // Москва
+					zoom:10,
+					controls:[]
+				});
+
+				myMap2.behaviors.disable('scrollZoom');
+			}
+		
+		
+	})();
 
 script.
 	(function (doc) {

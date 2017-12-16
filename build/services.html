@@ -1163,18 +1163,6 @@
     <script src="./assets/js/vendor.js" defer></script>
     <script src="./assets/js/libs.js" defer></script>
     <script src="./assets/js/main.js" defer></script>
-    <!--IE10 Flexbox detection polyfill-->
-    <script>
-      //- Add a Modernizr-test for the weird, inbetween, flexbox implementation
-      //- in IE10, necessary for the "sticky" footer.
-      //- (See https://github.com/Modernizr/Modernizr/issues/812)
-      //- (This could be rolled into a custom Modernizr build in production later.)
-      //- $( document ).ready(function() {
-      	//- Modernizr.addTest('flexboxtweener', Modernizr.testAllProps('flexAlign', 'end', true));
-      //- });
-      
-      //- Modernizr.addTest('flexboxtweener', Modernizr.testAllProps('flexAlign', 'end', true));
-    </script>
     <script>
       (function (doc) {
       			var scripts = doc.getElementsByTagName('script')
@@ -1189,21 +1177,8 @@
       			xhr.open('get', './assets/img/sprite-sym.svg', true)
       			xhr.send()
       		})(document)
+      		
     </script>
-    <script>
-      (function() { var v = document.getElementsByClassName("youtube-player"); for (var n = 0; n < v.length; n++) { v[n].onclick = function () { var iframe = document.createElement("iframe"); iframe.setAttribute("src", "//www.youtube.com/embed/" + this.dataset.id + "?autoplay=1&autohide=2&border=0&wmode=opaque&enablejsapi=1&rel="+ this.dataset.related +"&controls="+this.dataset.control+"&showinfo=" + this.dataset.info); iframe.setAttribute("frameborder", "0"); iframe.setAttribute("id", "youtube-iframe"); iframe.setAttribute("style", "width: 100%; height: 100%; position: absolute; top: 0; left: 0;"); if (this.dataset.fullscreen == 1){ iframe.setAttribute("allowfullscreen", ""); } while (this.firstChild) { this.removeChild(this.firstChild); } this.appendChild(iframe); }; } })();
-      
-      
-      
-      
-      
-      
-    </script><!--[if lt IE 9]>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
-<!--[if lt IE 10 ]>
-<p class="chromeframe" style="background-color:yellow;">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/?locale=ru" style="color: red; font-weight: bold;">Скачайте новый браузер абсолютно бесплатно</a> или <a href="http://www.google.com/chromeframe/?redirect=true">активируй Google Chrome Frame</a>чтобы пользоваться всеми возможностями сайта.</p>
-<![endif]-->
-<!-- Custom Browsers Color Start -->
-<!-- Chrome, Firefox OS and Opera -->
+    <script>(function() { var v = document.getElementsByClassName("youtube-player"); for (var n = 0; n < v.length; n++) { v[n].onclick = function () { var iframe = document.createElement("iframe"); iframe.setAttribute("src", "//www.youtube.com/embed/" + this.dataset.id + "?autoplay=1&autohide=2&border=0&wmode=opaque&enablejsapi=1&rel="+ this.dataset.related +"&controls="+this.dataset.control+"&showinfo=" + this.dataset.info); iframe.setAttribute("frameborder", "0"); iframe.setAttribute("id", "youtube-iframe"); iframe.setAttribute("style", "width: 100%; height: 100%; position: absolute; top: 0; left: 0;"); if (this.dataset.fullscreen == 1){ iframe.setAttribute("allowfullscreen", ""); } while (this.firstChild) { this.removeChild(this.firstChild); } this.appendChild(iframe); }; } })();</script>
   </body>
 </html>

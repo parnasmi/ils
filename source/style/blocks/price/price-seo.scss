@@ -1,0 +1,83 @@
+/* Styles Start*/
+.price-seo {
+	p {
+		color: $grey;
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__title {
+		font-size: 3rem;
+		font-weight: 700;
+		margin-bottom: 30px;
+	}
+}
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	.price-seo {
+		display: none;
+	}
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+	.price-seo {
+
+	}
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.price-seo {
+		margin-bottom: 70px;
+
+		&__inner {
+			@include container-tab;
+		}
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.price-seo {
+
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.price-seo {
+		margin-bottom: 90px;
+		&__inner {
+			@include container;
+		}
+	}
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

@@ -1,0 +1,330 @@
+/* Styles Start*/
+.main-banner {
+	display: block;
+
+	color: $dark;
+	@include border;
+	overflow: hidden;
+	
+	position: relative;
+	&__wrapper {
+		overflow: hidden;
+		height: 100%;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		width: 160px;
+		height: 100%;
+		background-color: #F4F4F4;
+		// background-color: darken(#e7f9b2, 10%);
+		left: 0;
+		top: 0;
+		z-index: -1;
+		transform: rotate(14deg) scale(2) translateX(-40%);
+	}
+
+
+	&__title-accent,
+	&__title-common {
+		display: block;
+	}
+
+	&__title-accent,
+	&__button {
+		font-weight: 700;
+	}
+
+	&__title-common {
+
+	}
+
+	&__button {
+		background-color: $yellow;
+	}
+
+	&__button-text {
+		
+	}
+
+	&__left {
+		
+	}
+}
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	.main-screen__container {
+		width: 100%;
+		// max-width: 350px;
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.main-banner {
+		padding: 13px 20px;
+
+		&__title {
+			font-size: 1.7rem;
+			margin-bottom: 12px;
+		}
+
+		&__title-accent {
+			font-weight: 700;
+		}
+
+		&__comment,
+		&__icons,
+		&__secondary-icon,
+		&__secondary {
+			display: none;
+		}
+
+		&__title-common {
+
+		}
+
+		&__button {
+			display: inline-block;
+			font-weight: 700;
+			border-radius: 3px;
+			padding: 4px 10px 5px 10px;
+			margin-bottom: 13px;
+		}
+
+		&__button-text {
+			font-size: 1.2rem;
+		}
+
+		&__address-item {
+			display: block;
+
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+
+		&__address-icon,
+		&__address-text {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		&__address-icon {
+			.icon {
+				color: #757887;
+			}
+		}
+
+		&__address-text {
+			margin-left: 5px;
+			font-weight: 700;
+			color: #757887;
+			border-bottom: 1px solid rgba(#757887, .2);
+		}
+	}
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+	.main-banner {
+
+	}
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.main-banner {
+
+
+		&__left {
+			flex-basis: 493px;
+		}
+
+		&__right {
+			// flex-shrink: 0;
+		}
+
+		&__icon {
+			width: 47px;
+			height: 84px;
+		}
+
+		&__icon_phone {
+			
+		}
+
+		&__icon_screwdriver {
+
+		}
+	}
+
+	.main-screen__col {
+		// padding-left: 0 !important;
+		// padding-right: 0 !important;
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.main-banner {
+		height: 100%;
+		display: flex;
+		// align-items: center;
+		justify-content: space-between;
+		// padding: 24px 28px 13px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		position: relative;
+		z-index: 1;
+
+		&::before {
+			width: 673px;
+		}
+
+		&__left {
+			padding-left: 28px;
+		}
+
+		&__right {
+			padding-left: 10px;
+			padding-right: 26px;
+			flex-grow: 1;
+			padding-top: 27px;
+		}
+
+		&__right-inner {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+	
+		&__title {
+			margin-bottom: 30px;
+		}
+
+		&__title-accent {
+			font-size: 3rem;
+		}
+
+		&__title-common {
+			font-size: 22px;
+		}
+
+		&__secondary {
+			display: flex;
+			align-items: center;
+			margin-bottom: 46px;
+		}
+
+		&__secondary-icon {
+			margin-left: 20px;
+		}
+
+		&__comment {
+			font-size: 1.2rem;
+			color: $grey;
+		}
+
+		&__button {
+			font-weight: 700;
+			font-size: 1.5rem;
+			display: inline-block;
+			margin-top: auto;
+			text-align: center;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			transform: skew(-10deg);
+			transition: all .3s;
+			&:hover {
+				background-color: lighten($yellow, 10%);
+			}
+		}
+
+		&__button-text {
+			display: inline-block;
+			transform: skew(10deg);
+		}
+
+		&__address {
+			display: none;
+		}
+
+		&__icons {
+			margin-left: 23px;
+		}
+
+		&__icon {
+			position: relative;
+			display: inline-block;
+			width: 49px;
+			height: 87px;
+			.icon {
+				@include img-center;
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+
+		&__icon {
+			
+		}
+
+		&__icon_phone {
+			
+		}
+
+		&__icon_screwdriver {
+			margin-left: 60px;
+		}
+
+
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.main-banner {
+
+		&__left {
+			flex-basis: 515px;
+			display: flex;
+			align-items: center;
+			// justify-content: center;
+		}
+		&__icon_phone {
+			
+		}
+
+		&__icon_screwdriver {
+
+		}
+	}
+} // (min-width: 1042px)
+
+/*  End*/
+
+//F4F4F4
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

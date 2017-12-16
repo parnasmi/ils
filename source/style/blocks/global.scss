@@ -1,0 +1,261 @@
+/* Styles Start*/
+
+// .youtube-player {
+	
+	
+// 	&:hover {
+// 		&::before {
+// 			background-position: center center,
+// 													-10000px center;
+// 			background-image: url("../img/img-youtube-hover.png"),
+// 												url("../img/icon-youtube.png");
+// 		}
+// 	}
+
+// 	&::before {
+// 		content: '';
+// 		position: absolute;
+// 		width: 67px;
+// 		height: 47px;
+// 		top: 50%;
+// 		left: 50%;
+// 		transform: translate(-50%, -50%);
+// 		background-repeat: no-repeat;
+// 		background-position: center center,
+// 												-10000px center;
+// 		background-image: url("../img/icon-youtube.png"),
+// 											url("../img/img-youtube-hover.png");
+// 		transition: all .3s;
+// 		z-index: 2;
+// 	}
+
+// 	&.hide-icon {
+// 		&::before {
+// 			display: none;
+// 		}
+// 	}
+
+// 	&:active,
+// 	&:visited,
+// 	&:focus {
+// 		&::before {
+// 			display: none;
+// 		}
+// 	}
+// }
+
+.shop-banner-section {
+	&__inner {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	.index-device-select,
+	.indemand-section,
+	.feedbacks-section {
+		padding-left: 10px;
+		padding-right: 10px;
+
+		
+	}
+
+	.index-device-select {
+		margin-bottom: 10px;
+	}
+
+	.indemand-section {
+
+	}
+
+	.indemand-section_index {
+		margin-bottom: 10px;
+	}
+
+	.video-section_index {
+		margin-bottom: 30px;
+	}
+
+	.shop-items-section {
+		margin-bottom: 70px;
+	}
+
+	.shop-banner-section {
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-bottom: 40px;
+		&__inner {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	.info-section {
+		margin-bottom: 10px;
+	}
+
+	.about-section {
+		margin-bottom: 75px;
+	}
+
+	.depart-b-section {
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-bottom: 50px;
+	}
+
+	.feedbacks-section_general {
+		margin-bottom: 10px;
+	}
+
+	.feedbacks-section_price,
+	.feedbacks-section_services {
+		margin-bottom: 70px;
+	}
+
+	.depart-b-section_blog-inside {
+		margin-bottom: 60px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+	
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.indemand-section_index,
+	.video-section_index {
+		margin-bottom: 50px;
+	}
+
+	.feedbacks-section_index {
+		margin-bottom: 20px;
+	}
+
+	.shop-items-section {
+		margin-bottom: 62px;
+	}
+
+	.shop-banner-section {
+		margin-bottom: 86px;
+		&__inner {
+			width: 738px;
+		}
+	}
+
+	.info-section {
+		margin-bottom: 50px;
+	}
+
+	.about-section {
+		margin-bottom: 50px;
+	}
+
+	.depart-b-section {
+		
+		margin-bottom: 30px;
+	}
+
+	.feedbacks-section_general {
+		margin-bottom: 20px;
+	}
+
+	.depart-b-section_blog-inside {
+		margin-top: 55px;
+		// margin-bottom: 50px;
+		margin-bottom: 10px;
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	main {
+		padding-top: 65px;
+	}
+
+	.feedbacks-section_services {
+		margin-bottom: 50px;
+
+
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.indemand-section_index {
+		margin-bottom: 75px;
+	}
+
+	.feedbacks-section_index {
+		margin-bottom: 40px;
+	}
+
+	.video-section_index {
+		margin-bottom: 70px;
+	}
+
+	.shop-items-section {
+		margin-bottom: 70px;
+	}
+
+	.shop-banner-section {
+		margin-bottom: 106px;
+
+		&__inner {
+			width: 970px;
+		}
+	}
+
+	.info-section {
+		margin-bottom: 100px;
+	}
+
+	.about-section {
+		margin-bottom: 110px;
+	}
+
+	.depart-b-section {
+		margin-bottom: 50px;
+	}
+
+	.feedbacks-section_general {
+		margin-bottom: 30px;
+	}
+
+	.depart-b-section_blog-inside {
+		margin-bottom: 10px;
+	}
+
+
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

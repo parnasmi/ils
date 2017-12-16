@@ -1,0 +1,158 @@
+/* Styles Start*/
+//Label style
+.options__form-list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.form-label {
+	font-size: 13px;
+	position: relative;
+	display: block;
+	// margin-bottom: 15px;
+	cursor: pointer;
+	padding-left: 31px;
+	// margin-bottom: 0 !important;
+}
+
+// Checkbox or Radio hiding
+.form-label input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+//generated span style for custom checkbox or radio
+.form-stylized-option {
+	position: absolute;
+	// top: 2px;
+	top: 50%;
+	margin-top: -10px;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border: 1px solid #d9d9d9;
+	// box-shadow: 0 0 1px 0 #777;
+	transition: all .3s ease;
+}
+
+//radio box-radius
+.form-label--radio .form-stylized-option {
+	border-radius: 10px;
+}
+//checkbox box-radius
+.form-label--checkbox .form-stylized-option {
+	border-radius: 5px;
+}
+
+// Hover and focus states
+.form-label:hover input ~ .form-stylized-option,
+.form-label input:focus ~ .form-stylized-option {
+	background: #fff;
+	// border-width: 2px;
+	box-shadow: 0 0 2px 0 #d9d9d9;
+}
+
+.form-label:hover {
+	.label-text {
+		color: #666;
+	}
+}
+
+// Checked state
+.form-label input:checked ~ .form-stylized-option {
+	background: #fff;
+}
+
+//Hover state whilst checked
+
+// .form-label:hover input:not([disabled]):checked ~ .form-stylized-option,
+// .form-label input:checked:focus ~ .form-stylized-option {
+// 	background-color: #ccc;
+// }
+
+//Disabled state
+.form-label input:disabled ~ .form-stylized-option {
+	pointer-events: none;
+	background: #e6e6e6;
+}
+
+//Check mark 
+.form-stylized-option::after {
+	position: absolute;
+	display: none;
+	content: '';
+}
+
+//Show check/tick mark 
+.form-label input:checked ~ .form-stylized-option::after {
+	display: block;
+}
+//Show disabled check/tick mark 
+.form-label input:disabled:checked ~ .form-stylized-option::after {
+	display: block;
+}
+//checkbox tick
+.form-label--checkbox .form-stylized-option::after{
+	top: 3px;
+	left: 6px;
+	width: 6px;
+	height: 10px;
+	transform: rotate(45deg);
+	border: solid #000;
+	border-width: 0 2px 2px 0;
+}
+
+//disabled checkbox tick
+.form-label--checkbox input:checked:disabled ~ .form-stylized-option::after {
+	border-color: #999;
+}
+
+//Radio button inner circle
+.form-label--radio .form-stylized-option::after{
+	top: 6px;
+	left: 6px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: #000;
+}
+
+// Disabled circle colour
+.form-label--radio input:checked:disabled ~ .form-stylized-option::after {
+	background: #999;
+}
+
+//hover states
+// .form-label--checkbox:hover input:not([disabled]) ~ .form-stylized-option::after,
+// .form-label--radio:hover input:not([disabled]) ~ .form-stylized-option::after {
+// 	display: block;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  End*/

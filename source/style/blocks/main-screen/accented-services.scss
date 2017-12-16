@@ -1,0 +1,144 @@
+/* Styles Start*/
+
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.accented-services {
+		justify-content: space-between;
+
+		&__item {
+			// padding-top: 17px;
+			// padding-bottom: 17px;
+			flex-basis: 50%;
+			&:first-child {
+				margin-right: 15px;
+			}
+
+			&:last-child {
+				margin-left: 15px;
+			}
+		}
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.accented-services {
+		display: flex;
+		
+		&__item {
+			padding-left: 30px;
+			padding-right: 20px;
+			color: $dark;
+			@include border;
+			
+			display: flex;
+
+			padding-top: 17px;
+			padding-bottom: 17px;
+
+			&:hover {
+				.accented-services__item-icon {
+					background-position: right top;;
+				}
+			}
+		}
+
+		&__item-wrapper {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		&__item-title {
+			font-size: 2.1rem;
+			font-weight: 700;
+			margin-right: 20px;
+			span {
+				font-size: 1.6rem;
+				font-weight: normal;
+				display: block;
+			}
+		}
+
+		&__item-icon {
+			flex-shrink: 0;
+			display: block;
+			width: 70px;
+			height: 70px;
+			background-size: 140px 70px;
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			// transition: all .3s;
+		}
+
+		&__item-icon_screen {
+			background-image: url("../img/img-accented-screen.png");
+		}
+
+		&__item-icon_battery {
+			background-image: url("../img/img-accented-battery.png");
+		}
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.accented-services {
+		height: 100%;
+
+		
+		flex-direction: column;
+		
+		&__item {
+			
+			// display: flex;
+			align-items: center;
+			justify-content: space-between;
+			
+			&:first-child {
+				margin-bottom: 15px;
+			}
+
+			&:last-child {
+				margin-top: 15px;
+			}
+		}
+	}
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

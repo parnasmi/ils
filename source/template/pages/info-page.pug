@@ -1,0 +1,42 @@
+extends ../tpl/_template_info-page
+
+block variables
+	- var title = 'Info-page'
+
+block content
+	+b.info-p
+		+e.inner.container
+			+e.row.row
+				+e.col.col-lg-3.col-xs-12
+					+e.menu
+						+e.UL.menu-list
+							+e.menu-item: +e.menu-link(href="#") О нас
+							+e.menu-item: +e.menu-link(href="#") Гарантия
+							+e.menu-item: +e.menu-link(href="#") Блог
+							+e.menu-item.active: +e.menu-link(href="#") Статьи
+							+e.menu-item: +e.menu-link(href="#") Контакт
+							+e.menu-item: +e.menu-link(href="#") Отзывы
+				+e.col_content.col-lg-6.col-sm-8.col-xs-12
+					+e.col-inner
+						+e.H2.title Контакты
+						+e.addresses
+							+e.address-i
+								+e.address-i-row.row
+									.col-sm-6.col-xs-12
+										+e.address-num
+											+e.address-num-icon
+												svg(class="icon",width="14",height="20")
+													use(xlink:href='#icon-place')
+											+e.address-num-text Адрес-1
+										+e.address-text
+											|Мы находимся на ПЕРВОМ этаже, на линии «Б», в павильоне 1Б-39 (как ориентир, рядом с нами находятся магазины «Рыболов» и «Леонардо»).
+										+e.gallery-link(href="#")
+											+e.gallery-icon
+												svg(class="icon",width="16",height="13")
+													use(xlink:href='#icon-photo')
+											+e.gallery-text Фото офиса
+									.col-sm-6.col-xs-12
+										+e.address-map#ilsMap1(style="height: 160px;")
+									+e.gallery.col-xs-12
+				+e.col_sidebar.col-lg-3.col-sm-4
+					include ../blocks/support

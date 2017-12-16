@@ -1,0 +1,155 @@
+/* .info-page Styles Start*/
+.info-page {
+	background-color: #f6f6f6;
+}
+
+.info-p {
+	&__col {
+		// background-color: #fff;
+		// border-radius: 8px;
+	}
+
+	&__menu {
+		background-color: #fff;
+	}
+
+	&__menu-link {
+		color: $dark;
+		font-weight: 700;
+		display: inline-block;
+	}
+}
+
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	.info-p {
+		
+		&__inner {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		&__row {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&__col {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		&__col_content {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		&__menu {
+			padding-left: 10px;
+			margin-bottom: 12px;
+			.flickity-viewport {
+				// padding-bottom: 3px;
+				overflow:visible;
+			}
+		}
+
+		&__menu-item {
+			margin-right: 30px;
+			// padding-bottom: 3px;
+			&.active {
+				&::after {
+					content: '';
+					position: absolute;
+					width: 5px;
+					height: 5px;
+					border-radius: 50%;
+					background-color: $blue;
+					left: 50%;
+					margin-left: -3px;
+					top: 48px;
+					z-index: 10;
+				}
+			}
+		}
+
+		&__menu-link {
+			font-size: 1.3rem;
+			padding-top: 17px;
+			padding-bottom: 16px;
+		}
+
+		&__col {
+
+		}
+
+		&__col-inner {
+			background-color: #fff;
+			border-radius: 8px;
+		}
+
+		&__col_sidebar {
+			display: none;
+		}
+	}
+
+	.info-page .page-header {
+		margin-bottom: 0;
+	}
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+	.info-p {
+
+	}
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.info-p {
+
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.info-p {
+
+		&__menu-link {
+			font-size: 1.6rem;
+		}
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.info-p {
+
+	}
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

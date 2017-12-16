@@ -1,0 +1,144 @@
+/* Styles Start*/
+.catalog-banner {
+
+}
+
+.cat-banner {
+	border-radius: 8px;
+	background-color: #eaff78;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__text {
+		text-align: center;
+		font-weight: 300;
+	}
+
+	&__accented-text {
+
+	}
+
+	&__muted-text {
+		
+	}
+	
+	&__logo {
+		position: relative;
+
+		img {
+			@include img;
+		}
+	}
+}
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	
+	.catalog-banner {
+		display: none;
+	}
+
+	.cat-banner {
+		
+		
+	}
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+	.catalog-banner {
+
+	}
+
+	.cat-banner {
+
+	}
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.catalog-banner {
+		@include container-tab;
+	}
+
+	.cat-banner {
+		padding: 15px 45px 18px 28px;
+		margin-bottom: 20px;
+
+		&__logo {
+			width: 51px;
+			height: 61px;
+		}
+		&__accented-text {
+			font-size: 1.9rem;
+		}
+
+		&__muted-text {
+			font-size: 1.2rem;
+		}
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.catalog-banner {
+
+	}
+
+	.cat-banner {
+
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.catalog-banner {
+		@include container;
+	}
+
+	.cat-banner {
+		padding: 24px 72px 28px 46px;
+		margin-bottom: 30px;
+
+		&__logo {
+			width: 82px;
+			height: 96px;
+		}
+
+		&__accented-text {
+			font-size: 3rem;
+		}
+
+		&__muted-text {
+			font-size: 2rem;
+		}
+	}
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"
+
+

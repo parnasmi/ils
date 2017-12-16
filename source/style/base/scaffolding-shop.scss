@@ -1,0 +1,205 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+//Adjustment vars
+
+$body-bg: #fff;
+
+
+// Reset the box-sizing
+// 
+// Heads up! This reset may cause conflicts with some third-party widgets.
+// For recommendations on resolving such conflicts, see
+// http://getbootstrap.com/getting-started/#third-box-sizing
+
+* {
+	box-sizing:border-box;
+}
+
+*:before,
+*:after {
+	box-sizing:border-box;
+}
+
+
+// Body reset
+html {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	font-size: 62.5%;
+	// height: 100%;
+	position: relative;
+	max-width: 100%;
+	overflow-x: hidden;
+}
+//Flexbox IE10 fix https://thatemil.com/blog/2013/11/03/sticky-footers-flexbox-and-ie10/
+.flexboxtweener, .flexboxtweener>body {
+  height: 100%;
+}
+
+body {
+	font-family: $ff-regular;
+	font-size: $font-size-base;
+	font-weight: 400;
+	line-height: $line-height-base;
+	-webkit-font-smoothing: antialiased;
+	color: $text-color;
+	background-color: $body-bg;
+	min-width: 320px;
+	overflow-x: hidden;
+	max-width: 100%;
+}
+
+.outer-wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+html, body {
+	&.freeze {
+		overflow: hidden;
+	}
+}
+
+@media (max-width: 767px) {
+	body {
+		display: block;
+	}
+}
+
+
+.wrapper {
+	width: 100%;
+	// overflow: hidden; // Item tooltips cropping
+	position: relative;
+
+	@media (min-width: 1242px) {
+		// flex: 1 0 auto;
+
+		// display: flex;
+		// align-items: flex-start;
+		// justify-content: space-between;
+
+		display: flex;
+		flex-grow: 1;
+		flex-shrink: 0;
+		flex-basis: auto;
+		justify-content: space-between;
+		// min-height: 100vh;
+		flex-wrap: wrap;
+		
+	}
+
+}
+
+header.page-header {
+	width: 100%;
+	margin-bottom: auto;
+	@media (min-width: 1242px) {
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-basis: 0;
+	}
+}
+
+
+footer.page-footer {
+	// flex: 0 0 auto;
+	margin-top: auto;
+	width: 100%;
+	position: relative;
+	// flex: 0;
+	@media (min-width: 1242px) {
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-basis: 0;
+	}
+}
+
+.visually-hidden {
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+
+.default-img {
+	display: inline-block;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+
+i {
+	font-style: normal;
+}
+
+
+// Links
+
+a {
+	font-family: $ff-regular;
+	color: $link-color;
+	text-decoration: none;
+	transition: all .3s ease;
+
+	&:hover,
+	&:focus {
+		//color: $link-hover-color;
+		//text-decoration: @link-hover-decoration;
+	}
+
+	&:focus {
+		//.tab-focus();
+	}
+}
+
+// Figures
+//
+// We reset this here because previously Normalize had no `figure` margins. This
+// ensures we don't break anyone's use of the element.
+
+figure {
+	margin: 0;
+}
+
+button {
+	bottom: 0;
+	border: none;
+}
+
+
+// iOS "clickable elements" fix for role="button"
+//
+// Fixes "clickability" issue (and more generally, the firing of events such as focus as well)
+// for traditionally non-focusable elements with role="button"
+// see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+
+[role="button"] {
+	cursor: pointer;
+}
+
+input[type=search] {
+	appearance: none;
+}
+
+
+// .wow { visibility: hidden; }
+

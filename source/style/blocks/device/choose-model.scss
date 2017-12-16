@@ -1,0 +1,151 @@
+/* Styles Start*/
+.choose-model {
+	
+	&__list {
+		font-size: 0;
+	}
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__link {
+		display: block;
+		border-radius: 8px;
+		background-color: #fff;
+		border: 1px solid $silver;
+		transition: all .3s;
+		color: $blue;
+		font-weight: 700;
+		font-size: 1.3rem;
+		text-align: center;
+		&:hover {
+			box-shadow: 0 0 0 2px $blue;
+		}
+	}
+}
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	.choose-model {
+		width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 8px;
+
+		&__list {
+			margin-right: -12px;
+		}
+
+		&__item {
+			margin-right: 12px;
+			margin-bottom: 12px;
+		}
+
+		&__link {
+			padding: 15px 10px;
+			width: 92px;
+		}
+
+		&__image {
+			display: none;
+		}
+	}
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+	.choose-model {
+
+	}
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.choose-model {
+		&__inner {
+			width: 738px;
+		}
+
+		&__item {
+			margin-bottom: 20px;
+		}
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.choose-model {
+
+		&__inner {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&__list {
+			margin-right: -30px;
+		}
+
+		&__item {
+			margin-right: 30px;
+		}
+
+		&__link {
+			width: 120px;
+			padding: 20px 10px;
+		}
+		
+		&__image {
+			position: relative;
+			width: 145px;
+			height: 145px;
+			flex-shrink: 0;
+			margin-bottom: 30px;
+			img {
+				@include img;
+			}
+		}
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.choose-model {
+		&__inner {
+			width: 1170px;
+		}
+
+		&__item {
+			margin-bottom: 25px;
+		}
+	}	
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

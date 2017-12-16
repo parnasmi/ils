@@ -1,0 +1,13 @@
+// Core variables and mixins
+@import "_vars-project";
+@import "_mixins-project";
+// @import "sprite";
+@import "fonts";
+
+//Customized vendor less/css style
+@import "vendor/owl.carousel";
+@import "vendor/owl.theme.default";
+@import "vendor/owl.theme.unishop";
+@import "vendor/jquery-ui";
+@import "vendor/ui-slider";
+@import "vendor/magnific-popup";

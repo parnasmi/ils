@@ -1,0 +1,74 @@
+extends ../tpl/_template-blog
+
+block variables
+	- var title = 'News Index'
+
+block content
+	+b.blog
+		+e.inner
+			+e.H1.title Новости
+			+e.UL.wrapper
+				+e.col
+					+e.item_news
+						+e.date 12 сентября 2017
+						+e.item-title(href="#") У нас новый дизайн. Сайт работает на стадии бета теста
+						+e.more-link(href="#")
+							+e.more-link-text Читать далее
+							+e.more-link-icon
+								svg(class="icon",width="8",height="7")
+									use(xlink:href='#icon-arrow-short')
+				+e.col
+					+e.item_news
+						+e.date 9 сентября 2017
+						+e.item-title(href="#") Скидка 5% в честь праздника
+						+e.more-link(href="#")
+							+e.more-link-text Читать далее
+							+e.more-link-icon
+								svg(class="icon",width="8",height="7")
+									use(xlink:href='#icon-arrow-short')
+				+e.col
+					+e.item_news
+						+e.date 9 сентября 2017
+						+e.item-title(href="#") Скидки на ремонт электроники!
+						+e.more-link(href="#")
+							+e.more-link-text Читать далее
+							+e.more-link-icon
+								svg(class="icon",width="8",height="7")
+									use(xlink:href='#icon-arrow-short')
+				+e.col
+					+e.item_news
+						+e.date 9 сентября 2017
+						+e.item-title(href="#") Проверка электроники
+						+e.more-link(href="#")
+							+e.more-link-text Читать далее
+							+e.more-link-icon
+								svg(class="icon",width="8",height="7")
+									use(xlink:href='#icon-arrow-short')
+				+e.col
+					+e.item_news
+						+e.date 9 сентября 2017
+						+e.item-title(href="#") График работы в праздничные дни
+						+e.more-link(href="#")
+							+e.more-link-text Читать далее
+							+e.more-link-icon
+								svg(class="icon",width="8",height="7")
+									use(xlink:href='#icon-arrow-short')
+				+e.col
+					+e.item_news
+						+e.date 9 сентября 2017
+						+e.item-title(href="#") Режим разработчика в Android: как и зачем?
+						+e.more-link(href="#")
+							+e.more-link-text Читать далее
+							+e.more-link-icon
+								svg(class="icon",width="8",height="7")
+									use(xlink:href='#icon-arrow-short')
+	+b.pagination_article-index
+		+e.UL.list
+			+e.item.active: +e.link(href="#") 1
+			+e.item: +e.link(href="#") 2
+			+e.item: +e.link(href="#") 3
+			+e.item_next: +e.link(href="#") следующая страница
+				svg(class="icon",width="5",height="8")
+					use(xlink:href='#arrow-pagination')
+	SECTION.depart-b-section
+		include ../blocks/depart-b

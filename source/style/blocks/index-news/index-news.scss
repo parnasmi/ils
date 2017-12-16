@@ -1,0 +1,202 @@
+/* Styles Start*/
+.index-news {
+
+	&__list {
+
+	}
+
+	&__item {
+
+	}
+
+	&__item-inner {
+		display: flex;
+		align-items: center;
+	}
+
+	&__title {
+		display: inline-block;
+		font-weight: 900;
+		color: $ff-headings;
+		color: $dark;
+		position: relative;
+		text-transform: uppercase;
+
+		&:hover {
+			color: $blue;
+
+			&::before {
+				background-color: transparent;
+			}
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			height: 2px;
+			width: 100%;
+			bottom: 0;
+			left: 0;
+			background-color: rgba(#2e3a46, .23);
+			transition: all .3s;
+		}
+	}
+
+	&__image {
+		display: block;
+		position: relative;
+		border-radius: 7px;
+		overflow: hidden;
+		width: 70px;
+		height: 70px;
+		flex-shrink: 0;
+
+		img {
+			@include img-center;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	&__content {
+
+	}
+
+	&__date {
+		font-size: 1.2rem;
+		color: $grey;
+		margin-bottom: 5px;
+	}
+
+	&__item-title {
+		font-size: 1.4rem;
+		color: $dark;
+
+		&:hover {
+			color: $blue;
+		}
+	}
+}
+
+.home-info {
+
+	&__news-wrapper {
+		// display: flex;
+	}
+
+	&__news-wrapper_pics {
+
+	}
+
+	&__news-wrapper_no-pics {
+		// justify-content: flex-end;
+	}
+}
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	.index-news {
+		
+		&__title {
+			font-size: 1.8rem;
+			margin-bottom: 20px;
+		}
+
+		&__image {
+			margin-right: 5px;
+		}
+	}
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+	.index-news {
+		&__item {
+			margin-bottom: 30px;
+		}
+	}
+
+	.home-info__banner {
+		display: none;
+	}
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.index-news {
+		
+		&__image {
+			margin-right: 20px;
+		}
+
+		&__date {
+			font-size: 1.4rem;
+		}
+
+		&__item-title {
+			font-size: 1.6rem;
+		}
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.index-news {
+		
+
+		&__title {
+			font-size: 2rem;
+			margin-bottom: 30px;
+		}
+
+		&__image {
+			margin-right: 30px;
+		}
+
+		&__content {
+			flex-grow: 1;
+		}
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.index-news {
+
+		&__list {
+			// display: flex;
+			// flex-direction: column;
+			// justify-content: flex-end;
+		}
+		&__item {
+			&:not(:last-child) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

@@ -1,0 +1,119 @@
+// Core variables and mixins
+@import "_vars-project";
+@import "_mixins-project";
+// @import "sprite";
+@import "fonts";
+
+
+// Reset and dependencies
+@import "base/inormalize-shop";
+@import "base/bootstrap.min";
+
+// Core CSS
+@import "base/scaffolding-project";
+@import "blocks/global";
+
+//Components
+@import "components/buttons";
+@import "components/forms";
+@import "components/tooltip";
+@import "components/scroll";
+@import "components/rating-stars";
+@import "components/logo";
+@import "components/nav";
+@import "components/checkbox-radio";
+@import "components/icons";
+@import "components/headings";
+@import "components/breadcrumbs";
+
+//-------- Blocks --------
+//========================
+
+@import "blocks/header/header";
+@import "blocks/header/top-bar";
+@import "blocks/header/mid-bar";
+@import "blocks/header/menu";
+
+//-------- Index --------
+//========================
+
+//Main screen
+@import "blocks/main-screen/main-screen";
+@import "blocks/main-screen/main-banner";
+@import "blocks/main-screen/accented-services";
+
+//Selecting device model
+@import "blocks/select/select";
+@import "blocks/indemand/indemand";
+
+//Feedbacks
+@import "blocks/feedbacks/feedbacks";
+
+//Videos
+@import "blocks/video/video";
+
+//Indes items
+@import "blocks/items/index-items";
+@import "blocks/items/shop-item";
+
+//Banner
+@import "blocks/banners/shop-banner";
+@import "blocks/banners/article-banner";
+@import "blocks/banners/depart-b";
+
+//About
+@import "blocks/about/about";
+
+//Indes items
+@import "blocks/index-news/index-news";
+@import "blocks/footer/footer";
+//Footer
+
+//-------- Select Device model --------
+//========================
+@import "blocks/device/device";
+@import "blocks/device/device-banner";
+@import "blocks/device/choose-model";
+@import "blocks/device/choose-problem";
+
+//-------- Price Page & Service page --------
+//========================
+@import "blocks/price/price-header";
+@import "blocks/price/services";
+@import "blocks/price/problem";
+@import "blocks/price/price-seo";
+@import "blocks/price/service-top";
+
+//-------- Service Page--------
+//========================
+@import "blocks/service/support";
+
+//-------- Shop Page--------
+//========================
+@import "blocks/shop/catalog";
+@import "blocks/shop/pagination";
+@import "blocks/shop/catalog-banner";
+
+//-------- Item page --------
+//========================
+@import "blocks/item-page/item-info";
+@import "blocks/item-page/item-slider";
+
+//-------- Blog -----
+//========================
+@import "blocks/blog/blog";
+@import "blocks/blog/bl-inside";
+
+//-------- Info-page -----
+//========================
+@import "blocks/info-page/info-p";
+
+
+//Vendor
+@import "vendor/css-toggle-switch_custom-initial";
+@import "vendor/css-toggle-switch_custom";
+@import "../../bower_components/flickity/dist/flickity";
+@import "vendor/flickity_custom";
+@import "vendor/mediaelementplayer";
+@import "vendor/mediaelementplayer_custom";
+// @import "vendor/media-rifmach-skin";

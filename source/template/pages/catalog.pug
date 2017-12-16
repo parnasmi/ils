@@ -1,0 +1,196 @@
+extends ../tpl/_template
+
+block variables
+	- var title = 'Catalog'
+
+block content
+	//- First screen
+	//- include ../blocks/first
+	+b.cat-mmenu
+		+e.inner
+			+e.button(href="#")
+				+e.icon
+					svg(class="icon",width="16",height="12")
+						use(xlink:href='#icon-catalog')
+				+e.text Каталог товаров
+			+e.nav
+	+b.breadcrumbs
+		+e.inner 
+			+e.UL.list
+				+e.item: +e.link(href="#") Главная
+				+e.item: +e.link(href="#") Ремонт Iphone
+				+e.item: +e.link(href="#") Iphone X
+	.catalog-banner
+		+b.cat-banner
+			+e.text_left
+				+e.accented-text Аксессуары для техники Apple
+				+e.muted-text по лучшой цене
+			+e.logo
+				img(src="./assets/img/Apple_logo_black.svg", alt)
+			+e.text_right
+				+e.accented-text Аксессуары для техники Apple
+				+e.muted-text по лучшой цене
+	+b.SECTION.catalog
+		+e.inner
+			+e.header_catalog-page
+				+e.title_catalog-page.sec-title_xl Кожанные чехлы для iPhone 6S
+				+e.filter
+					+e.filter-title Сортировка по:
+					+e.filter-select
+						+e.filter-selected
+							+e.filter-selected-text Рекомендуемые
+							+e.filter-selected-icon
+								svg(class="icon",width="7",height="4")
+									use(xlink:href='#arrow-up-down')
+						+e.UL.sublist
+							+e.subitem.active Рекомендуемые
+							+e.subitem Сначала дешевая
+							+e.subitem Сначала дорогая
+							+e.subitem Новинки
+			+e.UL.items-list_catalog-page
+				+e.item_menu._catalog-page
+					+e.menu
+						+e.menu-inner
+							+e.UL.menu-list
+								+e.menu-item.active
+									+e.menu-link(href="#") Кожанные чехлы
+									+e.UL.submenu-list
+										+e.submenu-item: +e.submenu-link(href="#") Кожа крокодила
+										+e.submenu-item: +e.submenu-link(href="#") Кожа страуса
+										+e.submenu-item: +e.submenu-link(href="#") Кожа дракона
+										+e.submenu-item: +e.submenu-link(href="#") Замша
+										+e.submenu-item: +e.submenu-link(href="#") Нубук
+								+e.menu-item: +e.menu-link(href="#") Кейсы для iPhone
+								+e.menu-item: +e.menu-link(href="#") Наушники
+								+e.menu-item: +e.menu-link(href="#") Адаптер питание
+								+e.menu-item: +e.menu-link(href="#") Переходники
+								+e.menu-item: +e.menu-link(href="#") Кабели
+				+e.item
+					+b.shop-item
+						+e.label(style="background-color:#f76ea2;") хит продаж
+						+e.image(href="#")
+							img(src="./assets/pics/pic-charger.png", alt)
+						+e.title(href="#") Красный кожанный кейс для iPhone 6S Plus
+						+e.price
+							+e.price-regular 599 руб.
+				+e.item
+					+b.shop-item
+						+e.label(style="background-color:#56d7e7;") новинка
+						+e.image(href="#")
+							img(src="./assets/pics/pic-wireless-charger.png", alt)
+						+e.title(href="#") Беспроводной зарядчик Samsung Wireless Charge 2s
+						+e.price
+							+e.price-regular 2599 руб.
+							+e.price-old 2899 руб.
+				+e.item
+					+b.shop-item
+						+e.image(href="#")
+							img(src="./assets/pics/pic-case-1.png", alt)
+						+e.title(href="#") Кожанный чехол - ПИТОНЧИК
+						+e.price
+							+e.price-regular 599 руб.
+				+e.item
+					+b.shop-item
+						+e.image(href="#")
+							img(src="./assets/pics/pic-case-2.png", alt)
+						+e.title(href="#") Примиум кейс Apple Versage
+						+e.price
+							+e.price-regular 599 руб.
+				+e.item
+					+b.shop-item
+						+e.label(style="background-color:#56d7e7;") новинка
+						+e.image(href="#")
+							img(src="./assets/pics/pic-case-3.png", alt)
+						+e.title(href="#") Кожанный чехол Apple цвета баклажан
+						+e.price
+							+e.price-regular 599 руб.
+				+e.item
+					+b.shop-item
+						+e.image(href="#")
+							img(src="./assets/pics/pic-glass.png", alt)
+						+e.title(href="#") Кожанный чехол Apple цвета баклажан
+						+e.price
+							+e.price-regular 599 руб.
+				+e.item
+					+b.shop-item
+						+e.label(style="background-color:#56d7e7;") новинка
+						+e.image(href="#")
+							img(src="./assets/pics/pic-case-4.png", alt)
+						+e.title(href="#") Красный кожанный кейс для iPhone 6S Plus
+						+e.price
+							+e.price-regular 599 руб.
+				+e.item
+					+b.shop-item
+						+e.image(href="#")
+							img(src="./assets/pics/pic-earpod.png", alt)
+						+e.title(href="#") Оригинальные AirPods
+						+e.price
+							+e.price-regular 599 руб.
+				+e.item
+					+b.shop-item
+						+e.image(href="#")
+							img(src="./assets/pics/pic-case-5.png", alt)
+						+e.title(href="#") Силиковые кейс
+						+e.price
+							+e.price-regular 599 руб.
+				+e.item
+					+b.shop-item
+						+e.label(style="background-color:#f76ea2;") хит продаж
+						+e.image(href="#")
+							img(src="./assets/pics/pic-earphone.png", alt)
+						+e.title(href="#") Красный Beats наушники большие
+						+e.price
+							+e.price-regular 599 руб.
+				+e.item
+					+b.shop-item
+						+e.image(href="#")
+							img(src="./assets/pics/pic-case-6.png", alt)
+						+e.title(href="#") Кейс Ultima для Samsung Edge
+						+e.price
+							+e.price-regular 2599 руб.
+							+e.price-old 2899 руб.
+				+e.item
+					+b.shop-item
+						+e.image(href="#")
+							img(src="./assets/pics/pic-earphone-2.png", alt)
+						+e.title(href="#") Наушники Meizu MX50
+						+e.price
+							+e.price-regular 5995 руб.
+				+e.item
+					+b.shop-item
+						+e.image(href="#")
+							img(src="./assets/pics/pic-earphone-3.png", alt)
+						+e.title(href="#") Обычные наушники WengMi Da Hong Ku
+						+e.price
+							+e.price-regular 599 руб.
+				+e.item
+					+b.shop-item
+						+e.image(href="#")
+							img(src="./assets/pics/pic-iwatch-strap.png", alt)
+						+e.title(href="#") Кожанный ремешок для Apple Watch Кожанный ремешок для Apple Watch
+						+e.price
+							+e.price-regular 599 руб.
+				+e.item
+					+b.shop-item
+						+e.label(style="background-color:#56d7e7;") новинка
+						+e.image(href="#")
+							img(src="./assets/pics/pic-strap-nike.png", alt)
+						+e.title(href="#") Силиконовый ремешок Nike Sport Силиконовый ремешок Nike Sport Силиконовый ремешок Nike Sport
+						+e.price
+							+e.price-regular 2599 руб.
+							+e.price-old 2899 руб.
+			+b.pagination_catalog
+				+e.UL.list
+					+e.item.active: +e.link(href="#") 1
+					+e.item: +e.link(href="#") 2
+					+e.item: +e.link(href="#") 3
+					+e.item_next: +e.link(href="#") следующая страница
+						svg(class="icon",width="5",height="8")
+							use(xlink:href='#arrow-pagination')
+				+e.loader
+					img(src="./assets/img/preloader.svg", alt)
+			+e.seo-text
+				p
+					|Вдохновение существует, но оно приходит во время работы, — считали мы, оглядываясь на таких монстров индустрии компьютерных технологий, как Apple, Microsoft, Samsung и видели себя исключительно как часть этого большого бизнеса. Стив Джобс олицетворял для нас ту самую необходимую харизму и целеустремление, что успешно позволяет добиваться любых поставленных задач. И вот, на пике этих эмоций, в 2007 году, мы уже создаем свою первою торговую точку — представляем электронные товары в интернете, закладывая туда зачатки широкого спектра сервиса, трепетно относимся к доступности информации о товаре и гарантируем его качество.
+	SECTION.depart-b-section
+		include ../blocks/depart-b

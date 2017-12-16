@@ -1,0 +1,121 @@
+/* Styles Start*/
+.index-items {
+	&__link-to-shop {
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+
+		&:hover {
+			.index-items__link-to-shop-text {
+				&::before {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&__link-to-shop-icon,
+	&__link-to-shop-text {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__link-to-shop-icon {
+		position: relative;
+		width: 15px;
+		height: 15px;
+		.icon {
+			@include img-center;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	&__link-to-shop-text {
+		margin-left: 10px;
+		font-weight: 700;
+		font-size: 1.7rem;
+		position: relative;
+
+		&::before {
+			content: '';
+			height: 2px;
+			width: 0;
+			background-color: $blue;
+			bottom: 0;
+			left: 0;
+			position: absolute;
+			transition: all .3s;
+		}
+	}
+}
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	.index-items {
+		
+	}
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+	.index-items {
+		&__inner {
+			margin-bottom: 30px;
+		}
+	}
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.index-items {
+		&__inner {
+			
+		}
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.index-items {
+		
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.index-items {
+		&__inner {
+			margin-bottom: 42px;
+		}
+
+		&__item {
+			
+		}
+	}
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

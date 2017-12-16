@@ -1,0 +1,92 @@
+extends ../tpl/_template-blog
+
+block variables
+	- var title = 'Article Index'
+
+block content
+	+b.blog
+		+e.inner
+			+e.H1.title Полезные статьи
+			+e.UL.wrapper
+				+e.col
+					+e.item
+						+e.image(href="#")
+							img(src="./assets/pics/pic-blog-1.png" alt)
+						+e.item-title(href="#") Самостоятельное устранение поломки
+						+e.text
+							|Отключить громкую связь - дело в том, что при использовании громкой связи, датчик реагирующий на приближении не срабатывает ...
+						+e.more-link(href="#")
+							+e.more-link-text Читать далее
+							+e.more-link-icon
+								svg(class="icon",width="8",height="7")
+									use(xlink:href='#icon-arrow-short')
+				+e.col
+					+e.item
+						+e.image(href="#")
+							img(src="./assets/pics/pic-blog-2.png" alt)
+						+e.item-title(href="#") iPhone не гаснет экран в процессе разговора
+						+e.text
+							|Если же ничего не помогает и экран iPhone в процессе разговора продолжает гореть, лучше отнести смартфон в сервисный центр ...
+						+e.more-link(href="#")
+							+e.more-link-text Читать далее
+							+e.more-link-icon
+								svg(class="icon",width="8",height="7")
+									use(xlink:href='#icon-arrow-short')
+				+e.col
+					+e.item
+						+e.image(href="#")
+							img(src="./assets/pics/pic-blog-3.png" alt)
+						+e.item-title(href="#") Не включается экран на iPhone
+						+e.text
+							|Всем привет, сегодня мы поговорим о беде, которая никогда не приходит во время
+						+e.more-link(href="#")
+							+e.more-link-text Читать далее
+							+e.more-link-icon
+								svg(class="icon",width="8",height="7")
+									use(xlink:href='#icon-arrow-short')
+				+e.col
+					+e.item
+						+e.image(href="#")
+							img(src="./assets/pics/pic-blog-4.png" alt)
+						+e.item-title(href="#") Не заряжается iPhone
+						+e.text
+							|Достаточно популярный вопрос, с которым обращаются наши клиенты – это «что делать, если не включается экран на айфон?»
+						+e.more-link(href="#")
+							+e.more-link-text Читать далее
+							+e.more-link-icon
+								svg(class="icon",width="8",height="7")
+									use(xlink:href='#icon-arrow-short')
+				+e.col
+					+e.item
+						+e.image(href="#")
+							img(src="./assets/pics/pic-blog-5.png" alt)
+						+e.item-title(href="#") Не ловит сеть
+						+e.text
+							|Например, в самый ненужный момент, когда нужно выключить звук, кнопка включения вибро перестанет работать.
+						+e.more-link(href="#")
+							+e.more-link-text Читать далее
+							+e.more-link-icon
+								svg(class="icon",width="8",height="7")
+									use(xlink:href='#icon-arrow-short')
+				+e.col
+					+e.item
+						+e.image(href="#")
+							img(src="./assets/pics/pic-blog-6.png" alt)
+						+e.item-title(href="#") Не работает сенсор на айфоне. Что делать?
+						+e.text
+							|Все вледельцы Айфонов знают, что продукция Apple довольно качественная, но не смотря на это владельцы иногда сталкиваются с т ...
+						+e.more-link(href="#")
+							+e.more-link-text Читать далее
+							+e.more-link-icon
+								svg(class="icon",width="8",height="7")
+									use(xlink:href='#icon-arrow-short')
+	+b.pagination_article-index
+		+e.UL.list
+			+e.item.active: +e.link(href="#") 1
+			+e.item: +e.link(href="#") 2
+			+e.item: +e.link(href="#") 3
+			+e.item_next: +e.link(href="#") следующая страница
+				svg(class="icon",width="5",height="8")
+					use(xlink:href='#arrow-pagination')
+	SECTION.depart-b-section
+		include ../blocks/depart-b

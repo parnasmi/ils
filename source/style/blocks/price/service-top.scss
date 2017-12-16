@@ -1,0 +1,83 @@
+/* .service-top Styles Start*/
+.service-top {
+	&__title {
+		line-height: 1;
+		text-align: left;
+	}
+}
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	.service-top {
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-bottom: 20px;
+
+		&__title {
+			margin-bottom: 20px;
+		}
+	}
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+	.service-top {
+
+	}
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.service-top {
+		margin-bottom: 30px;
+
+		&__inner {
+			@include container-tab;
+		}
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.service-top {
+		&__title {
+			margin-bottom: 20px;
+		}
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.service-top {
+		margin-bottom: 40px;
+
+		&__inner {
+			@include container;
+		}
+	}
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

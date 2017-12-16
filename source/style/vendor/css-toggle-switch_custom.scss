@@ -1,0 +1,168 @@
+.switch-toggle label,
+.switch-toggle input,
+.switch-toggle a
+ {
+	outline: none 0!important;
+}
+
+.switch-toggle label:focus,
+.switch-toggle input:focus,
+.switch-toggle a
+ {
+	outline: none 0!important;
+}
+
+// .slide-toggle {
+// 	border: 1px solid $silver;
+// 	// border: 1px solid purple;
+// 	border-radius: 30px;
+// 	overflow: hidden;
+
+// 	fieldset {
+// 		overflow: hidden;
+// 		border-radius: 30px;
+// 		max-width: 100%;
+
+// 		margin: 0;
+// 		padding: 0;
+// 	}
+// }
+
+.switch-ios.switch-toggle {
+	background-color: #fff;
+	// background-color: aquamarine;
+	box-shadow: none;
+	// border: 1px solid $silver;
+	// border: 1px solid purple;
+	overflow: hidden;
+	border-radius: 30px;
+	max-width: 100%;
+}
+
+.switch-ios.switch-toggle {
+	// overflow: hidden;
+}
+
+.switch-ios.switch-toggle:not(.price) {
+	
+	a {
+		border: none 0;
+		background-color: $silver;
+	}
+
+	label {
+		color: $grey;
+		font-weight: bold;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		cursor: pointer;
+		height: auto;
+		transition: color .3s ease-in-out .3s;
+	}
+
+	input:not(.price-input):checked ~ a:not(.price-toggle) {
+		background-color: $silver;
+	}
+
+	input:not(.price-input):checked + label:not(.price-label) {
+		color: $grey;
+		transition: color .3s ease-in-out .3s;
+	}
+
+}
+
+.switch-ios.switch-toggle.price {
+	position: relative;
+	z-index: 0;
+	a {
+		border: none 0;
+		background-color: $silver;
+	}
+
+	label {
+		color: $grey;
+		font-weight: bold;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		cursor: pointer;
+		height: auto;
+		transition: color .3s ease-in-out .3s;
+	}
+
+	input.price-input:checked ~ a.price-toggle {
+		background-color: $silver;
+	}
+
+	input.price-input:checked + label.price-label {
+		color: $grey;
+		transition: color .3s ease-in-out .3s;
+	}
+
+}
+
+
+.switch-ios.switch-light a {
+	transition: all .3s ease-in-out;
+}
+
+
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	// .switch-ios.switch-toggle {
+	// 	width: 100%;
+	// }
+	// .switch-ios.switch-toggle label {
+	// 	line-height: 1.4;
+	// 	vertical-align: middle;
+	// 	text-align: center;
+	// }
+
+
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+	
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	
+
+
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+
+} // (min-width: 1042px)
+
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

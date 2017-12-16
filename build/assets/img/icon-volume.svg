@@ -1,0 +1,9 @@
+<svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    ic_volume_up_black_24px
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <path d="M.75 4.25v3.5h2.333L6 10.667V1.333L3.083 4.25H.75zM8.625 6c0-1.032-.595-1.92-1.458-2.35v4.695C8.03 7.92 8.625 7.032 8.625 6zM7.167.884v1.202C8.852 2.588 10.083 4.15 10.083 6c0 1.85-1.23 3.412-2.916 3.914v1.202c2.34-.53 4.083-2.62 4.083-5.116 0-2.497-1.744-4.585-4.083-5.116z" fill="#2C2B3A" fill-rule="nonzero"/>
+    <path d="M-1-1h14v14H-1"/>
+  </g>
+</svg>

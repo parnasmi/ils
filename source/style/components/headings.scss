@@ -1,0 +1,255 @@
+/* Styles Start*/
+.section-head {
+	&__title {
+		font-weight: 900;
+		color: $dark;
+		text-align: center;
+		line-height: 1.24;
+		text-transform: uppercase;
+		font-family: $ff-headings;
+	}
+
+	&__descr {
+		color: $grey;
+		text-align: center;
+	}
+
+	&__title_feedbacks {
+		font-weight: 300;
+		span {
+			font-weight: 900;
+			color: $blue;
+		}
+	}
+
+	&__btn {
+		font-size: 1.3rem;
+		display: inline-block;
+		vertical-align: middle;
+		padding-top: 11px;
+		padding-bottom: 11px;
+		border-radius: 100px;
+	}
+
+
+
+	&__btn_all-fdbs {
+		margin-right: 10px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	&__btn_write-fdb {
+		margin-left: 10px;
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+
+	&__title_video {
+
+		strong {
+			color: $blue;
+		}
+	}
+
+	&__title_shop-items {
+		strong {
+			font-weight: 300;
+		}
+	}
+
+}
+
+.sec-title {
+	// font-family: $ff-headings;
+	font-weight: 700;
+	text-align: center;
+
+	&_muted {
+		color: $grey;
+	}
+}
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	.section-head {
+		margin-bottom: 18px;
+		
+		&__title {
+			font-size: 1.8rem;
+		}
+
+		&__descr {
+			display: none;
+		}
+
+		&__title_feedbacks {
+			margin-bottom: 20px;
+		}
+
+		&__btn_all-fdbs {
+			span {
+				display: none;
+			}
+		}
+
+		&__title_video {
+
+			strong {
+				display: block;
+			}
+		}
+	}
+
+	.sec-title {
+
+		&_xl {
+			font-size: 2rem;
+		}
+		&_l {
+			font-size: 1.6rem;
+		}
+
+		&_device {
+			margin-bottom: 10px;
+		}
+
+		&_device-choose {
+			margin-bottom: 20px;
+		}
+
+	}
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+	.section-head {
+		&__button-group_feedbacks {
+			display: table;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&__button-group_feedbacks {
+
+		}
+
+
+	}
+
+	
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.section-head {
+		margin-bottom: 30px;
+
+		&__title_feedbacks {
+			margin-bottom: 30px;
+		}
+	}
+
+	.sec-title {
+
+		&_l {
+			font-size: 2rem;
+		}
+
+		&_device-choose {
+			margin-bottom: 30px;
+		}
+
+		&_device-bottom {
+			margin-bottom: 0;
+		}
+
+	}
+
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.section-head {
+		&__title {
+			font-size: 2.5rem;
+		}
+
+		&__descr {
+			margin-top: 10px;
+		}
+	}
+
+	.sec-title {
+
+		&_xl {
+			font-size: 3rem;
+		}
+
+		&_device {
+			margin-bottom: 20px;
+		}
+
+		&_xxl {
+			font-size: 4rem;
+		}
+
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.section-head {
+		margin-bottom: 40px;
+
+		&_with-buttons {
+			@include container;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 40px;
+		}
+	}
+
+	.sec-title {
+
+		&_device-choose {
+			margin-bottom: 50px;
+		}
+
+		&_l {
+			font-size: 2.5rem;
+		}
+
+		
+
+		&_device-bottom {
+			margin-bottom: 20px;
+		}
+	}
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

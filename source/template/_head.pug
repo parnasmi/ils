@@ -1,0 +1,82 @@
+meta(charset="utf-8")
+title #{title}
+meta(content="" name="author")
+meta(content="" name="description")
+meta(content="" name="keywords")
+meta(content="width=device-width, initial-scale=1" name="viewport")
+meta(content="ie=edge" http-equiv="x-ua-compatible")
+//- favicon block start
+//- favicon block end
+
+//- link(rel='stylesheet' href='./assets/css/vendor.css')
+//- link(rel='stylesheet' href='./assets/css/unisite.css')
+//- link(rel='stylesheet' href='./assets/css/vendor.css')
+
+link(rel='stylesheet' href='./assets/css/style.css')
+
+//- script(src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js" defer)
+//- script(src='./assets/js/vendor.js' defer)
+//- script(src='./assets/js/libs.js' defer)
+//- script(src='./assets/js/main.js' defer)
+
+//- //Picturefill polyfill
+//- script.
+//- 	document.createElement("picture");
+
+//- //IE10 Flexbox detection polyfill
+//- script.
+	//- Add a Modernizr-test for the weird, inbetween, flexbox implementation
+	//- in IE10, necessary for the "sticky" footer.
+	//- (See https://github.com/Modernizr/Modernizr/issues/812)
+	//- (This could be rolled into a custom Modernizr build in production later.)
+	Modernizr.addTest('flexboxtweener', Modernizr.testAllProps('flexAlign', 'end', true));
+//- //SVG Sprite injection
+//- script.
+	(function (doc) {
+				var scripts = doc.getElementsByTagName('script')
+				var script = scripts[scripts.length - 1]
+				var xhr = new XMLHttpRequest()
+				xhr.onload = function () {
+					var div = doc.createElement('div')
+					div.innerHTML = this.responseText
+					div.style.display = 'none'
+					script.parentNode.insertBefore(div, script)
+				}
+				xhr.open('get', './assets/sprites/sprite-sym.svg', true)
+				xhr.send()
+			})(document)
+//- script.
+<!--[if lt IE 9]>
+script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+<![endif]-->
+<!--[if lt IE 10 ]>
+<p class="chromeframe" style="background-color:yellow;">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/?locale=ru" style="color: red; font-weight: bold;">Скачайте новый браузер абсолютно бесплатно</a> или <a href="http://www.google.com/chromeframe/?redirect=true">активируй Google Chrome Frame</a>чтобы пользоваться всеми возможностями сайта.</p>
+<![endif]-->
+<!-- Custom Browsers Color Start -->
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#000">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#000">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+<!-- Custom Browsers Color End -->
+//- style.
+	.page-preloader {
+		position: fixed;
+		background-color: #f2f2f2;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 20000;
+	}
+
+	.inner-loader {
+		width: 32px;
+		height: 32px;
+		background: url(./assets/img/preloader.gif) center center no-repeat;
+		position: absolute;
+		top: 0;left: 0;right: 0;bottom: 0;margin: auto;
+	}

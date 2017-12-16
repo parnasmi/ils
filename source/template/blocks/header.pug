@@ -1,0 +1,348 @@
++b.HEADER.page-header
+	+b.top-bar
+		+e.inner
+			+e.wrapper
+				+e.UL.menu
+					+e.menu-item: +e.menu-link(href="#") Магазин аксессуаров
+					+e.menu-item: +e.menu-link(href="#") Вопросы и ответы
+					+e.menu-item: +e.menu-link(href="#") Блог
+					+e.menu-item: +e.menu-link(href="#") Контакты
+					+e.menu-item: +e.menu-link(href="#") Отзывы
+				+e.go-btn(href="#") Выезной ремонт
+			+e.mob-logo
+			+e.hamburger
+				span
+				span
+				span
+			+e.mob-tel-btn
+			+e.mob-device-btn
+				.device-icon-wrapper
+					.device-icon
+						svg(class="icon",width="22",height="24")
+							use(xlink:href='#icon-device')
+					.device-close
+	+b.mid-bar
+		+e.inner
+			+e.logo-wrapper
+				//Логотип фирмы
+				+b.logo(href="#")
+					img(src="./assets/img/logo.svg",alt)
+				+e.descr
+					|Специализированный сервисный центр Apple в Москве
+			+e.mob-sec-menu
+			//- +e.contacts-wrapper
+			+e.address
+				+b.address
+					+e.UL.list
+						+e.item
+							+e.metro
+								+e.metro-icon
+									img(src="./assets/img/icon-metro.svg", alt, width="24", height="16")
+								+e.metro-text(href="#") Сокольники
+							+e.street ул. Русаковская 22
+						+e.item
+							+e.metro
+								+e.metro-icon
+									img(src="./assets/img/icon-metro.svg", alt, width="24", height="16")
+								+e.metro-text(href="#") Римская
+							+e.street ул. С. Радонежского 23-25
+			+e.contacts
+				+b.contacts
+					+b.A.tel(href="tel:+79876781234")
+						+e.icon_contacts
+							svg(class="icon",width="16",height="16")
+								use(xlink:href='#icon-contacts')
+						+e.text +7 (499) 350-44-45
+						+e.icon_tel
+							svg(class="icon",width="16",height="16")
+								use(xlink:href='#icon-tel')
+					+b.worktime
+						+e.UL.list
+							+e.item
+								+e.item-text Пн-Пт с 10.00 до 20.00
+							+e.item
+								+e.item-text Выходные с 11.00 до 20.00
+	+b.NAV.nav
+		+e.inner
+			+e.descr
+				+e.descr-inner
+					|Какому устройству требуется помощь?
+			+e.mob-title Выбор устройства для ремонта
+			+b.menu
+				+e.UL.list
+					+e.item
+						+e.item-link(href="#") Iphone
+						+e.submenu
+							+e.submenu-inner
+								+e.submenu-mobile-nav
+									//- Заголовок
+									+e.submenu-mobile-title
+										+e.submenu-mobile-back
+											svg(class="icon",width="7",height="12")
+												use(xlink:href='#icon-left')
+										+e.submenu-mobile-title-text
+											|Выбор устройства для ремонта
+									//- toggle кнопки
+									+b.slide-toggle
+										//- fieldset
+											.switch-toggle.switch-ios
+												input#models(name='option', type='radio', checked='', value="models")
+												label(for='models', onclick='') Модели
+												input#service(name='option', type='radio', value="services")
+												label(for='service', onclick='') Услуги
+												a
+								+e.submenu-section_models
+									+e.submenu-title Модели
+									+e.UL.submenu-list_models
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 7 plus
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 7
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone SE
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 6S plus
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 6S
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 6
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 5s
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 5
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 4s
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 4
+								+e.submenu-section_services
+									+e.submenu-title Услуги
+									+e.UL.submenu-list_service
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена дисплея
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена стекло дисплея
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена аккумулатора
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена кнопки Home
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена задней крышки
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Перепрошивка
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Настройка
+									+e.submenu-descr
+										|Выберите слева модель вашего тефона и мы покажем все наши услуги
+					+e.item
+						+e.item-link(href="#") Ipad
+						+e.submenu
+							+e.submenu-inner
+								+e.submenu-mobile-nav
+									//- Заголовок
+									+e.submenu-mobile-title
+										+e.submenu-mobile-back
+											svg(class="icon",width="7",height="12")
+												use(xlink:href='#icon-left')
+										+e.submenu-mobile-title-text
+											|Выбор устройства для ремонта
+									//- toggle кнопки
+									+b.slide-toggle
+										//- fieldset
+											.switch-toggle.switch-ios
+												input#models(name='option', type='radio', checked='', value="models")
+												label(for='models', onclick='') Модели
+												input#service(name='option', type='radio', value="services")
+												label(for='service', onclick='') Услуги
+												a
+								+e.submenu-section_models
+									+e.submenu-title Модели
+									+e.UL.submenu-list_models
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 7 plus
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 7
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone SE
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 6S plus
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 6S
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 6
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 5s
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 5
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 4s
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 4
+								+e.submenu-section_services
+									+e.submenu-title Услуги
+									+e.UL.submenu-list_service
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена дисплея
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена стекло дисплея
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена аккумулатора
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена кнопки Home
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена задней крышки
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Перепрошивка
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Настройка
+									+e.submenu-descr
+										|Выберите слева модель вашего тефона и мы покажем все наши услуги
+					+e.item
+						+e.item-link(href="#") Macbook
+						+e.submenu
+							+e.submenu-inner
+								+e.submenu-mobile-nav
+									//- Заголовок
+									+e.submenu-mobile-title
+										+e.submenu-mobile-back
+											svg(class="icon",width="7",height="12")
+												use(xlink:href='#icon-left')
+										+e.submenu-mobile-title-text
+											|Выбор устройства для ремонта
+									//- toggle кнопки
+									+b.slide-toggle
+										//- fieldset
+											.switch-toggle.switch-ios
+												input#models(name='option', type='radio', checked='', value="models")
+												label(for='models', onclick='') Модели
+												input#service(name='option', type='radio', value="services")
+												label(for='service', onclick='') Услуги
+												a
+								+e.submenu-section_models
+									+e.submenu-title Модели
+									+e.UL.submenu-list_models
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 7 plus
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 7
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone SE
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 6S plus
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 6S
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 6
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 5s
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 5
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 4s
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 4
+								+e.submenu-section_services
+									+e.submenu-title Услуги
+									+e.UL.submenu-list_service
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена дисплея
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена стекло дисплея
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена аккумулатора
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена кнопки Home
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена задней крышки
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Перепрошивка
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Настройка
+									+e.submenu-descr
+										|Выберите слева модель вашего тефона и мы покажем все наши услуги
+					+e.item
+						+e.item-link(href="#") iWatch
+						+e.submenu
+							+e.submenu-inner
+								+e.submenu-mobile-nav
+									//- Заголовок
+									+e.submenu-mobile-title
+										+e.submenu-mobile-back
+											svg(class="icon",width="7",height="12")
+												use(xlink:href='#icon-left')
+										+e.submenu-mobile-title-text
+											|Выбор устройства для ремонта
+									//- toggle кнопки
+									+b.slide-toggle
+										//- fieldset
+											.switch-toggle.switch-ios
+												input#models(name='option', type='radio', checked='', value="models")
+												label(for='models', onclick='') Модели
+												input#service(name='option', type='radio', value="services")
+												label(for='service', onclick='') Услуги
+												a
+								+e.submenu-section_models
+									+e.submenu-title Модели
+									+e.UL.submenu-list_models
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 7 plus
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 7
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone SE
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 6S plus
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 6S
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 6
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 5s
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 5
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 4s
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 4
+								+e.submenu-section_services
+									+e.submenu-title Услуги
+									+e.UL.submenu-list_service
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена дисплея
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена стекло дисплея
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена аккумулатора
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена кнопки Home
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена задней крышки
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Перепрошивка
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Настройка
+									+e.submenu-descr
+										|Выберите слева модель вашего тефона и мы покажем все наши услуги
+					+e.item
+						+e.item-link(href="#") iPod
+						+e.submenu
+							+e.submenu-inner
+								+e.submenu-mobile-nav
+									//- Заголовок
+									+e.submenu-mobile-title
+										+e.submenu-mobile-back
+											svg(class="icon",width="7",height="12")
+												use(xlink:href='#icon-left')
+										+e.submenu-mobile-title-text
+											|Выбор устройства для ремонта
+									//- toggle кнопки
+									+b.slide-toggle
+										//- fieldset
+											.switch-toggle.switch-ios
+												input#models(name='option', type='radio', checked='', value="models")
+												label(for='models', onclick='') Модели
+												input#service(name='option', type='radio', value="services")
+												label(for='service', onclick='') Услуги
+												a
+								+e.submenu-section_models
+									+e.submenu-title Модели
+									+e.UL.submenu-list_models
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 7 plus
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 7
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone SE
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 6S plus
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 6S
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 6
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 5s
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 5
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 4s
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 4
+								+e.submenu-section_services
+									+e.submenu-title Услуги
+									+e.UL.submenu-list_service
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена дисплея
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена стекло дисплея
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена аккумулатора
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена кнопки Home
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена задней крышки
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Перепрошивка
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Настройка
+									+e.submenu-descr
+										|Выберите слева модель вашего тефона и мы покажем все наши услуги
+					+e.item
+						+e.item-link(href="#") Samsung, Meizu, Xiaomi и др.
+						+e.submenu
+							+e.submenu-inner
+								+e.submenu-mobile-nav
+									//- Заголовок
+									+e.submenu-mobile-title
+										+e.submenu-mobile-back
+											svg(class="icon",width="7",height="12")
+												use(xlink:href='#icon-left')
+										+e.submenu-mobile-title-text
+											|Выбор устройства для ремонта
+									//- toggle кнопки
+									+b.slide-toggle
+										//- fieldset
+											.switch-toggle.switch-ios
+												input#models(name='option', type='radio', checked='', value="models")
+												label(for='models', onclick='') Модели
+												input#service(name='option', type='radio', value="services")
+												label(for='service', onclick='') Услуги
+												a
+								+e.submenu-section_models
+									+e.submenu-title Модели
+									+e.UL.submenu-list_models
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 7 plus
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 7
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone SE
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 6S plus
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 6S
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 6
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 5s
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 5
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 4s
+										+e.submenu-models-item: +e.submenu-models-link(href="#") Iphone 4
+								+e.submenu-section_services
+									+e.submenu-title Услуги
+									+e.UL.submenu-list_service
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена дисплея
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена стекло дисплея
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена аккумулатора
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена кнопки Home
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Замена задней крышки
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Перепрошивка
+										+e.submenu-service-item: +e.submenu-service-link(href="#") Настройка
+									+e.submenu-descr
+										|Выберите слева модель вашего тефона и мы покажем все наши услуги

@@ -1,0 +1,17 @@
+<svg width="45" height="31" viewBox="0 0 45 31" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>
+    youtube
+  </title>
+  <defs>
+    <path id="a" d="M0 0h45v31H0z"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <g>
+      <mask id="b" fill="#fff">
+        <use xlink:href="#a"/>
+      </mask>
+      <path d="M44.06 4.84c-.518-1.905-2.043-3.405-3.98-3.915C36.573 0 22.5 0 22.5 0S8.428 0 4.92.925c-1.937.51-3.462 2.01-3.98 3.916C0 8.295 0 15.5 0 15.5s0 7.206.94 10.66c.518 1.905 2.043 3.405 3.98 3.915C8.427 31 22.5 31 22.5 31s14.072 0 17.58-.925c1.937-.51 3.462-2.01 3.98-3.916C45 22.705 45 15.5 45 15.5s0-7.206-.94-10.66" fill="#F00" mask="url(#b)"/>
+    </g>
+    <path fill="#FFF" d="M17.898 22.042l11.76-6.542L17.9 8.958"/>
+  </g>
+</svg>

@@ -1,0 +1,177 @@
+/* Styles Start*/
+.pagination {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+
+	&__list {
+		font-size: 0;
+	}
+
+	&__item {
+		display: inline-block;
+		vertical-align: middle;
+
+		&.active {
+			.pagination__link {
+				background-color: $silver;
+			}
+		}
+
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		width: 35px;
+		height: 35px;
+		line-height: 35px;
+		text-align: center;
+		color: $grey;
+		font-size: 1.3rem;
+		background-color: #fff;
+		border: 1px solid $silver;
+		border-radius: 3px;
+
+		&:hover {
+			background-color: $silver;
+		}
+
+		.blog-page & {
+			background-color:#f6f6f6;
+			&:hover {
+				background-color: $silver;
+			}
+			
+		}
+	}
+
+	&__item_next {
+		.pagination__link {
+			@include link-text-indent;
+			border: 1px solid $silver;
+			position: relative;
+			
+			.icon {
+				color: $grey;
+				@include img;
+				width: 8px;
+			}
+
+			&:hover {
+				background-color: $silver;
+			}
+		}
+	}
+
+	&__loader {
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		left: 50%;
+		margin-left: -20px;
+		
+		img {
+			@include img;
+		}
+	}
+}
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	.pagination_catalog {
+		margin-bottom: 30px;
+	}
+
+	.pagination_article-index {
+		margin-bottom: 75px;
+	}
+
+	.pagination {
+
+		&__loader {
+			display: none;
+			// margin-bottom: 20px;
+			// margin-top: 20px;
+		}
+	}
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+	.pagination {
+
+	}
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.pagination {
+		&_catalog {
+			margin-bottom: 120px;
+
+			.pagination__loader {
+				top: 70px;
+			}
+		}
+
+		
+	}
+
+	.pagination_article-index {
+		margin-bottom: 90px;
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.pagination {
+
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.pagination {
+
+		&_catalog {
+			margin-bottom: 140px;
+
+			.pagination__loader {
+				top: 85px;
+			}
+		}
+	}
+
+	.pagination_article-index {
+		margin-bottom: 100px;
+	}
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

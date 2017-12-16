@@ -1,0 +1,307 @@
+/* Styles Start*/
+.top-bar {
+
+	&__menu {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+
+	.top-bar {
+		position: relative;
+		z-index: 2;
+		background-color: #081128;
+		&__inner {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-left: 10px;
+		}
+
+		&__wrapper {
+			display: none;
+		}
+
+		&__mob-logo {
+			width: 110px;
+			height: 15px;
+			.logo {
+
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		&__hamburger {
+			display: inline-flex;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 16px;
+			height: 14px;
+			transition: all .3s;
+			position: relative;
+			span {
+				display: table;
+				margin-left: auto;
+				margin-right: auto;
+				width: 16px;
+				height: 2px;
+				background-color: #fff;
+				border-radius: 2px;
+				transition: all .3s;
+				&:nth-child(2) {
+					width: 10px;
+				}
+			}
+			
+			&.active {
+
+				transform: rotate(-180deg);
+
+				span {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					margin-left: -8px;
+					margin-top: -1px;
+					&:nth-child(1) {
+						transform: rotate(-45deg);
+					}
+					&:nth-child(2) {
+						opacity: 0;
+					}
+					&:nth-child(3) {
+						transform: rotate(45deg);
+					}
+				}
+			}
+		}
+
+		&__mob-tel-btn {
+			.tel__icon_contacts {
+				display: none;
+			}
+
+			.tel__text {
+				@include link-text-indent;
+			}
+		}
+
+		.icon {
+			color: #fff;
+		}
+
+		&__mob-device-btn {
+
+			background-color: $blue;
+			padding: 8px 9px;
+			.device-icon-wrapper {
+				width: 24px;
+				height: 24px;
+				position: relative;
+			}
+
+			.device-icon,
+			.device-close {
+				position: absolute;
+				width: 24px;
+				height: 24px;
+				@include img-center;
+				transition: all .2s;
+			}
+
+			.device-icon {
+				.icon {
+					@include img-center;
+				}
+			}
+
+			.device-close {
+				background-color: #fff;
+				border-radius: 50%;
+				
+				transform: scale(0);
+				&::before,
+				&::after {
+					content: '';
+					position: absolute;
+					height: 1px;
+					width: 8px;
+					background-color: $blue;
+					top: 50%;
+					left: 50%;
+					// margin-top: -4px;
+					margin-left: -4px;
+				}
+
+				&::before {
+					transform: rotate(45deg);
+				}
+
+				&::after {
+					transform: rotate(-45deg);
+				}
+			}
+
+			&.active {
+				.device-close {
+					transform: scale(1);
+				}
+
+				.device-icon {
+					opacity: 0;
+				}
+			}
+		}
+	}//.top-bar
+
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+	
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.top-bar {
+		&__inner {
+			@include container-tab;
+			padding-top: 10px;
+		}
+
+		&__wrapper {
+			
+		}
+
+		&__menu {
+
+		}
+
+		&__menu-item {
+			margin-right: 40px;
+		}
+
+		&__menu-link {
+
+		}
+
+		&__go-btn {
+
+	}
+	
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.top-bar {
+
+		&__mob-logo,
+		&__mob-device-btn,
+		&__hamburger,
+		&__mob-tel-btn {
+			display: none;
+		}
+
+		&__inner {
+
+		}
+
+		&__wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&__menu {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+
+		&__menu-item {
+
+		}
+
+		&__menu-link,
+		&__go-btn {
+			color: #fff;
+			font-size: 1.3rem;
+			font-weight: bold;
+		}
+
+		&__menu-link {
+			position: relative;
+
+			&::before {
+				content: '';
+				position: absolute;
+				height: 1px;
+				width: 0;
+				background-color: #fff;
+				left: 0;
+				bottom: -1px;
+				transition: all .3s ease-in-out;
+			}
+
+			&:hover {
+				&::before {
+					width: 100%;
+				}
+			}
+		}
+
+		&__go-btn {
+			border: 2px solid #fff;
+			border-radius: 20px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 4px;
+			padding-bottom: 4px;
+		}
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.top-bar {
+		&__inner {
+			@include container;
+			padding-top: 10px;
+		}
+
+		&__wrapper {
+			
+		}
+
+		&__menu {
+
+		}
+
+		&__menu-item {
+			margin-right: 50px;
+		}
+
+		&__menu-link {
+
+		}
+
+		&__go-btn {
+
+		}
+	}
+	
+} // (min-width: 1042px)
+
+/*  End*/
+

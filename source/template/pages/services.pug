@@ -1,0 +1,150 @@
+extends ../tpl/_template
+
+block variables
+	- var title = 'Service'
+
+block content
+	SECTION.service-section
+		+b.breadcrumbs
+			+e.inner 
+				+e.UL.list
+					+e.item: +e.link(href="#") Главная
+					+e.item: +e.link(href="#") Ремонт Iphone
+					+e.item: +e.link(href="#") Не включается iPhone
+		+b.service-top
+			+e.inner
+				+e.H1.title.sec-title_xl Не включается iPhone
+				+e.descr
+					|Айфон не включается, что делать? В данной ситуации следует воздержаться от самостоятельного ремонта и поиска рекомендаций в интернете. Если iPhone не включается, то сразу несите его в сервисный центр “iSupport”! Наши опытные мастера благодаря накопленному опыту и наличию лицензионного программного обеспечения и специализированного оборудования точно установят причину поломки, после чего предложат наиболее оптимальный вариант устранения неисправности. Если не включается айфон, то это не повод ставить крест на своём телефоне! В 99% случаев мы сможем вернуть жизнь Вашему гаджету!
+		+b.services_service-page
+			+e.inner
+				+e.H2.title Цены на ремонт iPhone когда не включается:
+				+e.wrapper_service-page
+					+e.content_service-page
+						//- +e.H2.title Цены на ремонт iPhone когда не включается:
+						+e.TABLE.table_service-page
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title iPhone X
+								+e.TD.col-cell_cost
+									+e.price от 2500 руб.
+								+e.TD.col-cell_time
+									+e.time 1 час
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title iPhone 8
+								+e.TD.col-cell_cost
+									+e.price 5000 руб.
+								+e.TD.col-cell_time
+									+e.time 1 час
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title iPhone 7 Plus
+								+e.TD.col-cell_cost
+									+e.price 2000 руб.
+								+e.TD.col-cell_time
+									+e.time 1 час
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title iPhone 7
+								+e.TD.col-cell_cost
+									+e.price 10000 руб.
+								+e.TD.col-cell_time
+									+e.time 1 час
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title iPhone SE
+								+e.TD.col-cell_cost
+									+e.price 2500 руб.
+								+e.TD.col-cell_time
+									+e.time 1 час
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title iPhone 6S Plus
+								+e.TD.col-cell_cost
+									+e.price 5000 руб.
+								+e.TD.col-cell_time
+									+e.time 1 час
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title iPhone 6S
+								+e.TD.col-cell_cost
+									+e.price 2000 руб.
+								+e.TD.col-cell_time
+									+e.time 1 час
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title iPhone 6 Plus
+								+e.TD.col-cell_cost
+									+e.price 2500 руб.
+								+e.TD.col-cell_time
+									+e.time 1 час
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title iPhone 6
+								+e.TD.col-cell_cost
+									+e.price 5000 руб.
+								+e.TD.col-cell_time
+									+e.time 1 час
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title iPhone 5S
+								+e.TD.col-cell_cost
+									+e.price 2000 руб.
+								+e.TD.col-cell_time
+									+e.time 1 час
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title iPhone 5C
+								+e.TD.col-cell_cost
+									+e.price 2500 руб.
+								+e.TD.col-cell_time
+									+e.time 1 час
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title iPhone 5
+								+e.TD.col-cell_cost
+									+e.price 5000 руб.
+								+e.TD.col-cell_time
+									+e.time 1 час
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title iPhone 4S
+								+e.TD.col-cell_cost
+									+e.price 2000 руб.
+								+e.TD.col-cell_time
+									+e.time 1 час
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title iPhone 4
+								+e.TD.col-cell_cost
+									+e.price 2500 руб.
+								+e.TD.col-cell_time
+									+e.time 1 час
+					+e.ASIDE.sidebar_service-page
+						include ../blocks/support
+	SECTION.feedbacks-section.feedbacks-section_services
+		+b.section-head_with-buttons
+			+e.H1.title_feedbacks Отзывы наших клиентов
+			+e.button-group_feedbacks
+				+e.btn_all-fdbs.btn_grey-thin-bd(href="#") Посмотреть все отзывы
+				+e.btn_write-fdb.btn_blue(href="#") Написать отзыв
+		include ../blocks/feedbacks
+	SECTION.depart-b-section
+		include ../blocks/depart-b
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

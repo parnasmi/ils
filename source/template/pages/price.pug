@@ -1,0 +1,370 @@
+extends ../tpl/_template
+
+block variables
+	- var title = 'Price'
+
+block content
+	SECTION.price-section
+		+b.price-header
+			+e.inner
+				+b.breadcrumbs
+					//- +e.inner 
+					+e.UL.list
+						+e.item: +e.link(href="#") Главная
+						+e.item: +e.link(href="#") Ремонт Iphone
+						+e.item: +e.link(href="#") Iphone X
+				+e.top
+					+e.title-wrapper
+						+e.H1.title.sec-title_xl Услуги и цены на ремонт iPhone X
+						+e.image
+							img(src="./assets/pics/img-iphonex.jpg", alt)
+					+e.mobile-toggle
+						fieldset
+							.switch-toggle.switch-ios.price
+								input.price-input#by-service(name='option', type='radio', checked='', value="by-service")
+								label.price-label(for='by-service', onclick='') По услуги
+								input.price-input#by-problem(name='option', type='radio', value="by-problem")
+								label.price-label(for='by-problem', onclick='') По проблеме
+								a.price-toggle
+					+e.search
+						form
+							+e.search-inner
+								+e.INPUT.search-input(type="search", placeholder="Быстрый поиск услуги")
+								+e.BUTTON.search-button(type="submit")
+									+e.search-icon
+										svg(class="icon",width="16",height="16")
+											use(xlink:href='#icon-search')
+									+e.search-text Поиск
+		+b.services_price
+			+e.inner
+				+e.wrapper_price-page
+					+e.SECTION.content_price-page
+						+e.TABLE.table_price-page
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Вызов курьера
+									+e.col-cell-descr
+										|Наш курьер бесплатно заберет ваше устройство в ремонт, а после завершения ремонта может привезти обратно всего за 300 рублей.
+								+e.TD.col-cell_cost
+									+e.price_buttoned бесплатно
+								+e.TD.col-cell_time
+									+e.time_btn.btn_blue(href="#") Отправить заявку
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Диагностика
+								+e.TD.col-cell_cost
+									+e.price_buttoned бесплатно
+								+e.TD.col-cell_time
+									+e.time 15 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title(href="#") Замены платы
+								+e.TD.col-cell_cost
+									+e.price от 25000 руб.
+								+e.TD.col-cell_time
+									+e.time 1 час 30 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title(href="#") Замены стекла*
+								+e.TD.col-cell_cost
+									+e.price 7000 руб.
+								+e.TD.col-cell_time
+									+e.time 45 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Замена дисплея копия
+								+e.TD.col-cell_cost
+									+e.price 7000 руб.
+								+e.TD.col-cell_time
+									+e.time 30 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Замена дисплея Orig*
+								+e.TD.col-cell_cost
+									+e.price 10900 руб.
+								+e.TD.col-cell_time
+									+e.time 30 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Замена кнопки вкл/выкл
+								+e.TD.col-cell_cost
+									+e.price 2500 руб.
+								+e.TD.col-cell_time
+									+e.time 45 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Замена кнопки Home
+								+e.TD.col-cell_cost
+									+e.price 2500 руб.
+								+e.TD.col-cell_time
+									+e.time 30 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title(href="#") Замена слухового динамика
+								+e.TD.col-cell_cost
+									+e.price 2500 руб.
+								+e.TD.col-cell_time
+									+e.time 30 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Замена микрофона
+								+e.TD.col-cell_cost
+									+e.price 2500 руб.
+								+e.TD.col-cell_time
+									+e.time 30 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Замена аккумулятора
+								+e.TD.col-cell_cost
+									+e.price 3000 руб.
+								+e.TD.col-cell_time
+									+e.time 30 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title(href="#") Замена камеры
+								+e.TD.col-cell_cost
+									+e.price 4000 руб.
+								+e.TD.col-cell_time
+									+e.time 30 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Замена задней крышки (корпус)
+								+e.TD.col-cell_cost
+									+e.price 5000 руб.
+								+e.TD.col-cell_time
+									+e.time 30 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Замена разъема наушников
+								+e.TD.col-cell_cost
+									+e.price 2500 руб.
+								+e.TD.col-cell_time
+									+e.time 30 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Замена SIM-лоток
+								+e.TD.col-cell_cost
+									+e.price 1000 руб.
+								+e.TD.col-cell_time
+									+e.time 30 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Замена виброзвонка
+								+e.TD.col-cell_cost
+									+e.price 2500 руб.
+								+e.TD.col-cell_time
+									+e.time 30 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Ремонт iPhone после попадания воды
+								+e.TD.col-cell_cost
+									+e.price 2000 руб.
+								+e.TD.col-cell_time
+									+e.time 30 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Перепрошивка iPhone
+								+e.TD.col-cell_cost
+									+e.price 1000 руб.
+								+e.TD.col-cell_time
+									+e.time 10 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Разлочка iPhone
+								+e.TD.col-cell_cost
+									+e.price 1000 руб.
+								+e.TD.col-cell_time
+									+e.time 10 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Замена WiFi модуля
+								+e.TD.col-cell_cost
+									+e.price 5000 руб.
+								+e.TD.col-cell_time
+									+e.time 10 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Замена разъема
+								+e.TD.col-cell_cost
+									+e.price 1000 руб.
+								+e.TD.col-cell_time
+									+e.time 30 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Разблокировка Apple ID
+								+e.TD.col-cell_cost
+									+e.price 7000 руб.
+								+e.TD.col-cell_time
+									+e.time 1 день
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Замена стеклошко камера
+								+e.TD.col-cell_cost
+									+e.price 2000 руб.
+								+e.TD.col-cell_time
+									+e.time 30 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Замена кнопки регулировки громкости
+								+e.TD.col-cell_cost
+									+e.price 2500 руб.
+								+e.TD.col-cell_time
+									+e.time 1 день
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Не работает вспышка
+								+e.TD.col-cell_cost
+									+e.price 2500 руб.
+								+e.TD.col-cell_time
+									+e.time 30 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Не работает GPS
+								+e.TD.col-cell_cost
+									+e.price 5500 руб.
+								+e.TD.col-cell_time
+									+e.time 1 день
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Не гаснет дисплей при разговоре
+								+e.TD.col-cell_cost
+									+e.price 2500 руб.
+								+e.TD.col-cell_time
+									+e.time 30 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Не ловит сеть
+								+e.TD.col-cell_cost
+									+e.price 5000 руб.
+								+e.TD.col-cell_time
+									+e.time 1 день
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Не работает полифонический динамик
+								+e.TD.col-cell_cost
+									+e.price 2500 руб.
+								+e.TD.col-cell_time
+									+e.time 1 день
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title Перенос данных на другой iPhone
+								+e.TD.col-cell_cost
+									+e.price 2000 руб.
+								+e.TD.col-cell_time
+									+e.time 30 минут
+							+e.TR.row
+								+e.TD.col-cell_ser-name
+									+e.col-cell-title(href="#") Обмен по гарантии
+								+e.TD.col-cell_cost
+									+e.price 10000 руб.
+								+e.TD.col-cell_time
+									+e.time 1 день
+						+e.comments
+							p.accented Запчасти для ремонта уже включены в стоимость работы.
+							p *Дисплей Original производство Китай. Она более дешевая и отличается только с покритием стекла.
+							p **Все зависет от сложности ремонта.
+					+e.ASIDE.sidebar_by-problem
+						+b.problem
+							+e.header
+								+e.H2.title Не знаете какая услуга вам нужна?
+								+e.descr Найдите услугу по проблеме
+							+e.type-wrapper
+								+e.type
+									+e.type-title Общие
+									+e.UL.type-list
+										+e.type-item: +e.type-link(href="#") Не работает Wi-Fi
+										+e.type-item: +e.type-link(href="#") Не включается
+										+e.type-item: +e.type-link(href="#") Попала влага
+										+e.type-item: +e.type-link(href="#") Просит iTunes
+										+e.type-item: +e.type-link(href="#") Забыт пароль
+										+e.type-item: +e.type-link(href="#") Зависает(обновить ПО)
+								+e.type
+									+e.type-title Экран/дисплей
+									+e.UL.type-list
+										+e.type-item: +e.type-link(href="#") Не гаснет при разговоре
+										+e.type-item: +e.type-link(href="#") Не работает часть экрана
+										+e.type-item: +e.type-link(href="#") Не работает сенсор
+										+e.type-item: +e.type-link(href="#") Нет подсветки
+										+e.type-item: +e.type-link(href="#") Разбилось стекло
+								+e.type
+									+e.type-title Задняя крышка
+									+e.UL.type-list
+										+e.type-item: +e.type-link(href="#") Поцарапана зад. крышка
+										+e.type-item: +e.type-link(href="#") Разбит полностью
+										+e.type-item: +e.type-link(href="#") Треснула зад. крышка
+								+e.type
+									+e.type-title Зарядка
+									+e.UL.type-list
+										+e.type-item: +e.type-link(href="#") Быстро садитсяот
+										+e.type-item: +e.type-link(href="#") Греется
+										+e.type-item: +e.type-link(href="#") Не заряжаетсяот
+										+e.type-item: +e.type-link(href="#") Плохой контакт
+								+e.type
+									+e.type-title Связь (Сеть)
+									+e.UL.type-list
+										+e.type-item: +e.type-link(href="#") Не видит SIM
+										+e.type-item: +e.type-link(href="#") Нет сети
+										+e.type-item: +e.type-link(href="#") Сеть ловит плохо
+								+e.type
+									+e.type-title Разговор
+									+e.UL.type-list
+										+e.type-item: +e.type-link(href="#") Собеседник не слышит
+										+e.type-item: +e.type-link(href="#") Собеседник плохо слышит
+										+e.type-item: +e.type-link(href="#") Я не слышу собеседника
+										+e.type-item: +e.type-link(href="#") Плохо слышу собеседника
+								+e.type
+									+e.type-title Кнопки
+									+e.UL.type-list
+										+e.type-item: +e.type-link(href="#") Ремонт кнопки громкомсти
+										+e.type-item: +e.type-link(href="#") Ремонт кнопки вибро
+										+e.type-item: +e.type-link(href="#") Ремонт кнопки вкл/выкл
+										+e.type-item: +e.type-link(href="#") Ремонт кнопки Home
+								+e.type
+									+e.type-title Камеры
+									+e.UL.type-list
+										+e.type-item: +e.type-link(href="#") Не фокусирует передняя
+										+e.type-item: +e.type-link(href="#") Не фокусирует задняя
+										+e.type-item: +e.type-link(href="#") Не работает передняя
+										+e.type-item: +e.type-link(href="#") Не работает задняя
+	SECTION.feedbacks-section.feedbacks-section_price
+		+b.section-head_with-buttons
+			+e.H1.title_feedbacks Отзывы наших клиентов
+			+e.button-group_feedbacks
+				+e.btn_all-fdbs.btn_grey-thin-bd(href="#") Посмотреть все отзывы
+				+e.btn_write-fdb.btn_blue(href="#") Написать отзыв
+		include ../blocks/feedbacks
+	+b.price-seo
+		+e.inner
+			+e.H3.title Ремонт iPhone X
+			+e.content
+				p
+					|Сервисный центр «iLikeService» ремонтирует iPhone 3G и 3GS в Москве. Все ремонты выполняются сразу же, в короткие сроки. Во время ремонта клиенты могут находится в сервисе или уходить по своим делам.
+				p
+					|Меняем неисправные запчасти — <a href="#">дисплеи</a>, <a href="#">аккумуляторы</a>, <a href="#">шлейфы</a>, <a href="#">динамики</a> и другие компоненты телефона. 
+				p
+					|Чиним неисправности материнских плат. Меняем микросхемы и восстанавливаем элементы — <a href="#">резисторы</a>, <a href="#">конденсаторы</a>, <a href="#">разъемы</a> и <a href="#">проводники</a>.
+	SECTION.depart-b-section
+		include ../blocks/depart-b
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

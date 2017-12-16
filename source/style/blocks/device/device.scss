@@ -1,0 +1,115 @@
+/* Styles Start*/
+
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	.device-indemand {
+		margin-bottom: 30px;
+	}
+
+	.device-bottom {
+		display: none;
+	}
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.device {
+		&__banner-wrapper {
+			@include container-tab;
+			margin-bottom: 30px;
+		}
+	}
+
+	.device-indemand {
+		margin-bottom: 20px;
+	}
+
+	.device-bottom {
+		margin-bottom: 30px;
+		
+		&__inner {
+			width: 738px;
+		}
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.device {
+		&__banner-wrapper {
+			
+		}
+	}
+
+	.device-bottom {
+		&__inner {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&__descr-title {
+			margin-bottom: 20px;
+			font-size: 2.5rem;
+			color: $grey;
+			text-align: center;
+		}
+
+		p {
+			// text-align: center;
+			color: $grey;
+		}
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.device {
+		&__banner-wrapper {
+			@include container;
+			margin-bottom: 50px;
+		}
+	}
+
+	.device-indemand {
+		margin-bottom: 55px;
+	}
+
+	.device-bottom {
+		margin-bottom: 50px;
+
+		&__inner {
+			width: 970px;
+		}
+	}
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

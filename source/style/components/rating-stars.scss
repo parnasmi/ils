@@ -1,0 +1,90 @@
+/*Rating Styles Start*/
+
+
+
+
+
+// .rating-stars__list {
+// 	list-style: none;
+// 	font-size: 0;
+// 	margin: 0;
+// 	padding: 0;
+// 	display: inline-block;
+// 	vertical-align: middle;
+// }
+
+// .feedback-count {
+// 	display: inline-block;
+// 	vertical-align: middle;
+// 	line-height: 1;
+// 	margin-left: 3px;
+// 	position: relative;
+// 	top: 1px;
+// 	a {
+// 		display: inline-block;
+// 		color: $grey-7;
+// 		font-size: 11px;
+// 		line-height: 1;
+// 		border-bottom: 1px solid $grey-7;
+
+// 		&:hover {
+// 			border-bottom-color: transparent;
+// 			transition: all .3s ease;
+// 		}
+// 	}
+// }
+
+// .rating-stars__item {
+// 	font-size: 14px;
+// 	display: inline-block;
+// 	width: 15px;
+// 	height: 15px;
+// 	margin-left: 2px;
+// 	margin-right: 2px;
+// }
+
+// .rating-stars__item .checked {
+// 	display: none;
+// }
+// .rating-stars__item .not-checked {
+// 	display: block;
+// }
+
+// .rating-stars__item.rating-stars__item--full .not-checked {
+// 	display: none;
+// }
+
+// .rating-stars__item.rating-stars__item--full .checked {
+// 	display: block;
+// }
+
+
+/* --Only Mobile Styles * 767-- */
+@media #{$mobileonly} {
+
+}
+
+/* --Only Mobile&Tablet styles * 1023-- */
+@media #{$mobtabonly} {
+
+}//@media (max-width: 1023px) 
+
+
+/* --Only Tablet Styles !!! 768 < || 1023-- */
+@media #{$tabonly} {
+
+}//#{$tabonly}
+
+
+/* --Tablet Media queries-- */
+@media #{$tabdeskonly} {
+
+} //(min-width: 768px)
+
+
+/* --Desktop Media queries-- */
+@media #{$deskonly} {
+
+}
+
+/* Rating End*/

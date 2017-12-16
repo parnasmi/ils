@@ -1,0 +1,202 @@
+/* Styles Start*/
+.problem {
+
+	&__title {
+		font-weight: 700;
+	}
+
+	&__descr {
+
+	}
+
+	&__type-list {
+		line-height: 1;
+	}
+
+	&__type-title {
+		font-weight: 700;
+	}
+
+	&__type-link {
+		color: $grey;
+
+		&:hover {
+			color: $blue;
+		}
+	}
+}
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	.problem {
+		&__header {
+			display: none;
+		}
+
+		&__title {
+
+		}
+
+		&__type {
+			margin-bottom: 30px;
+		}
+
+		&__type-title {
+			margin-bottom: 16px;
+		}
+
+		&__type-item {
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+		}
+
+
+
+	}
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+	.problem {
+		&__title {
+
+		}
+
+		&__type-title {
+			
+		}
+
+		&__type-item {
+
+		}
+	}
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.problem {
+		&__header {
+					margin-bottom: 50px;
+					text-align: center;
+				}
+
+				&__title {
+					font-size: 3rem;
+					margin-bottom: 5px;
+				}
+
+				&__descr {
+					font-size: 2rem;
+					color: $grey;
+				}
+
+				&__type-wrapper {
+					font-size: 0;
+					margin-right: -30px;
+				}
+
+				&__type {
+					margin-bottom: 50px;
+					display: inline-block;
+					vertical-align: top;
+					width: 226px;
+					margin-right: 30px;
+				}
+
+				&__type-title {
+					margin-bottom: 21px;
+				}
+
+				&__type-list {
+
+				}
+
+				&__type-item {
+					&:not(:last-child) {
+						margin-bottom: 21px;
+					}
+				}
+
+				&__type-title,
+				&__type-link {
+					font-size: 1.6rem;
+				}
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.problem {
+
+		&__title {
+
+		}
+
+		&__type-title {
+			
+		}
+
+		&__type-item {
+
+		}
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.problem {
+		&__header {
+			margin-bottom: 30px;
+		}
+
+		&__title {
+
+		}
+
+		&__type {
+			margin-bottom: 30px;
+		}
+
+		&__type-title {
+			margin-bottom: 12px;
+		}
+
+		&__type-list {
+
+		}
+
+		&__type-item {
+			&:not(:last-child) {
+				margin-bottom: 12px;
+			}
+		}
+
+
+	}
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

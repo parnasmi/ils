@@ -1,0 +1,41 @@
+extends ../tpl/_template
+
+block variables
+	- var title = 'Главная'
+
+block content
+	//- First screen
+	include ../blocks/first
+	SECTION.index-device-select
+		+b.section-head
+			+e.H1.title Выберите устройства для ремонта
+			+e.descr Для вашего удобство мы разделили каждую технику на модели, выберите устройства и далее услугу
+		include ../blocks/select
+	SECTION.indemand-section.indemand-section_index
+		+b.section-head
+			+e.H1.title Самые востребованные услуги
+		include ../blocks/indemand
+	SECTION.feedbacks-section.feedbacks-section_index
+		+b.section-head_with-buttons
+			+e.H1.title_feedbacks Отзывы наших клиентов
+			+e.button-group_feedbacks
+				+e.btn_all-fdbs.btn_grey-thin-bd(href="#") Посмотреть все отзывы
+				+e.btn_write-fdb.btn_blue(href="#") Написать отзыв
+		include ../blocks/feedbacks
+	SECTION.video-section.video-section_index
+		+b.section-head
+			+e.H1.title_video Посмотрите как мы ремонтируем
+		include ../blocks/video
+	SECTION.shop-items-section
+		+b.section-head
+			+e.H1.title_shop-items  Популярные аксессуары в нашем магазине
+		include ../blocks/index-items
+	SECTION.shop-banner-section
+		.shop-banner-section__inner
+			include ../blocks/shop-banner
+	SECTION.info-section
+		include ../blocks/home-info
+	SECTION.about-section
+		include ../blocks/about
+	SECTION.depart-b-section
+		include ../blocks/depart-b

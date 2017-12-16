@@ -1,0 +1,82 @@
+extends ../tpl/_template
+
+block variables
+	- var title = 'Item page'
+
+block content
+	+b.breadcrumbs
+		+e.inner 
+			+e.UL.list
+				+e.item: +e.link(href="#") Главная
+				+e.item: +e.link(href="#") Каталог iLikeService
+				+e.item: +e.link(href="#") Кожанные чехлы
+	+b.SECTION.item-info
+		+e.inner
+			+e.header
+				+e.H2.title
+					+e.title-text Красный Beats Solo наушники большие
+				+e.nav
+					+e.UL.nav-list
+						+e.nav-item
+							+e.nav-link(href="#")
+								svg(class="icon",width="7",height="12")
+									use(xlink:href='#arrow-left')
+							+e.tooltip
+								+e.tooltip-title Предьидущий товар
+								+e.tooltip-text Beats Big красный маленький для Apple
+						+e.nav-item
+							+e.nav-link(href="#")
+								svg(class="icon",width="7",height="12")
+									use(xlink:href='#arrow-right')
+							+e.tooltip
+								+e.tooltip-title Следующий товар
+								+e.tooltip-text Beats Big красный маленький для Apple
+			+e.wrapper
+				+b.item-slider
+					+e.inner
+						+e.main
+							+e.image-wrapper
+								+e.init
+									+e.image
+										img(src="./assets/pics/pic-slider-1.jpg", alt)
+									+e.image
+										img(src="./assets/pics/pic-slider-2.png", alt)
+									+e.image
+										img(src="./assets/pics/pic-slider-3.png", alt)
+									+e.image
+										img(src="./assets/pics/pic-slider-4.png", alt)
+									+e.image
+										img(src="./assets/pics/pic-slider-5.png", alt)
+							+e.price
+						+e.thumbs
+							+e.thumbs-inner
+								+e.thumbs-init
+									+e.thumb-i
+										img(src="./assets/pics/thumb-slider-1.jpg", alt)
+									+e.thumb-i
+										img(src="./assets/pics/thumb-slider-2.jpg", alt)
+									+e.thumb-i
+										img(src="./assets/pics/thumb-slider-3.jpg", alt)
+									+e.thumb-i
+										img(src="./assets/pics/thumb-slider-4.jpg", alt)
+									+e.thumb-i
+										img(src="./assets/pics/thumb-slider-5.jpg", alt)
+				+e.descr
+					+e.H2.descr-title
+					+e.descr-text
+						|Beats Solo3 Wireless работают от аккумулятора до 40 часов и оснащены чипом Apple W1. Если наушники все же разрядились, благодаря технологии Fast Fuel пяти минут подзарядки хватит на три часа работы. Элементы управления на чашке наушников и два направленных микрофона обеспечивают удобство ответа на звонки, управления музыкой и громкостью и вызова Siri, даже если вы в пути.
+					+e.price
+						+e.price-wrapper
+							+e.price-sum_price-regular <strong>990</strong> руб
+							+e.price-sum_price-old <strong>1200</strong> руб
+					+e.address
+						+e.address-title Это товар вы можете купить у нас в магазине
+						+e.address-wrapper
+							+e.address-item: +e.address-link(href="#") Москва, ул. Русакова 22, м.Сокольники
+							+e.address-item: +e.address-link(href="#") Москва, ул. С. Радонежского 23-25, м. Римская
+	SECTION.shop-items-section
+		+b.section-head
+			+e.H1.title_shop-items Похожие товары
+		include ../blocks/index-items_item-page
+	SECTION.depart-b-section
+		include ../blocks/depart-b

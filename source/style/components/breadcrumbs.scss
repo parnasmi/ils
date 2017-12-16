@@ -1,0 +1,109 @@
+/* Styles Start*/
+.breadcrumbs {
+	margin-bottom: 20px;
+	
+	&__list {
+		font-size: 0;
+	}
+
+	&__item {
+		display: inline-block;
+		vertical-align: middle;
+
+		position: relative;
+
+		&:not(:last-child) {
+			margin-right: 35px;
+
+			&::after {
+				content: '';
+				position: absolute;
+				height: 2px;
+				width: 15px;
+				top: 50%;
+				margin-top: -1px;
+				right: -24px;
+				background-color: $silver;
+			}
+		}
+	}
+
+	&__link {
+		color: $grey;
+		font-size: 1.3rem;
+		line-height: 1;
+
+		&:hover {
+			color: $blue;
+		}
+	}
+}
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	.breadcrumbs {
+		padding-left: 10px;
+		padding-right: 10px;
+		
+		&__item {
+			// margin-bottom: 5px;
+		}
+	}
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+	.breadcrumbs {
+		
+	}
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.breadcrumbs {
+		&__inner {
+			@include container-tab;
+		}
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.breadcrumbs {
+		
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.breadcrumbs {
+		&__inner {
+			@include container;
+		}
+	}
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

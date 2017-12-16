@@ -1,0 +1,407 @@
+/* Styles Start*/
+.item-info {
+	&__title {
+
+	}
+
+	&__title-text {
+		font-weight: 700;
+	}
+
+	&__price-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__price-sum {
+		font-size: 1.2rem;
+		strong {
+			font-weight: 700;
+		}
+	}
+
+	&__price-sum_price-old {
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 3px;
+			background-color: #f00;
+			top: 20px;
+			left: 0;
+			transform: rotate(8deg);
+		}
+	}
+
+	&__descr-text {
+		color: $grey;
+		font-size: 1.4rem;
+	}
+
+	&__address {
+		background-color: $blue;
+		color: #fff;
+		border-radius: 8px;
+
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	&__address-title {
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	&__address-item {
+		counter-increment: address-count;
+		padding-left: 28px;
+		position: relative;
+
+		&::before {
+			content: counter(address-count);
+			position: absolute;
+			background-color: #fff;
+			border-radius: 50%;
+			text-align: center;
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			font-weight: 700;
+			font-size: 1.2rem;
+			color: $blue;
+			left: 0;
+			top: 0;
+		}
+	}
+
+	&__address-link {
+		font-size: 1.4rem;
+		color: #fff;
+		font-weight: 700;
+		border-bottom: 1px solid rgba(#fff, .3);
+		
+		&:hover {
+			border-bottom-color: transparent;
+		}
+	}
+}
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	.item-info {
+		padding-left: 10px;
+		padding-right: 10px;
+
+		&__wrapper {
+			margin-bottom: 30px;
+		}
+
+		&__title {
+			margin-bottom: 20px;
+		}
+
+		&__title-text {
+			font-size: 2rem;
+		}
+
+		&__nav {
+			display: none;
+		}
+
+		&__price-sum {
+			strong {
+				font-size: 3rem;
+			}
+		}
+
+		&__price-sum_price-old {
+			margin-left: 25px;
+		}
+
+		&__descr-text {
+			margin-bottom: 20px;
+		}
+
+		&__address {
+			// padding: 20px 15px 20px 10px;
+			padding-left: 10px;
+			padding-right: 15px;
+		}
+
+		&__address-item {
+			margin-bottom: 10px;
+		}
+	}
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+	.item-info {
+		&__price {
+			display: none;
+		}
+
+		&__descr-title {
+			display: none;
+		}
+
+	}
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.item-info {
+		margin-bottom: 30px;
+
+		&__inner {
+			@include container-tab;
+		}
+
+		&__header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			margin-bottom: 30px;
+		}
+
+		&__title-text {
+			font-size: 3rem;
+		}
+
+		&__price-sum_price-old {
+			margin-left: 30px;
+		}
+
+		&__descr-text {
+			margin-bottom: 30px;
+		}
+
+		&__address {
+			padding-left: 35px;
+			padding-right: 35px;
+		}
+
+		&__address-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		&__tooltip {
+			display: none;
+		}
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.item-info {
+		
+		&__nav {
+			width: 98px;
+		}
+
+		&__nav-list {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		&__nav-link {
+			display: block;
+			border: 2px solid $silver;
+			border-radius: 50%;
+			width: 40px;
+			height: 40px;
+			position: relative;
+			.icon {
+				@include img-center;
+				color: $grey;
+				transition: all .3s;
+			}
+
+			&:hover {
+				.icon {
+					color: $blue;
+				}
+			}
+		}
+
+		&__price-sum {
+			strong {
+				font-size: 4rem;
+			}
+		}
+
+		&__price-sum_price-old {
+
+			&::before {
+				top: 28px;
+			}
+		}
+	}//.item-info
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.item-info {
+		margin-bottom: 50px;
+		
+		&__inner {
+			@include container;
+			position: relative;
+		}
+
+		&__nav {
+			position: absolute;
+			right: 0;
+			top: -40px;
+		}
+
+		&__header {
+			.item-info__title {
+				display: none;
+			}
+		}
+
+		&__wrapper {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+
+		&__descr {
+			width: 475px;
+		}
+
+		&__descr-title,
+		&__descr-text,
+		&__price {
+			margin-bottom: 40px;
+		}
+
+		&__price-wrapper {
+			justify-content: flex-start;
+		}
+
+		&__title-text {
+			font-size: 4rem;
+		}
+
+		&__price {
+
+		}
+
+		&__price-sum_price-old {
+			margin-left: 40px;
+		}
+
+		&__address {
+			display: inline-block;
+			// padding-left: 10px;
+			// padding-right: 20px;
+		}
+
+		&__address-wrapper {
+			padding-left: 10px;
+			padding-right: 20px;
+		}
+
+		&__address-item {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+
+		&__nav-item {
+			position: relative;
+
+			&:hover {
+				.item-info__tooltip {
+					pointer-events: auto;
+					opacity: 1;
+					transform: translateX(-50%) translateY(0rem);
+				}
+			}
+		}
+
+		&__tooltip {
+			position: absolute;
+			top: 55px;
+			left: 50%;
+			transform: translateX(-50%) translateY(1rem);
+			background-color: #fff;
+			border-radius: 8px;
+			border: 1px solid $silver;
+			text-align: center;
+			color: $grey;
+			font-size: 1.2rem;
+			padding: 10px;
+			z-index: 10;
+			width: 150px;
+			transition: all .3s;
+
+			pointer-events: none;
+			opacity: 0;
+
+			&::before,
+			&::after {
+				bottom: 100%;
+				left: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+			}
+
+			&::after {
+				border-color: rgba(255, 255, 255, 0);
+				border-bottom-color: #fff;
+				border-width: 8px;
+				margin-left: -8px;
+			}
+
+			&::before {
+				border-color: rgba(223, 225, 234, 0);
+				border-bottom-color: #dfe1ea;
+				border-width: 9px;
+				margin-left: -9px;
+			}
+		}
+
+		&__tooltip-title {
+			font-weight: 700;
+		}
+	}
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

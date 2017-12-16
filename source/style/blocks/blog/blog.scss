@@ -1,0 +1,413 @@
+/* .blog Styles Start*/
+body.blog-page {
+	background-color: #f6f6f6;
+}
+.blog {
+
+	&__inner {
+
+	}
+
+	&__title,
+	&__item-title {
+		font-weight: 700;
+	}
+
+	&__wrapper {
+		font-size: 0;
+	}
+
+	&__col {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__item {
+		background-color: #fff;
+		border-radius: 8px;
+		border: 1px solid $silver;
+	}
+
+	&__image {
+		position: relative;
+		display: block;
+		border-radius: 8px;
+		overflow: hidden;
+		margin-left: auto;
+		margin-right: auto;
+
+		img {
+			@include img;
+		}
+	}
+
+	&__item-title {
+		// font-weight: 700;
+		display: inline-block;
+		color: $dark;
+		&:hover {
+			color: $blue;
+		}
+	}
+
+	&__text {
+		color: $grey;
+	}
+
+	&__more-link {
+		color: $blue;
+		font-size: 1.4rem;
+		display: block;
+	}
+
+	&__more-link-text,
+	&__more-link-icon {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__more-link-icon {
+		width: 8px;
+		height: 7px;
+		position: relative;
+		.icon {
+			@include img-center;
+			color: $blue;
+		}
+	}
+
+	&__date {
+		color: $grey;
+	}
+}
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	.blog {
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-bottom: 10px;
+		
+		&__inner {
+			width: 100%;
+		}
+
+		&__title {
+			font-size: 2rem;
+			margin-bottom: 20px;
+		}
+
+		&__wrapper {
+		
+		}
+
+		&__col {
+			width: 50%;
+			margin-bottom: 20px;
+			&:nth-child(odd) {
+				padding-right: 10px;
+			}
+
+			&:nth-child(even) {
+				padding-left: 10px;
+			}
+		}
+
+		&__item {
+			padding: 10px;
+		}
+
+		&__item_news {
+			.blog__more-link {
+				display: block;
+			}
+		}
+
+		&__image {
+			width: 120px;
+			height: 120px;
+		}
+
+		&__image,
+		&__item-title {
+			margin-bottom: 10px;
+		}
+
+		&__item-title {
+			font-size: 1.4rem;
+		}
+
+		&__text {
+			font-size: 1.3rem;
+		}
+
+		&__more-link {
+			display: none;
+		}
+
+		&__more-link-icon {
+			margin-left: 5px;
+		}
+
+		&__date {
+			font-size: 1.3rem;
+			margin-bottom: 10px;
+		}
+	}
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+	.blog {
+		&__inner {
+
+		}
+
+		&__title {
+			text-align: center;
+		}
+
+		&__wrapper {
+			
+		}
+
+		
+
+		&__item {
+
+		}
+
+		&__image {
+
+		}
+
+		&__item-title {
+
+		}
+
+		&__text {
+
+		}
+
+		&__more-link {
+
+		}
+
+		&__more-link-text {
+
+		}
+
+		&__more-link-icon {
+
+		}
+	}
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.blog {
+		&__inner {
+			@include container-tab;
+		}
+
+		&__title {
+
+		}
+
+		&__wrapper {
+			margin-right: -30px;
+		}
+
+		&__col {
+			width: 354px;
+			margin-right: 30px;
+		}
+
+		&__item {
+			padding: 20px;
+		}
+
+		&__image {
+
+		}
+
+		&__item-title {
+			font-size: 2rem;
+		}
+
+		&__text {
+
+		}
+
+		&__more-link {
+
+		}
+
+		&__more-link-text {
+
+		}
+
+		&__more-link-icon {
+
+		}
+
+		&__date {
+			font-size: 1.4rem;
+		}
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.blog {
+		margin-bottom: 20px;
+
+		
+
+		&__title {
+			font-size: 3rem;
+			margin-bottom: 30px;
+		}
+
+		&__wrapper {
+
+		}
+
+		&__col {
+			margin-bottom: 30px;
+		}
+
+		&__item {
+
+		}
+
+		&__image {
+			margin-bottom: 30px;
+			width: 160px;
+			height: 160px;
+		}
+
+		&__item-title {
+
+		}
+
+		&__item-title,
+		&__text {
+			margin-bottom: 20px;
+		}
+
+		&__text {
+			font-size: 1.4rem;
+		}
+
+		&__more-link {
+				&:hover {
+					
+					.blog__more-link-text,
+					.blog__more-link-icon .icon{
+						color: $dark;
+					}
+
+				}
+		}
+
+		&__more-link-text {
+			
+		}
+
+		&__more-link-icon {
+			margin-left: 5px;
+		}
+
+		&__more-link-text,
+		&__more-link-icon {
+			transition: all .3s;
+		}
+
+		&__date {
+			margin-bottom: 20px;
+		}
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.blog {
+		&__inner {
+			@include container;
+		}
+
+		&__title {
+
+		}
+
+		&__wrapper {
+			margin-right: -70px;
+		}
+
+		&__col {
+			width: 550px;
+			margin-right: 70px;
+		}
+
+		&__item {
+			padding: 30px;
+		}
+
+		&__image {
+
+			&:hover {
+				transform: translateY(-1rem);
+			}
+		}
+
+		&__item-title {
+			font-size: 2.5rem;
+		}
+
+		&__text {
+
+		}
+
+		&__more-link {
+
+		}
+
+		&__more-link-text {
+
+		}
+
+		&__more-link-icon {
+
+		}
+
+		&__date {
+			font-size: 1.1rem;
+		}
+	}
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

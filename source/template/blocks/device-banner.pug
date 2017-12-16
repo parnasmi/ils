@@ -1,0 +1,29 @@
++b.device-banner
+	+e.inner
+		+e.UL.list
+			+e.item
+				+e.icon_guarantee
+					svg(class="icon",width="32",height="30")
+						use(xlink:href='#icon-star-check')
+				+e.content
+					+e.item-title Гарантия
+					+e.item-text 100 дней на выполненные работы
+			+e.item
+				+e.icon_diagnostics
+					svg(class="icon",width="33",height="24")
+						use(xlink:href='#icon-check')
+				+e.content
+					+e.item-title Диагностика бесплатна
+					+e.item-text Даже при отказе от ремонта
+			+e.item
+				+e.icon_comfort
+					svg(class="icon",width="32.5",height="26")
+						use(xlink:href='#icon-coffee')
+				+e.content
+					+e.item-title Комфорт
+					+e.item-text Уютная мастерская, кофе и iPad
+			+e.item_img
+				picture
+					source(media="(min-width:1280px)", srcset="./assets/pics/banner-iphone@1x-desk.png 1x, ./assets/pics/banner-iphone@2x-desk.png 2x")
+					source(media="(max-width:1024px)", srcset="./assets/pics/banner-iphone@1x-tab.png 1x, ./assets/pics/banner-iphone@2x-tab.png 2x")
+					img(src="./assets/pics/banner-iphone@1x-tab.png" srcset="banner-iphone@2x-tab.png.png 2x",alt="")

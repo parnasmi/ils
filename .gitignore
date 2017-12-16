@@ -1,0 +1,12 @@
+/node_modules/
+/bower_components/
+/assets/
+/temp/
+/Design/
+/gulp/
+.DS_Store
+Thumbs.db
+*.sublime*
+*.log
+*.psd
+*.zip

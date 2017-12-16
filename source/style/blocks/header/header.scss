@@ -1,0 +1,190 @@
+/* Styles Start*/
+.page-header {
+	background-color: #081128;
+	position: relative;
+}
+
+.logo {
+	display: block;
+	img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+
+.address {
+	
+	&__metro {
+		font-size: 0;
+	}
+
+	&__metro-icon,
+	&__metro-text {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__metro-icon {
+		position: relative;
+
+		img {
+			@include img-center;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	&__metro-text {
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			height: 1px;width: 100%;
+			left: 0;
+			bottom: -1px;
+		}
+	}
+}
+
+.worktime {
+
+}
+
+.contacts {
+	.tel {
+		
+	}
+}
+
+
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	.page-header {
+		margin-bottom: 20px;
+	}
+
+	.address {
+
+		&__item {
+			margin-bottom: 20px!important;
+		}
+
+		&__metro {
+			margin-bottom: 6px;
+		}
+
+		&__metro-icon,
+		&__metro-text {
+			font-size: 1.5rem;
+		}
+
+		&__metro-icon {
+			width: 16px;
+			height: 10px;
+		}
+
+		&__metro-text {
+			margin-left: 5px;
+			font-weight: 700;
+			color: $dark;
+			position: relative;
+
+			&::before {
+				background-color: rgba(#000, .2);
+			}
+		}
+
+		&__street {
+			color: $grey;
+		}
+	}
+
+	.contacts {
+		.tel {
+			display: table;
+			margin-left: auto;
+			margin-right: auto;
+			position: relative;
+			margin-bottom: 9px;
+
+			color: $dark;
+			font-size: 1.5rem;
+			font-weight: 700;
+			
+			
+
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: -1px;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background-color: rgba(#000, .2);
+			}
+			&__icon_contacts,
+			&__icon_tel {
+				display: none;
+			}
+		}
+	}//.contacts
+
+	.worktime {
+		color: $grey;
+		font-size: 1.3rem;
+	}
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.page-header {
+		position: relative;
+		// margin-bottom: 65px;
+		
+	}
+	
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.page-header {
+		
+	}
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

@@ -1,0 +1,86 @@
+// Variables for current project 
+
+//Colors
+$dark-base: #000;
+$body-bg: #fff;
+
+$dark: #2c2b3a;
+$grey: #757887;
+$silver: #dfe1ea;
+$blue: #1f7adc;
+$blue-hover: #0E82FF;
+$yellow: #ffe228;
+
+
+//Responsive grids variaes
+
+//$xs-container-width: 320px;
+//$sm-container-width: 640px;
+$sm-container-width: 738px;
+// $md-container-width: 1242px;
+$md-container-width: 1170px;
+$desktop-width: 1170px;
+$desktop-widths: "(min-width: 1242px)";
+$mobileonly: "(max-width: 767px)";
+$mobtabonly: "(max-width: 1241px)";
+$tabonly: "(min-width:768px) and (max-width: 1241px)";
+$tabdeskonly: "(min-width: 768px)";
+$deskonly: "(min-width: 1242px)";
+
+//** Background color for `<body>`.
+$body-bg:               #fff;
+
+//** Global text color on `<body>`.
+$text-color:            $dark;
+
+//** Global textual link color.
+$link-color:            $blue;
+
+//** Link hover color set via `darken()` function.
+
+$link-hover-color:      $dark-base;
+$link-hover-color--desktop:      $dark-base;
+$link-hover-color--tablet:      #826550;
+
+
+//** Link hover decoration.
+$link-hover-decoration: none;
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+// $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+// $font-family-serif:       Georgia, "Times New Roman", Times, serif;
+// //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+// $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+// $font-family-base:        $font-family-sans-serif;
+
+$ff-regular: 'clear_sans', Helvetica, sans-serif;
+$ff-headings: 'museo-sans', Helvetica, sans-serif;
+// $ff-serif: 'PT Serif', 'Times New Roman', serif;
+// $ff-fregat: 'Fregat', Helvetica, sans-serif;
+// $ff-playfair: 'Playfair Display', "Comic Sans MS", cursive, sans-serif;
+// $ff-lato: Lato, Helvetica, sans-serif;
+// $ff-rubl: 'rub';
+
+$font-size-base:          14px;
+
+$font-size-h1:            floor(($font-size-base * 2.6)); // ~36px
+$font-size-h2:            floor(($font-size-base * 2.15)); // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.7)); // ~24px
+$font-size-h4:            ceil(($font-size-base * 1.25)); // ~18px
+$font-size-h5:            $font-size-base;
+$font-size-h6:            ceil(($font-size-base * 0.85)); // ~12px
+
+//** Unit-less `line-height` for use in components like buttons.
+// $line-height-base:        1.428571429; // 20/14
+$line-height-base:        1.35; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
+
+//** By default, this inherits from the `<body>`.
+//$headings-font-family:    $ff-bold;
+//$headings-font-weight:    500;
+$headings-line-height:    1.1;
+$headings-color:          inherit;

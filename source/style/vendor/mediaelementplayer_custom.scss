@@ -1,0 +1,185 @@
+/* Styles Start*/
+.mejs__container {
+	background-color: #fff;
+	border: 1px solid $silver;
+	border-radius: 100px;
+}
+
+.mejs__controls:not([style*='display: none']) {
+	background: none;
+}
+.mejs__inner {
+	height: 100%;
+}
+.mejs__time {
+	display: none;
+}
+
+.mejs__controls {
+	padding-left: 0;
+	padding-right: 0;
+	height: 100%;
+}
+
+.mejs__button, .mejs__time, .mejs__time-rail {
+	height: 100%;
+}
+
+.mejs__playpause-button {
+	border-right: 1px solid $silver;
+}
+
+.mejs__volume-button {
+	border-left: 1px solid $silver;
+}
+
+.mejs__button {
+	outline: none;
+	button {
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		outline: none;
+
+		&:focus,
+		&:active {
+			outline: none;
+		}
+	}
+}
+
+.mejs__replay > button {
+	margin: 2px 8px;
+	background-size: 15px 15px;
+	background-image: url("../img/icon-refresh.svg");
+}
+
+.mejs__play > button,
+.mejs__pause > button {
+	// margin: 6px 12px;
+	// background-size: 12px 16px;
+	// width: 12px;
+	// height: 16px;
+
+	
+	background-position: 2px 0;
+}
+
+.mejs__play > button {
+	margin: 8px 12px;
+	width: 10px;
+	height: 10px;
+	background-size: 8px 10px;
+	background-image: url("../img/icon-play-2.svg");
+}
+
+.mejs__pause > button {
+	margin: 5px 11px;
+	background-size: 8px 11px;
+	width: 12px;
+	height: 14px;
+	background-image: url("../img/icon-pause.svg");
+}
+
+.mejs__mute > button {
+	background-size: 14px 14px;
+	background-image: url("../img/icon-volume.svg");
+	width: 14px;
+	height: 14px;
+	margin: 7px 7px;
+}
+
+.mejs__unmute > button {
+	background-size: 14px 14px;
+	background-image: url("../img/icon-volume-off.svg");
+	width: 14px;
+	height: 14px;
+	margin: 7px 7px;
+}
+
+.mejs__time-rail {
+	// height: 8px;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+
+.mejs__time-total {
+	position: relative;
+	margin: 0;
+	height: 8px;
+	border-radius: 3px;
+	overflow: hidden;
+	background-color: #C0C3D0;
+
+	outline: none;
+}
+
+.mejs__time-loaded,
+.mejs__time-current {
+	height: 100%;
+}
+
+.mejs__time-current {
+	background-color: #1F7ADC;
+}
+
+.mejs__horizontal-volume-slider {
+	display: none!important;
+}
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

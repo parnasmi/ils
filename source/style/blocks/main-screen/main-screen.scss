@@ -1,0 +1,92 @@
+/* Styles Start*/
+
+
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	.main-screen {
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-bottom: 22px;
+
+		&__col_services {
+			display: none;
+		}
+	}
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.main-screen {
+		margin-bottom: 30px;
+		&__container {
+			@include container-tab;
+		}
+
+		&__col_banner {
+			margin-bottom: 30px;
+		}
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.main-screen {
+		// position: relative;
+		// z-index: 1;
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.main-screen {
+		margin-bottom: 50px;
+		&__container {
+			width: 1170px;
+			margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			justify-content: space-between;
+		}
+		&__col_banner {
+			flex-basis: 770px;
+			flex-grow: 0;
+			margin-right: 30px;
+			flex-shrink: 0;
+		}
+
+		&__col_services {
+			flex-grow: 1;
+		}
+	}
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

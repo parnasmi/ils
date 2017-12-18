@@ -1,0 +1,109 @@
+/* Styles Start*/
+	.f-page {
+		position: relative;
+
+		&.on-loading {
+			&::after {
+				content: '';
+				position: absolute;
+				width: 40px;
+				height: 40px;
+				// background-repeat: no-repeat;
+				// background-position: 0 0;
+				// background-size: cover;
+				// background-image: url("../img/preloader.svg");
+				border: 2px solid $silver;
+				border-top: 2px solid $dark;
+				border-radius: 100%;
+				left: 50%;
+				margin-left: -20px;
+				bottom: -50px;
+				animation: spin 1s infinite linear;
+			}
+		}
+	}
+
+	@keyframes spin {
+	    from{
+	        transform: rotate(0deg);
+	    }to{
+	        transform: rotate(360deg);
+	    }
+	}
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	.f-page {
+		padding-left: 10px;
+		padding-right: 10px;
+		
+
+		&__title {
+			margin-bottom: 20px;
+		}
+	}
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+	.f-page {
+		margin-bottom: 139px;
+	}
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.f-page {
+
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.f-page {
+		&__title {
+			margin-bottom: 30px;
+		}
+
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.f-page {
+		margin-bottom: 143px;
+
+		&__inner {
+			@include container;
+		}
+
+		&__title {
+			text-align: left;
+		}
+	}
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

@@ -1,0 +1,12 @@
+extends ../tpl/_template
+
+block variables
+	- var title = 'Feedbacks page'
+
+block content
+	+b.f-page.on-loading
+		+e.inner
+			+e.H1.title.sec-title_xl Отзывы сервисного центра iLikeService.ru
+		include ../blocks/feedbacks_page
+	SECTION.depart-b-section
+		include ../blocks/depart-b

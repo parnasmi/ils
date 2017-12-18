@@ -1,0 +1,102 @@
+/* Styles Start*/
+.f-write {
+	border-radius: 8px;
+	background-color: $blue;
+	color: #fff;
+	text-align: center;
+
+	&__icon {
+		width: 41px;
+		height: 41px;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		margin-bottom: 30px;
+		.icon {
+			// color: #fff;
+			// @include img;
+		}
+	}
+
+	&__text {
+		font-size: 1.6rem;
+		margin-bottom: 30px;
+		font-weight: 700;
+	}
+
+	&__btn {
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+		color: $dark;
+		font-size: 1.4rem;
+		padding: 15px 30px 16px 30px;
+		background-color: #fff;
+		border-radius: 100px;
+		font-weight: 700;
+	}
+}
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	.f-write {
+		padding-top: 20px;
+		padding-bottom: 30px;
+	}
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+	.f-write {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.f-write {
+
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.f-write {
+		padding-top: 39px;
+		padding-bottom: 38px;
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.f-write {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

@@ -236,7 +236,8 @@
 // %mobile
 @media #{$mobileonly} {
 	.info-p {
-		
+		margin-bottom: 30px;
+
 		&__inner {
 			padding-left: 0;
 			padding-right: 0;
@@ -386,6 +387,7 @@
 // %tablet
 @media #{$tabonly} {
 	.info-p {
+		margin-bottom: 30px;
 
 		&__inner {
 			@include container-tab;
@@ -476,7 +478,7 @@
 // %tabdesk
 @media #{$tabdeskonly} {
 	.info-p {
-
+		margin-bottom: 50px;
 		&__inner {
 			display: flex;
 			align-items: flex-start;

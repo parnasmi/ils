@@ -6,7 +6,7 @@
 		e.preventDefault();
 
 		var $this = $(this),
-				parent = $this.closest('.catalog__filter'),
+				parent = $this.closest('.cat-mmenu'),
 				nav = $('.cat-mmenu__nav');
 
 		

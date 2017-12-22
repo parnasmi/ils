@@ -76,6 +76,7 @@
 				thisToggle.remove();
 			}, 500)
 		});
+
 		//Slide toggle
 		$('.slide-toggle').on('change', 'input[type=radio][name=option]',function(){
 			
@@ -98,7 +99,20 @@
 
 	}//if (window.matchMedia('(max-width: 767px)').matches)
 
+	
+		var fixed = document.querySelector('body'),
+				nav = document.querySelector('.nav');
+		// if(nav.classList.contains('opened')) {
+			document.body.addEventListener('touchmove', function(e) {
+
+			e.preventDefault();
+			}, false);
+		// }
+
+		
+
 })();
+
 
 
 

@@ -45,7 +45,8 @@
 @media #{$tabdeskonly} {
 	.service-top {
 		&__title {
-			margin-bottom: 20px;
+			// margin-bottom: 20px;
+			margin-bottom: 26px;
 		}
 	}
 } //(min-width: 768px)

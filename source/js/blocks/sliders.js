@@ -16,14 +16,15 @@
 		contain: true,
 		setGallerySize: false,
 		prevNextButtons: false,
-		
+		touchVerticalScroll: true
 	});
 
 	$('.video__playlist-list_js').flickity({
 			asNavFor: '.video__player_js',
 			contain: true,
 			prevNextButtons: false,
-			pageDots: false
+			pageDots: false,
+			touchVerticalScroll: true
 	});
 
 	// Index items
@@ -36,7 +37,8 @@
 		// friction: 0.15,
 		// selectedAttraction: 0.3,
 		selectedAttraction: 0.15,
-		friction: 0.8
+		friction: 0.8,
+		touchVerticalScroll: true
 	});
 	
 	if (window.matchMedia('(max-width: 767px)').matches) {
@@ -60,8 +62,8 @@
 		contain: true,
 		setGallerySize: false,
 		prevNextButtons: false,
-		pageDots: true
-		
+		pageDots: true,
+		// touchVerticalScroll: true
 	});
 
 	$('.item-slider__thumbs-init').flickity({

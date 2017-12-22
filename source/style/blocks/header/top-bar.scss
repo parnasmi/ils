@@ -12,7 +12,11 @@
 @media #{$mobileonly} {
 
 	.top-bar {
-		position: relative;
+		// position: relative;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
 		z-index: 2;
 		background-color: #081128;
 		&__inner {
@@ -289,7 +293,8 @@
 		}
 
 		&__menu-item {
-			margin-right: 50px;
+			// margin-right: 50px;
+			margin-right: 72px;
 		}
 
 		&__menu-link {

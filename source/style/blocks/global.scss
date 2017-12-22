@@ -184,7 +184,8 @@
 	}
 
 	.feedbacks-section_services {
-		margin-bottom: 50px;
+		// margin-bottom: 50px;
+		margin-bottom: 37px;
 
 
 	}
@@ -194,7 +195,9 @@
 // %desktop
 @media #{$deskonly} {
 	.indemand-section_index {
-		margin-bottom: 75px;
+		// margin-bottom: 75px;
+		// margin-bottom: 68px;
+		margin-bottom: 38px;
 	}
 
 	.feedbacks-section_index {
@@ -235,6 +238,10 @@
 
 	.depart-b-section_blog-inside {
 		margin-bottom: 10px;
+	}
+
+	.service-section .breadcrumbs {
+		margin-bottom: 29px;
 	}
 
 

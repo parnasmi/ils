@@ -4,9 +4,14 @@
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
+	text-align: center;
 
 	&__list {
 		font-size: 0;
+
+		&_margin-for-demo {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__item {
@@ -33,7 +38,7 @@
 		color: $grey;
 		font-size: 1.3rem;
 		background-color: #fff;
-		border: 1px solid $silver;
+		
 		border-radius: 3px;
 
 		&:hover {
@@ -47,9 +52,14 @@
 			}
 			
 		}
+
 	}
 
-	&__item_next {
+	&__link[href] {
+		border: 1px solid $silver;
+	}
+
+	&__item_nav {
 		.pagination__link {
 			@include link-text-indent;
 			border: 1px solid $silver;
@@ -64,6 +74,29 @@
 			&:hover {
 				background-color: $silver;
 			}
+		}
+	}
+
+	&__link:not([href]) {
+		@include link-text-indent;
+		position: relative;
+		width: 20px;
+		&::before {
+			content: '. . .';
+			position: absolute;
+			bottom: 10px;
+			left: 0;
+			// left: 50%;
+			// transform: translate(-50%);
+			font-size: 1.4rem;
+			color: #000;
+			color: $grey;
+		}
+	}
+
+	&__item_prev {
+		.icon {
+			transform: scaleX(-1);
 		}
 	}
 

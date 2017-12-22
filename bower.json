@@ -19,6 +19,7 @@
     "bemto": "https://github.com/kizu/bemto.git#^2.1.0",
     "flickity": "^2.0.10",
     "mediaelement": "https://github.com/mediaelement/mediaelement.git#^4.2.7",
-    "photoswipe": "^4.1.2"
+    "photoswipe": "^4.1.2",
+    "jquery.quicksearch": "https://github.com/DeuxHuitHuit/quicksearch.git#^2.4.0"
   }
 }

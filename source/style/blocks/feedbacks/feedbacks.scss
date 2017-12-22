@@ -17,7 +17,8 @@
 .feedback {
 	color: $dark;
 	@include border-silver;
-	padding: 30px 24px 30px 30px;
+	// padding: 30px 24px 30px 30px;
+	padding: 30px 24px 25px 30px;
 	
 	&__head,
 	&__user-type {
@@ -121,18 +122,32 @@
 		.moreelipses {
 			display: block;
 			position: absolute;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			height: 50px;
-			background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.74) 74%,rgba(255,255,255,1) 100%);
+			// left: 0;
+			// right: 0;
+			// bottom: 0;
+			// height: 50px;
+			// background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.74) 74%,rgba(255,255,255,1) 100%);
+			// transition: all .3s ease .3s;
+			// &.hide {
+			// 	opacity: 0;
+			// 	// transition-delay: .3s;
+			// }
 		}
 	}
 
 	.remaining-content {
 		.remained-text {
-			display: none;
+			display: block;
+			// display: none;
+			max-height: 0;
+			transition: all .3s;
+			overflow: hidden;
+
+			&.show {
+				max-height: 1000px;
+			}
 		}
+
 		.morelink {
 			display: flex;
 			align-items: center;
@@ -142,6 +157,13 @@
 			margin-top: 8px;
 			font-size: 1.3rem;
 			color: $grey;
+			position: relative;
+			
+
+			.morelink__text {
+				position: relative;
+				z-index: 1;
+			}
 
 			&:hover {
 				.morelink__text {
@@ -153,10 +175,14 @@
 				}
 			}
 			&.less {
-				margin-top: 20px;
+				// margin-top: 20px;
 
 				.icon {
 					transform: rotate(180deg);
+				}
+
+				&::before {
+					opacity: 0;
 				}
 			}
 
@@ -164,8 +190,23 @@
 				display: inline-block;
 				margin-left: 5px;
 				transition: all .3s;
+				position: relative;
+				z-index: 2;
 			}
-		}
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: -54px;
+				height: 50px;
+				// background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.74) 74%,rgba(255,255,255,1) 100%);
+				background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 56%,rgba(255,255,255,1) 100%);
+				transition: all .3s ease;
+				z-index: 0;
+			}
+		}//morelink
 
 		.morelink__text {
 			line-height: 1;

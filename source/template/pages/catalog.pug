@@ -18,7 +18,7 @@ block content
 		+e.inner 
 			+e.UL.list
 				+e.item: +e.link(href="#") Главная
-				+e.item: +e.link(href="#") Ремонт Iphone
+				+e.item: +e.link(href="#") Ремонт iPhone
 				+e.item: +e.link(href="#") iPhone X
 	.catalog-banner
 		+b.cat-banner
@@ -180,11 +180,41 @@ block content
 							+e.price-regular 2599 руб.
 							+e.price-old 2899 руб.
 			+b.pagination_catalog
-				+e.UL.list
+				+e.UL.list_margin-for-demo
 					+e.item.active: +e.link(href="#") 1
 					+e.item: +e.link(href="#") 2
 					+e.item: +e.link(href="#") 3
-					+e.item_next: +e.link(href="#") следующая страница
+					+e.item_nav: +e.link(href="#") следующая страница
+						svg(class="icon",width="5",height="8")
+							use(xlink:href='#arrow-pagination')
+				+e.UL.list_margin-for-demo
+					+e.item_nav._prev: +e.link(href="#") предидущая страница
+						svg(class="icon",width="5",height="8")
+							use(xlink:href='#arrow-pagination')
+					+e.item.active: +e.link(href="#") 1
+					+e.item: +e.link(href="#") 2
+					+e.item: +e.link(href="#") 3
+					+e.item_nav: +e.link(href="#") следующая страница
+						svg(class="icon",width="5",height="8")
+							use(xlink:href='#arrow-pagination')
+				+e.UL.list_margin-for-demo
+					+e.item_nav._prev: +e.link(href="#") предидущая страница
+						svg(class="icon",width="5",height="8")
+							use(xlink:href='#arrow-pagination')
+					+e.item.active: +e.link(href="#") 1
+					+e.item: +e.link(href="#") 2
+					+e.item: +e.link(href="#") 3
+				+e.UL.list_margin-for-demo
+					+e.item_nav._prev: +e.link(href="#") предидущая страница
+						svg(class="icon",width="5",height="8")
+							use(xlink:href='#arrow-pagination')
+					+e.item: +e.link(href="#") 1
+					+e.item: +e.A.link 2
+					+e.item.active: +e.link(href="#") 9
+					+e.item: +e.link(href="#") 10
+					+e.item: +e.link(href="#") 11
+					+e.item: +e.A.link 3
+					+e.item_nav: +e.link(href="#") следующая страница
 						svg(class="icon",width="5",height="8")
 							use(xlink:href='#arrow-pagination')
 				+e.loader

@@ -191,7 +191,11 @@
 // %mobtab
 @media #{$mobtabonly} {
 	.services {
-		
+
+		&__title:not(.services__title_mob) {
+			display: none;
+		}
+
 		&__table_price-page {
 			margin-bottom: 20px;
 		}
@@ -202,6 +206,8 @@
 // %tablet
 @media #{$tabonly} {
 	.services {
+
+
 		
 		&_service-page {
 			// margin-bottom: 50px;
@@ -276,7 +282,7 @@
 		&__row {
 			display: flex;
 			align-items: center;
-			padding: 21px 0px 22px 0px;
+			padding: 29px 0px 30px 0px;
 		}
 
 		&__col-cell_ser-name {
@@ -336,6 +342,19 @@
 // %desktop
 @media #{$deskonly} {
 	.services {
+
+		&__row {
+			padding-left: 10px;
+			padding-right: 10px;
+			transition: all .3s;
+			&:hover {
+				background-color: #dfe1ea;
+			}
+		}
+
+		&__title_mob {
+			display: none;
+		}
 
 		&_service-page {
 			margin-bottom: 75px;

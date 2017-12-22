@@ -5,7 +5,9 @@
 				+e.item_index-main
 					+e.item-index-main-left
 						+e.item-inner_index-main
-							+e.item-img_index-main
+							+e.item-img
+								img.bottom(src="./assets/img/screen_hover.png", alt)
+								img.top(src="./assets/img/screen.png", alt)
 							+e.item-text-wrapper
 								+e.item-title_index-main(href="#") Замена дисплея iPhone
 								+e.item-time
@@ -30,7 +32,9 @@
 			+e.col_index
 				+e.item_index-battery(href="#")
 					+e.item-inner
-						+e.item-img_index-battery
+						+e.item-img
+							img.bottom(src="./assets/img/battery_hover.png", alt)
+							img.top(src="./assets/img/battery.png", alt)
 						+e.item-title Замена аккумулятора iPhone
 						+e.item-time
 							+e.item-time-icon
@@ -41,7 +45,9 @@
 			+e.col_index
 				+e.item_index-home-button(href="#")
 					+e.item-inner
-						+e.item-img_index-home-button
+						+e.item-img
+							img.bottom(src="./assets/img/home-button-hover.png", alt)
+							img.top(src="./assets/img/home-button.png", alt)
 						+e.item-title Замена кнопки Home iPhone
 						+e.item-time
 							+e.item-time-icon
@@ -52,7 +58,9 @@
 			+e.col_index
 				+e.item_index-microphone(href="#")
 					+e.item-inner
-						+e.item-img_index-microphone
+						+e.item-img
+							img.bottom(src="./assets/img/micrphone-hover.png", alt)
+							img.top(src="./assets/img/micrphone.png", alt)
 						+e.item-title Замена микрофона iPhone
 						+e.item-time
 							+e.item-time-icon
@@ -63,7 +71,22 @@
 			+e.col_index
 				+e.item_index-camera(href="#")
 					+e.item-inner
-						+e.item-img_index-camera
+						+e.item-img
+							img.bottom(src="./assets/img/camera-hover.png", alt)
+							img.top(src="./assets/img/camera.png", alt)
+						+e.item-title Замена камеры iPhone
+						+e.item-time
+							+e.item-time-icon
+								svg(class="icon",width="13",height="13")
+									use(xlink:href='#icon-time')
+							+e.item-time-text 1 час 30 минут
+						+e.item-btn.btn.btn_blue выбрать модель
+			+e.col_index
+				+e.item_index-camera(href="#")
+					+e.item-inner
+						+e.item-img
+							img.bottom(src="./assets/img/camera-hover.png", alt)
+							img.top(src="./assets/img/camera.png", alt)
 						+e.item-title Замена камеры iPhone
 						+e.item-time
 							+e.item-time-icon

@@ -24,13 +24,13 @@
 	$(".morelink").click(function () {
 			if ($(this).hasClass("less")) {
 					$(this).removeClass("less");
-					$(this).find('.morelink__text').html(moretext);
+					$(this).find('.morelink__text').delay(300).html(moretext);
 			} else {
 					$(this).addClass("less");
-					$(this).find('.morelink__text').html(lesstext);
+					$(this).find('.morelink__text').delay(300).html(lesstext);
 			}
-			$(this).parent().prev().find('.moreelipses').toggle();
-			$(this).prev().toggle();
+			$(this).parent().prev().find('.moreelipses').toggleClass("hide");
+			$(this).prev().toggleClass("show");
 			return false;
 	});
 })();

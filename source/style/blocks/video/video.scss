@@ -8,6 +8,7 @@
 
 	&__info-text {
 		color: $grey;
+		line-height: 1.43;
 	}
 
 	&__player {
@@ -134,7 +135,11 @@
 			border-radius: 8px;
 			display: flex;
 			// padding: 0!important;
+			height: 100%;
 			overflow: hidden;
+
+			// outline: 1px solid red;
+
 			.video__btn {
 				margin: auto;
 				border: none;
@@ -273,7 +278,7 @@
 				&::before {
 					 content: counter(carousel-cell);
 					 position: absolute;
-					 left: -15px;
+					 left: -20px;
 					 top: 50%;
 					 transform: translateY(-50%);
 					 font-size: 1.3rem;
@@ -285,7 +290,7 @@
 				.thumbnail {
 					
 					&::before {
-							left: -15px;
+							left: -20px;
 							top: 50%;
 							border: solid transparent;
 							content: " ";
@@ -354,6 +359,26 @@
 
 		}
 
+		&__playlist-wrapper {
+			padding-left: 30px;
+		}
+
+		&__info {
+			width: 235px;
+			// margin-top: 20px;
+			margin-top: 30px;
+		}
+		
+		&__video-col_player {
+			padding-right: 0;
+		}
+
+		&__video-col_side {
+			padding-left: 0;
+			padding-right: 0;
+			// margin-left: 30px;
+			padding-left: 20px;
+		}
 
 	}
 

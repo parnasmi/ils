@@ -7,16 +7,19 @@
 	&__list {
 		display: flex;
 		align-items: center;
-		// justify-content: space-between;
+		justify-content: space-between;
 	}
 
 	&__item {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
+		flex-shrink: 0;
+		// flex-wrap: wrap;
 	}
 
 	&__item_img {
 		position: absolute;
+		// position: relative;
 		bottom: 0;
 		right: 20px;
 		
@@ -69,13 +72,13 @@
 @media #{$tabonly} {
 	.device-banner {
 		&__inner {
-			padding: 23px 20px 23px 22px;
+			padding: 23px 144px 23px 22px;
 		}
 
 		&__item {
-			
+			flex-basis: 165px;
 			&:not(:last-child) {
-				margin-right: 50px;
+				// margin-right: 50px;
 			}
 		}
 
@@ -131,14 +134,14 @@
 @media #{$deskonly} {
 	.device-banner {
 		&__inner {
-			padding: 37px 20px 37px 35px;
+			padding: 37px 230px 37px 35px;
 
 		}
 
 		&__item {
-			
+			flex-basis: 260px;
 			&:not(:last-child) {
-				margin-right: 80px;
+				// margin-right: 80px;
 			}
 		}
 

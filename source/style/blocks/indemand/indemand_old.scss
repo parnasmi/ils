@@ -10,8 +10,17 @@
 		display: block;
 		@include border-thin;
 
+		&:not(.indemand__item_index-main) {
+			&:hover {
+				.indemand__item-img {
+					// background-position: -10000px 0,
+					// 							0 0;
+				}
+			}
+		}
+
 		&:hover {
-			.indemand__item-img img.top {
+			.indemand__img img.top {
 				opacity: 0;
 			}
 		}
@@ -19,12 +28,41 @@
 
 
 
-	&__item-inner,
-	&__item-img,
-	&__item-title,
-	&__item-time,
-	&__item-btn {
-		display: block;
+	&__item_index-battery {
+
+		&:hover {
+			.indemand__item-img_index-battery {
+				background-image:url("../img/battery_hover.png"),
+												url("../img/battery_hover.png");
+			}
+		}
+	}
+
+	&__item_index-home-button {
+		&:hover {
+			.indemand__item-img_index-home-button {
+				background-image:url("../img/home-button-hover.png"),
+												url("../img/home-button-hover.png");
+			}
+		}
+	}
+
+	&__item_index-microphone {
+		&:hover {
+			.indemand__item-img_index-microphone {
+				background-image:url("../img/micrphone-hover.png"),
+												url("../img/micrphone-hover.png");
+			}
+		}
+	}
+
+	&__item_index-camera {
+		&:hover {
+			.indemand__item-img_index-camera {
+				background-image:url("../img/camera-hover.png"),
+												 url("../img/camera-hover.png");
+			}
+		}
 	}
 
 	&__item_device {
@@ -38,11 +76,27 @@
 		}
 	}
 
-	
+	&__img {
+		position: relative;
+		img {
+			position: absolute;
+			max-width: 100%;
+			max-height: 100%;
+			transition: all .3s;
+		}
+	}
 
 	&__item-img {
-		margin-left: auto;
-		margin-right: auto;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 0 0,
+												-10000px 0;
+		transition: all .3s;
+
+		&:not(.indemand__item-img_index-main) {
+			margin-left: auto;
+			margin-right: auto;
+		}
 
 		position: relative;
 		.icon {
@@ -51,15 +105,39 @@
 			color: #757887;
 			transition: all .3s;
 		}
+	}
 
-		img {
-			position: absolute;
-			max-width: 100%;
-			max-height: 100%;
-			transition: all .3s;
-			top: 0;
-			left: 0;
-		}
+	&__item-img_index-main {
+		background-image: url("../img/screen.png"),
+											url("../img/screen_hover.png");
+	}
+
+	&__item-img_index-battery {
+		background-image: url("../img/battery.png"),
+											url("../img/battery_hover.png");
+	}
+
+	&__item-img_index-home-button {
+		background-image: url("../img/home-button.png"),
+											url("../img/home-button-hover.png");
+	}
+
+	&__item-img_index-microphone {
+		background-image: url("../img/micrphone.png"),
+											url("../img/micrphone-hover.png");
+	}
+
+	&__item-img_index-camera {
+		background-image: url("../img/camera.png"),
+											url("../img/camera-hover.png");
+	}
+
+	&__item-title_index-main {
+		// display: block;
+
+		// &:hover {
+		// 	color: $blue;
+		// }
 	}
 
 	&__item-title {
@@ -67,7 +145,7 @@
 		color: $dark;
 		font-size: 1.4rem;
 
-		// display: block;
+		display: block;
 
 		&:hover {
 			color: $blue;
@@ -369,7 +447,7 @@
 
 		&__item-inner_index-main {
 			display: flex;
-			// align-items: center;
+			align-items: center;
 
 			padding-left: 20px;
 			padding-right: 20px;
@@ -401,13 +479,6 @@
 			font-size: 1.6rem;
 		}
 
-		&__item-inner_index-main {
-			.indemand__item-img {
-				flex-shrink: 0;
-				margin-right: 30px;
-			}
-		}
-
 		
 	}
 }//#{$tabonly}
@@ -417,22 +488,9 @@
 @media #{$tabdeskonly} {
 	.indemand {
 
-		&__wrapper {
-			// margin-right: -30px;
-			font-size: 0;
-			margin-right: -30px;
-			// &_device {
-			// 	font-size: 0;
-			// 	margin-right: -30px;
-			// }
-		}
-
-
 		&__col {
-			margin-right: 30px;
-			margin-bottom: 30px;
-		}
 
+		}
 		&__item {
 			
 
@@ -518,29 +576,16 @@
 			@include container;
 		}
 
-		// &__wrapper:not(.indemand__wrapper_device) {
-		// 	display: flex;
-		// 	justify-content: space-between;
-		// }
-
-		&__col {
-			// flex-shrink: 0;
-			// &:not(.indemand__col_index-main) {
-			// 	flex-basis: 170px;
-			// }
-			display: inline-block;
-			vertical-align: top;
-		
-
-			&:not(.indemand__col_index-main) {
-					width: 170px;
-			}
+		&__wrapper {
+			display: flex;
+			justify-content: space-between;
 		}
 
-		&__col_device {
-			display: inline-block;
-			vertical-align: top;
-			width: 170px;
+		&__col {
+			flex-shrink: 0;
+			&:not(.indemand__col_index-main) {
+				flex-basis: 170px;
+			}
 		}
 
 		&__item {
@@ -571,8 +616,7 @@
 		}
 
 		&__col_index-main {
-			// flex-basis: 370px;
-			width: 370px;
+			flex-basis: 370px;
 		}
 
 

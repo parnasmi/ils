@@ -162,7 +162,8 @@
 			font-size: 2rem;
 			display: inline-block;
 			
-			margin-bottom: 30px;
+			// margin-bottom: 30px;
+			margin-bottom: 20px;
 			transition: all .3s;
 			position: relative;
 			
@@ -263,6 +264,7 @@
 		&__item-col {
 			margin-bottom: 50px;
 			flex-basis: 470px;
+			// flex-basis: 570px;
 
 			// outline: 1px solid red;
 		}

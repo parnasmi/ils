@@ -3,5 +3,6 @@
 (function(){
 	$('.menu__item').hover(function(){
 		$('.nav').toggleClass('on-hover');
-	},200);
+	},100);
 })();
+

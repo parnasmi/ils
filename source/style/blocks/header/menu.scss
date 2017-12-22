@@ -224,6 +224,10 @@
 		margin-left: auto;
 		margin-right: auto;
 		width: 100%;
+
+		padding-left: 10px;
+		padding-right: 10px;
+		
 		.switch-toggle {
 			border: 1px solid $silver;
 		}
@@ -297,6 +301,7 @@
 			&::before {
 				opacity: 1;
 				pointer-events:auto;
+				transition: all .3s;
 			}
 		}
 
@@ -370,7 +375,7 @@
 			opacity: 0;
 			pointer-events: none;
 			transform: translateY(2rem);
-			transition: all 100ms cubic-bezier(.17,.67,.83,.67) .2s;
+			transition: all 300ms ease 100ms;
 		}
 
 		&__submenu-mobile-nav {

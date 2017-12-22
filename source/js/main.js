@@ -3,26 +3,23 @@ if( 'ontouchstart' in window ){ var tap = 'click'; }
 else { var tap = 'click'; }
 
 //Indemand tablet version items equilheights
-
 (function(){
 	if (window.matchMedia('(min-width: 768px)').matches && window.matchMedia('(max-width: 1279px)').matches) {
-		// $('.indemand__item:not(.indemand__item_index-main)').equalHeights();
+
+		$('.indemand__item:not(.indemand__item_index-main)').equalHeights();
 		$('.indemand__item-title:not(.indemand__item-title_index-main)').equalHeights();
+
 	}
 
 	if (window.matchMedia('(max-width: 767px)').matches) {
 		// $('.footer__address').equalHeights();
 	}
 
-	if (window.matchMedia('(min-width: 767px)').matches) {
+	if (window.matchMedia('(min-width: 1280px)').matches) {
 		$('.indemand__col').equalHeights();
 	}
 
-	
-
 })();
-
-
 
 //Videos block "show more videos" button cloning for mobile
 (function(){
@@ -30,7 +27,6 @@ else { var tap = 'click'; }
 })();
 
 //Info Page "Фото офиса"
-
 (function(){
 	$('.info-p__gallery-link').on(tap, function(e){
 		e.preventDefault();
@@ -61,16 +57,8 @@ else { var tap = 'click'; }
 	$('.services__title-text').clone().appendTo('.services__title_mob');
 })();
 
-//Quicksearch
-
+//Quicksearch on price page
 (function(){
 	$('.price-header__search-input').quicksearch('.services__row');
 })();
-
-
-
-
-
-
-
 

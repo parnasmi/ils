@@ -100,16 +100,20 @@
 	}//if (window.matchMedia('(max-width: 767px)').matches)
 
 	
-		var fixed = document.querySelector('body'),
-				nav = document.querySelector('.nav');
-		// if(nav.classList.contains('opened')) {
-			document.body.addEventListener('touchmove', function(e) {
+		// var fixed = document.querySelector('body'),
+		// 		nav = document.querySelector('.nav-bg-fixed');
+		// // if(nav.classList.contains('opened')) {
+		// 	nav.addEventListener('touchmove', function(e) {
 
-			e.preventDefault();
-			}, false);
-		// }
+		// 	e.preventDefault();
+		// 	}, false);
+		// // }
 
-		
+		// $('.nav-bg-fixed').on('touchmove', function(e) {
+		//     e.preventDefault();
+		//     e.stopPropagation();
+		//     // return false;
+		// });
 
 })();
 

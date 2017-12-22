@@ -447,6 +447,7 @@
 
 		&__gallery-wrapper {
 			margin-right: -18px;
+			margin-top: 20px;
 		}
 
 		&__gallery-wrapper-col {
@@ -534,7 +535,11 @@
 		&__gallery,
 		&__contacts {
 			flex-basis: 100%;
-			margin-top: 20px;
+			// margin-top: 20px;
+		}
+
+		&__contacts {
+			margin-top: 60px;
 		}
 
 		&__contacts-inner {

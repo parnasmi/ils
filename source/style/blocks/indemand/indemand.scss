@@ -334,7 +334,9 @@
 					}
 				}
 			}
-
+			&:not(:first-child) {
+				margin-right: 30px;
+			}
 			
 			&_device {
 				width: 226px;
@@ -345,7 +347,9 @@
 
 
 		&__col_index-main {
-			margin-bottom: 20px;
+			// margin-bottom: 20px;
+			// margin-right: 30px;
+			width: 738px;
 		}
 
 		&__item-index-main-left {
@@ -429,7 +433,7 @@
 
 
 		&__col {
-			margin-right: 30px;
+			// margin-right: 30px;
 			margin-bottom: 30px;
 		}
 
@@ -530,7 +534,7 @@
 			// }
 			display: inline-block;
 			vertical-align: top;
-		
+			margin-right: 30px;
 
 			&:not(.indemand__col_index-main) {
 					width: 170px;

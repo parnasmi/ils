@@ -276,13 +276,15 @@
 			.thumbnail {
 				position: relative;
 				&::before {
-					 content: counter(carousel-cell);
-					 position: absolute;
-					 left: -20px;
-					 top: 50%;
-					 transform: translateY(-50%);
-					 font-size: 1.3rem;
-					 color: $grey;
+					content: counter(carousel-cell);
+					position: absolute;
+					left: -20px;
+					// top: 50%;
+					// transform: translateY(-50%);
+					top: 13px;
+					font-size: 1.3rem;
+					color: $grey;
+					line-height: 1;
 				}
 			}
 
@@ -291,7 +293,7 @@
 					
 					&::before {
 							left: -20px;
-							top: 50%;
+							// top: 50%;
 							border: solid transparent;
 							content: " ";
 							height: 0;
@@ -301,7 +303,8 @@
 							border-color: rgba(0, 123, 255, 0);
 							border-left-color: #007bff;
 							border-width: 5px 7px;
-							transform: translateY(-50%);
+							top: 15px;
+							// transform: translateY(-50%);
 					}
 				}
 			}

@@ -38,11 +38,15 @@
 										+e.address-text Римская, ул. С. Радонежского д 23-25
 		+e.col_services
 			+b.accented-services
-				+e.item_display(href="#")
+				+e.item(href="#")
 					+e.item-wrapper
 						+e.item-title Замена Дисплея iPhone
-						+e.item-icon_screen
-				+e.item_battery(href="#")
+						+e.item-icon
+							img.bottom(src="./assets/img/screen_hover.png", alt)
+							img.top(src="./assets/img/screen.png", alt)
+				+e.item(href="#")
 					+e.item-wrapper
 						+e.item-title Замена Аккумулятора
-						+e.item-icon_battery
+						+e.item-icon
+							img.bottom(src="./assets/img/battery_hover.png", alt)
+							img.top(src="./assets/img/battery.png", alt)

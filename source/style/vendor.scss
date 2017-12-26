@@ -2,12 +2,21 @@
 @import "_vars-project";
 @import "_mixins-project";
 // @import "sprite";
-@import "fonts";
+// @import "fonts";
 
 //Customized vendor less/css style
-@import "vendor/owl.carousel";
-@import "vendor/owl.theme.default";
-@import "vendor/owl.theme.unishop";
-@import "vendor/jquery-ui";
-@import "vendor/ui-slider";
+// @import "vendor/owl.carousel";
+// @import "vendor/owl.theme.default";
+// @import "vendor/owl.theme.unishop";
+// @import "vendor/jquery-ui";
+// @import "vendor/ui-slider";
+// @import "vendor/magnific-popup";
+
+//Vendor
+@import "vendor/css-toggle-switch_custom-initial";
+@import "vendor/css-toggle-switch_custom";
+@import "../../bower_components/flickity/dist/flickity";
+@import "vendor/flickity_custom";
+@import "vendor/mediaelementplayer";
+@import "vendor/mediaelementplayer_custom";
 @import "vendor/magnific-popup";

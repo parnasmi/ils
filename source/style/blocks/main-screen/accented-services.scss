@@ -56,14 +56,18 @@
 				// 	background-position: right top;;
 				// }
 
-				.accented-services__item-icon_screen {
-					background-image: url("../img/screen_hover.png"),
-														url("../img/screen.png");
-				}
+				// .accented-services__item-icon_screen {
+				// 	background-image: url("../img/screen_hover.png"),
+				// 										url("../img/screen.png");
+				// }
 
-				.accented-services__item-icon_battery {
-					background-image: url("../img/battery_hover.png"),
-														url("../img/battery.png");
+				// .accented-services__item-icon_battery {
+				// 	background-image: url("../img/battery_hover.png"),
+				// 										url("../img/battery.png");
+				// }
+
+				.accented-services__item-icon .top {
+					opacity: 0;
 				}
 			}
 		}
@@ -99,22 +103,29 @@
 			width: 70px;
 			height: 70px;
 			// background-size: 140px 70px;
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: 0 0,
-														-10000px 0;
+			// background-size: cover;
+			// background-repeat: no-repeat;
+			// background-position: 0 0,
+														// -10000px 0;
 			transition: all .3s;
+			position: relative;
+			img {
+				@include img-center;
+				max-height: 100%;
+				max-width: 100%;
+				transition: all .3s;
+			}
 		}
 
-		&__item-icon_screen {
-			background-image: url("../img/screen.png"),
-												url("../img/screen_hover.png");
-		}
+		// &__item-icon_screen {
+		// 	background-image: url("../img/screen.png"),
+		// 										url("../img/screen_hover.png");
+		// }
 
-		&__item-icon_battery {
-			background-image: url("../img/battery.png"),
-												url("../img/battery_hover.png");
-		}
+		// &__item-icon_battery {
+		// 	background-image: url("../img/battery.png"),
+		// 										url("../img/battery_hover.png");
+		// }
 	}
 } //(min-width: 768px)
 

@@ -24,8 +24,8 @@ $.gulp.task('default', $.gulp.series(
   'clean',
   $.gulp.parallel(
     'sass',
-    // 'sass-vendor',
-    'sass-fonts',
+    'sass-vendor',
+    // 'sass-fonts',
     'pug',
     // 'pug:one',
     'js:foundation',

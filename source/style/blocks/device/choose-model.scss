@@ -66,12 +66,16 @@
 // %tablet
 @media #{$tabonly} {
 	.choose-model {
+		margin-bottom: 15px;
+
 		&__inner {
 			width: 738px;
 		}
 
 		&__item {
-			margin-bottom: 20px;
+			// margin-bottom: 20px;
+			margin-top: 10px;
+			margin-bottom: 10px;
 		}
 	}
 }//#{$tabonly}
@@ -84,7 +88,8 @@
 		&__inner {
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
+			// justify-content: space-between;
+			justify-content: flex-start;
 
 			margin-left: auto;
 			margin-right: auto;
@@ -105,10 +110,11 @@
 		
 		&__image {
 			position: relative;
-			width: 145px;
+			width: 120px;
 			height: 145px;
 			flex-shrink: 0;
-			margin-bottom: 30px;
+			// margin-bottom: 30px;
+			margin-right: 30px;
 			img {
 				@include img;
 			}
@@ -120,12 +126,16 @@
 // %desktop
 @media #{$deskonly} {
 	.choose-model {
+		margin-bottom: 35px;
+		
 		&__inner {
 			width: 1170px;
 		}
 
 		&__item {
-			margin-bottom: 25px;
+			// margin-bottom: 25px;
+			margin-top: 12px;
+			margin-bottom: 12px;
 		}
 	}	
 } // (min-width: 1042px)

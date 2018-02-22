@@ -43,7 +43,7 @@
                 </li>
                 <li class="top-bar__menu-item"><a class="top-bar__menu-link" href="#">Отзывы</a>
                 </li>
-              </ul><a class="top-bar__go-btn" href="#">Выезной ремонт</a>
+              </ul><a class="top-bar__go-btn" href="#"><svg width="155" height="34" xmlns="http://www.w3.org/2000/svg"><path d="M138 2c8.25 0 15 6.75 15 15s-6.75 15-15 15H17C8.75 32 2 25.25 2 17S8.75 2 17 2h121z" ></svg><span>Выездной ремонт</span></a>
             </div>
             <div class="top-bar__mob-logo">
             </div>
@@ -59,6 +59,12 @@
                   </svg>
                 </div>
                 <div class="device-close"></div>
+              </div>
+            </div>
+            <div class="notif">
+              <div class="notif__text">Выбор устройства для ремонта
+              </div>
+              <div class="notif__btn">
               </div>
             </div>
           </div>
@@ -121,7 +127,7 @@
         <nav class="nav">
           <div class="nav__inner">
             <div class="nav__descr">
-              <div class="nav__descr-inner">Какому устройству требуется помощь?
+              <div class="nav__descr-inner">Какому устройству<br> требуется помощь?
               </div>
             </div>
             <div class="nav__mob-title">Выбор устройства для ремонта
@@ -464,71 +470,6 @@
                   </div>
                 </li>
                 <li class="menu__item"><a class="menu__item-link" href="#">Samsung, Meizu, Xiaomi и др.</a>
-                  <div class="menu__submenu">
-                    <div class="menu__submenu-inner">
-                      <div class="menu__submenu-mobile-nav">
-                        <div class="menu__submenu-mobile-title">
-                          <div class="menu__submenu-mobile-back">
-                            <svg class="icon" width="7" height="12">
-                              <use xlink:href="#icon-left"></use>
-                            </svg>
-                          </div>
-                          <div class="menu__submenu-mobile-title-text">Выбор устройства для ремонта
-                          </div>
-                        </div>
-                        <div class="slide-toggle">
-                        </div>
-                      </div>
-                      <div class="menu__submenu-section menu__submenu-section_models">
-                        <div class="menu__submenu-title">Модели
-                        </div>
-                        <ul class="menu__submenu-list menu__submenu-list_models">
-                          <li class="menu__submenu-models-item"><a class="menu__submenu-models-link" href="#">iPhone 7 plus</a>
-                          </li>
-                          <li class="menu__submenu-models-item"><a class="menu__submenu-models-link" href="#">iPhone 7</a>
-                          </li>
-                          <li class="menu__submenu-models-item"><a class="menu__submenu-models-link" href="#">iPhone SE</a>
-                          </li>
-                          <li class="menu__submenu-models-item"><a class="menu__submenu-models-link" href="#">iPhone 6S plus</a>
-                          </li>
-                          <li class="menu__submenu-models-item"><a class="menu__submenu-models-link" href="#">iPhone 6S</a>
-                          </li>
-                          <li class="menu__submenu-models-item"><a class="menu__submenu-models-link" href="#">iPhone 6</a>
-                          </li>
-                          <li class="menu__submenu-models-item"><a class="menu__submenu-models-link" href="#">iPhone 5s</a>
-                          </li>
-                          <li class="menu__submenu-models-item"><a class="menu__submenu-models-link" href="#">iPhone 5</a>
-                          </li>
-                          <li class="menu__submenu-models-item"><a class="menu__submenu-models-link" href="#">iPhone 4s</a>
-                          </li>
-                          <li class="menu__submenu-models-item"><a class="menu__submenu-models-link" href="#">iPhone 4</a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="menu__submenu-section menu__submenu-section_services">
-                        <div class="menu__submenu-title">Услуги
-                        </div>
-                        <ul class="menu__submenu-list menu__submenu-list_service">
-                          <li class="menu__submenu-service-item"><a class="menu__submenu-service-link" href="#">Замена дисплея</a>
-                          </li>
-                          <li class="menu__submenu-service-item"><a class="menu__submenu-service-link" href="#">Замена стекло дисплея</a>
-                          </li>
-                          <li class="menu__submenu-service-item"><a class="menu__submenu-service-link" href="#">Замена аккумулатора</a>
-                          </li>
-                          <li class="menu__submenu-service-item"><a class="menu__submenu-service-link" href="#">Замена кнопки Home</a>
-                          </li>
-                          <li class="menu__submenu-service-item"><a class="menu__submenu-service-link" href="#">Замена задней крышки</a>
-                          </li>
-                          <li class="menu__submenu-service-item"><a class="menu__submenu-service-link" href="#">Перепрошивка</a>
-                          </li>
-                          <li class="menu__submenu-service-item"><a class="menu__submenu-service-link" href="#">Настройка</a>
-                          </li>
-                        </ul>
-                        <div class="menu__submenu-descr">Выберите слева модель вашего тефона и мы покажем все наши услуги
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </li>
               </ul>
             </div>
@@ -600,7 +541,7 @@
                         <div class="services__price services__price_buttoned">бесплатно
                         </div>
                       </td>
-                      <td class="services__col-cell services__col-cell_time"><a class="services__time services__time_btn btn btn_blue" href="#">Отправить заявку</a>
+                      <td class="services__col-cell services__col-cell_time"><a class="services__time services__time_btn btn btn_blue" href="#order-form">Отправить заявку</a>
                       </td>
                     </tr>
                     <tr class="services__row">
@@ -1154,7 +1095,7 @@
           <div class="section-head section-head_with-buttons">
             <h1 class="section-head__title section-head__title_feedbacks">Отзывы наших клиентов
             </h1>
-            <div class="section-head__button-group section-head__button-group_feedbacks"><a class="section-head__btn section-head__btn_all-fdbs btn btn_grey-thin-bd" href="#">Посмотреть все отзывы</a><a class="section-head__btn section-head__btn_write-fdb btn btn_blue" href="#">Написать отзыв</a>
+            <div class="section-head__button-group section-head__button-group_feedbacks"><a class="section-head__all-fdbs" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 40"><path d="M160 40H20C9 40 0 31 0 20S9 0 20 0h140c11 0 20 9 20 20s-9 20-20 20z" fill="#231f20"/></svg><span><i>Посмотреть</i> все отзывы</span></a><a class="section-head__btn section-head__btn_write-fdb btn btn_blue" href="#">Написать отзыв</a>
             </div>
           </div>
           <div class="feedbacks">
@@ -1381,6 +1322,78 @@
             </div>
           </div>
         </SECTION>
+        <div class="form form_ord mfp-hide" id="order-form">
+          <div class="form__main form__main_order-writer"><a class="form__close-btn" href="#"></a>
+            <div class="form__main-inner">
+              <form method="POST" action="myajax">
+                <div class="form__title form__title_ord">Форма заказа консультации
+                </div>
+                <div class="form__ord-icon"><img src="./assets/img/icon-call-request.svg">
+                </div>
+                <div class="input input_ord">
+                  <label class="input__label" for="ord-name">Ваше имя
+                  </label>
+                  <div class="input__input-wrp input__input-wrp_ord">
+                    <input type="text" id="ord-name">
+                  </div>
+                </div>
+                <div class="input input_ord">
+                  <label class="input__label" for="ord-tel">Телефон номер для связи
+                  </label>
+                  <div class="input__input-wrp input__input-wrp_ord">
+                    <div class="input__tel-prefix">+7
+                    </div>
+                    <input type="tel" id="ord-tel">
+                  </div>
+                </div>
+                <div class="input input_ord">
+                  <div class="input__label input__label_hidden">Каптча
+                  </div>
+                  <div class="input__input-wrp input__input-wrp_ord"><img src="./assets/img/captcha.png">
+                  </div>
+                </div>
+                <div class="input input_ord">
+                  <div class="input__label input__label_hidden">Отправить
+                  </div>
+                  <div class="input__input-wrp input__input-wrp_ord">
+                    <button class="input__btn input__btn_ord btn btn_blue" type="submit">
+                      <div class="input__btn-text">Отправить
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="form__success form__success_ord"><a class="form__close-btn" href="#"></a>
+            <div class="form__succes-inner">
+              <div class="form__title form__title_ord">Форма заказа консультации
+              </div>
+              <div class="form__ord-icon"><img src="./assets/img/icon-call-request.svg">
+              </div>
+              <div class="form__ord-info">
+                <div class="form__ord-info-text">Ваша заявка принята на обработку.
+                </div>
+                <div class="form__ord-info-text">Скоро мы вам позвоним на ваш номер
+                </div>
+                <div class="form__ord-info-text">+7(495)123-45-67
+                </div>
+              </div>
+              <div class="form__ord-worktime">
+                <h4 class="form__ord-worktime-title">Режим обработки заявок
+                </h4>
+                <div class="form__ord-worktime-text">Пн-Пт с 10.00 до 20.00
+                </div>
+                <div class="form__ord-worktime-text">Выходные с 11.00 до 20.00
+                </div>
+              </div>
+              <button class="form__again-btn btn btn_blue" type="submit">Отправить повторно заявку
+              </button>
+              <button class="form__success-btn form__success-btn_ord btn btn btn_grey-thick-bd" type="submit">Закрыть форму
+              </button>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
     <footer class="footer">
@@ -1522,6 +1535,7 @@
     <script src="./assets/js/vendor.js" defer></script>
     <script src="./assets/js/libs.js" defer></script>
     <script src="./assets/js/main.js" defer></script>
+    <script src="./assets/js/popups.js" defer></script>
     <script>
       (function (doc) {
       			var scripts = doc.getElementsByTagName('script')

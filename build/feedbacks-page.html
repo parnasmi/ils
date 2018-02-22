@@ -43,7 +43,7 @@
                 </li>
                 <li class="top-bar__menu-item"><a class="top-bar__menu-link" href="#">Отзывы</a>
                 </li>
-              </ul><a class="top-bar__go-btn" href="#">Выезной ремонт</a>
+              </ul><a class="top-bar__go-btn" href="#"><svg width="155" height="34" xmlns="http://www.w3.org/2000/svg"><path d="M138 2c8.25 0 15 6.75 15 15s-6.75 15-15 15H17C8.75 32 2 25.25 2 17S8.75 2 17 2h121z" ></svg><span>Выездной ремонт</span></a>
             </div>
             <div class="top-bar__mob-logo">
             </div>
@@ -59,6 +59,12 @@
                   </svg>
                 </div>
                 <div class="device-close"></div>
+              </div>
+            </div>
+            <div class="notif">
+              <div class="notif__text">Выбор устройства для ремонта
+              </div>
+              <div class="notif__btn">
               </div>
             </div>
           </div>
@@ -121,7 +127,7 @@
         <nav class="nav">
           <div class="nav__inner">
             <div class="nav__descr">
-              <div class="nav__descr-inner">Какому устройству требуется помощь?
+              <div class="nav__descr-inner">Какому устройству<br> требуется помощь?
               </div>
             </div>
             <div class="nav__mob-title">Выбор устройства для ремонта
@@ -464,71 +470,6 @@
                   </div>
                 </li>
                 <li class="menu__item"><a class="menu__item-link" href="#">Samsung, Meizu, Xiaomi и др.</a>
-                  <div class="menu__submenu">
-                    <div class="menu__submenu-inner">
-                      <div class="menu__submenu-mobile-nav">
-                        <div class="menu__submenu-mobile-title">
-                          <div class="menu__submenu-mobile-back">
-                            <svg class="icon" width="7" height="12">
-                              <use xlink:href="#icon-left"></use>
-                            </svg>
-                          </div>
-                          <div class="menu__submenu-mobile-title-text">Выбор устройства для ремонта
-                          </div>
-                        </div>
-                        <div class="slide-toggle">
-                        </div>
-                      </div>
-                      <div class="menu__submenu-section menu__submenu-section_models">
-                        <div class="menu__submenu-title">Модели
-                        </div>
-                        <ul class="menu__submenu-list menu__submenu-list_models">
-                          <li class="menu__submenu-models-item"><a class="menu__submenu-models-link" href="#">iPhone 7 plus</a>
-                          </li>
-                          <li class="menu__submenu-models-item"><a class="menu__submenu-models-link" href="#">iPhone 7</a>
-                          </li>
-                          <li class="menu__submenu-models-item"><a class="menu__submenu-models-link" href="#">iPhone SE</a>
-                          </li>
-                          <li class="menu__submenu-models-item"><a class="menu__submenu-models-link" href="#">iPhone 6S plus</a>
-                          </li>
-                          <li class="menu__submenu-models-item"><a class="menu__submenu-models-link" href="#">iPhone 6S</a>
-                          </li>
-                          <li class="menu__submenu-models-item"><a class="menu__submenu-models-link" href="#">iPhone 6</a>
-                          </li>
-                          <li class="menu__submenu-models-item"><a class="menu__submenu-models-link" href="#">iPhone 5s</a>
-                          </li>
-                          <li class="menu__submenu-models-item"><a class="menu__submenu-models-link" href="#">iPhone 5</a>
-                          </li>
-                          <li class="menu__submenu-models-item"><a class="menu__submenu-models-link" href="#">iPhone 4s</a>
-                          </li>
-                          <li class="menu__submenu-models-item"><a class="menu__submenu-models-link" href="#">iPhone 4</a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="menu__submenu-section menu__submenu-section_services">
-                        <div class="menu__submenu-title">Услуги
-                        </div>
-                        <ul class="menu__submenu-list menu__submenu-list_service">
-                          <li class="menu__submenu-service-item"><a class="menu__submenu-service-link" href="#">Замена дисплея</a>
-                          </li>
-                          <li class="menu__submenu-service-item"><a class="menu__submenu-service-link" href="#">Замена стекло дисплея</a>
-                          </li>
-                          <li class="menu__submenu-service-item"><a class="menu__submenu-service-link" href="#">Замена аккумулатора</a>
-                          </li>
-                          <li class="menu__submenu-service-item"><a class="menu__submenu-service-link" href="#">Замена кнопки Home</a>
-                          </li>
-                          <li class="menu__submenu-service-item"><a class="menu__submenu-service-link" href="#">Замена задней крышки</a>
-                          </li>
-                          <li class="menu__submenu-service-item"><a class="menu__submenu-service-link" href="#">Перепрошивка</a>
-                          </li>
-                          <li class="menu__submenu-service-item"><a class="menu__submenu-service-link" href="#">Настройка</a>
-                          </li>
-                        </ul>
-                        <div class="menu__submenu-descr">Выберите слева модель вашего тефона и мы покажем все наши услуги
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </li>
               </ul>
             </div>
@@ -549,7 +490,7 @@
                     <div class="f-write__icon"><img src="./assets/img/icon-chat.svg" alt>
                     </div>
                     <div class="f-write__text">Если вам понравился результат работы наших специалистов - оставьте отзыв о нашей работе и сервисе. Для нас это очень важно. Спасибо!
-                    </div><a class="f-write__btn" href="#">Написать отзыв</a>
+                    </div><a class="f-write__btn" href="#feedback-form">Написать отзыв</a>
                   </div>
                 </div>
                 <div class="feedbacks__col">
@@ -800,6 +741,82 @@
               </div>
             </div>
           </div>
+          <div class="form form_f-form mfp-hide" id="feedback-form">
+            <div class="form__main form__main_f-writer"><a class="form__close-btn" href="#"></a>
+              <form method="POST" action="myajax">
+                <div class="form__f-writer-body">
+                  <div class="form__title form__title_f">Написать отзыв
+                  </div>
+                  <div class="input input_f">
+                    <div class="input__label">Оцените нас
+                    </div>
+                    <div class="input__input-wrp input__input-wrp_rating input__input-wrp_f">
+                      <fieldset class="rating">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label class="full" for="star5" title="Здорово - 5 звезд"></label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label class="full" for="star4" title="Довольно хорошо - 4 звезд"></label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label class="full" for="star3" title="Пойдет - 3 звезд"></label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label class="full" for="star2" title="Плохо - 2 звезд"></label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label class="full" for="star1" title="Отстой - 1 звезд"></label>
+                      </fieldset>
+                    </div>
+                  </div>
+                  <div class="input input_f">
+                    <label class="input__label" for="f-name">Ваше имя
+                    </label>
+                    <div class="input__input-wrp input__input-wrp_f">
+                      <input type="text" id="f-name" required><span class="input__error-msg">Это поля объязательно для заполнения</span>
+                    </div>
+                  </div>
+                  <div class="input input_f">
+                    <label class="input__label" for="f-text">Текст отзыва
+                    </label>
+                    <div class="input__input-wrp input__input-wrp_f">
+                      <textarea id="f-text"></textarea>
+                    </div>
+                  </div>
+                  <div class="input input_f">
+                    <div class="input__label input__label_hidden">Каптча
+                    </div>
+                    <div class="input__input-wrp input__input-wrp_f"><img src="./assets/img/captcha.png">
+                    </div>
+                  </div>
+                  <div class="input input_f">
+                    <div class="input__label input__label_hidden">Добавить отзыв
+                    </div>
+                    <div class="input__input-wrp input__input-wrp_f">
+                      <button class="input__btn input__btn_f btn btn_blue" type="submit">
+                        <div class="input__btn-text">Добавить отзыв
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div class="form__f-writer-footer">
+                <div class="f-writer-footer">
+                  <div class="f-writer-footer__icon"><img src="./assets/img/img-youtube-hover.png">
+                  </div>
+                  <div class="f-writer-footer__text">Если вы желаете написать видео или аудио отзыв, запишите отзыв и отправьте нам на Telegram номер <a href="tel:+74951234567">+7 (495) 123-45-67</a> или на <a href="mailto:info@ilikeservice.ru">e-mail info@ilikeservice.ru</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form__success form__success_f"><a class="form__close-btn" href="#"></a>
+              <div class="form__icon-success"><img src="./assets/img/icon-chat-blue.svg" alt>
+              </div>
+              <div class="form__success-thanks">Спасибо за ваш отзыв!
+              </div>
+              <div class="form__success-mod">Мы опубликуем ваш отзыв после проверки модератора.
+              </div>
+              <button class="form__success-btn btn btn btn_grey-thick-bd" type="submit">Закрыть форму
+              </button>
+            </div>
+          </div>
         </div>
         <SECTION class="depart-b-section">
           <div class="depart-b">
@@ -963,6 +980,7 @@
     <script src="./assets/js/vendor.js" defer></script>
     <script src="./assets/js/libs.js" defer></script>
     <script src="./assets/js/main.js" defer></script>
+    <script src="./assets/js/popups.js" defer></script>
     <script>
       (function (doc) {
       			var scripts = doc.getElementsByTagName('script')

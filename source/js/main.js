@@ -62,3 +62,18 @@ else { var tap = 'click'; }
 	$('.price-header__search-input').quicksearch('.services__row');
 })();
 
+//Showing mobile version notification for pointing device menu
+//using firstImpression.js
+if (window.matchMedia('(max-width: 767px)').matches) {
+	if(firstImpression('ils', 2)) {// цифр означает количество дней в течении которых сохраниться куки
+		$(window).on('load', function(){
+			setTimeout(function(){
+				$('.notif').addClass('active');
+			},1000);
+		})
+	}
+
+	$('.notif__btn').on(tap, function(){
+		$('.notif').removeClass('active');
+	});
+}

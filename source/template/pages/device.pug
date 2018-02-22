@@ -26,7 +26,9 @@ block content
 			+b.section-head_with-buttons
 				+e.H1.title_feedbacks Отзывы наших клиентов
 				+e.button-group_feedbacks
-					+e.btn_all-fdbs.btn_grey-thin-bd(href="#") Посмотреть все отзывы
+					+e.all-fdbs(href="#")
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 40"><path d="M160 40H20C9 40 0 31 0 20S9 0 20 0h140c11 0 20 9 20 20s-9 20-20 20z" fill="#231f20"/></svg>
+						span <i>Посмотреть</i> все отзывы
 					+e.btn_write-fdb.btn_blue(href="#") Написать отзыв
 			include ../blocks/feedbacks
 		SECTION.video-section.video-section_index

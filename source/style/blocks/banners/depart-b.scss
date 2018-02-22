@@ -6,12 +6,13 @@
 	
 
 	
-	background-color: #fff;
+	// background-color: #fff;
 	
 
 	&__inner {
 		border: solid 4px $silver;
 		border-radius: 8px;
+		background-color: #fff;
 	}
 
 	&__text {
@@ -45,11 +46,12 @@
 			width: 100%;
 			height: 100%;
 			top: 0;
-			left: 0;
+			// left: 0;
+			left: 50%;
 			border-radius: 100px;
 			z-index: -1;
 			transition: all .3s;
-			transform: translate3d(0,0,0);
+			transform: translate3d(-50%,0,0);
 		}
 	}
 }
@@ -79,7 +81,6 @@
 			left: 50%;
 			white-space: nowrap;
 			@include trfcen;
-
 			bottom: -25px;
 
 			&:active {
@@ -176,7 +177,7 @@
 
 		.depart-b__btn {
 			left: 0 !important;
-
+	
 			&:hover {
 				&::before {
 					transform: none;
@@ -284,10 +285,16 @@
 			// left: 20px;
 			left: 5px;
 			z-index: 5;
+			// padding-left: 0;
+			// padding-right: 0;
+			width: 175px;
+
 			&:hover {
 				&::before {
-					transform: scaleX(1.2) translate3d(0,0,0);
+					// transform: scaleX(1.2) translate3d(0,0,0);
+					width: 215px;
 				}
+
 			}
 
 			&:active {

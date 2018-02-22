@@ -8,5 +8,54 @@ block content
 		+e.inner
 			+e.H1.title.sec-title_xl Отзывы сервисного центра iLikeService.ru
 		include ../blocks/feedbacks_page
+		+b.form_f-form#feedback-form.mfp-hide
+			+e.main_f-writer
+				+e.close-btn(href='#')
+				form(method="POST" action="myajax")
+					+e.f-writer-body
+						+e.title_f Написать отзыв
+						+b.input_f
+							+e.label Оцените нас
+							+e.input-wrp_rating._f
+								fieldset.rating
+									input(type="radio",id="star5",name="rating",value="5")
+									label.full(for="star5",title="Здорово - 5 звезд")
+									input(type="radio",id="star4",name="rating",value="4")
+									label.full(for="star4",title="Довольно хорошо - 4 звезд")
+									input(type="radio",id="star3",name="rating",value="3")
+									label.full(for="star3",title="Пойдет - 3 звезд")
+									input(type="radio",id="star2",name="rating",value="2")
+									label.full(for="star2",title="Плохо - 2 звезд")
+									input(type="radio",id="star1",name="rating",value="1")
+									label.full(for="star1",title="Отстой - 1 звезд")
+						+b.input_f
+							+e.LABEL.label(for="f-name") Ваше имя
+							+e.input-wrp_f
+								input(type="text", id="f-name" required)
+								+e.SPAN.error-msg Это поля объязательно для заполнения
+						+b.input_f
+							+e.LABEL.label(for="f-text") Текст отзыва
+							+e.input-wrp_f
+								textarea(id="f-text")
+						+b.input_f
+							+e.label_hidden Каптча
+							+e.input-wrp_f: img(src="./assets/img/captcha.png")
+						+b.input_f
+							+e.label_hidden Добавить отзыв
+							+e.input-wrp_f
+								+e.BUTTON.btn_f.btn_blue(type="submit")
+									+e.btn-text Добавить отзыв
+									//- +e.btn-loader
+				+e.f-writer-footer
+					+b.f-writer-footer
+						+e.icon: img(src="./assets/img/img-youtube-hover.png")
+						+e.text Если вы желаете написать видео или аудио отзыв, запишите отзыв и отправьте нам на Telegram номер <a href="tel:+74951234567">+7 (495) 123-45-67</a> или на <a href="mailto:info@ilikeservice.ru">e-mail info@ilikeservice.ru</a>
+			+e.success_f
+				+e.close-btn(href='#')
+				+e.icon-success
+					img(src="./assets/img/icon-chat-blue.svg", alt)
+				+e.success-thanks Спасибо за ваш отзыв!
+				+e.success-mod Мы опубликуем ваш отзыв после проверки модератора.
+				+e.BUTTON.success-btn.btn.btn_grey-thick-bd(type="submit") Закрыть форму
 	SECTION.depart-b-section
 		include ../blocks/depart-b

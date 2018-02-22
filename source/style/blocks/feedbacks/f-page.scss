@@ -21,6 +21,10 @@
 				animation: spin 1s infinite linear;
 			}
 		}
+
+		&__btn {
+			outline: none;
+		}
 	}
 
 	@keyframes spin {

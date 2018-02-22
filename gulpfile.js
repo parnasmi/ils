@@ -8,7 +8,8 @@ global.$ = {
     jsFoundation: require('./gulp/paths/js.foundation.js'),
     libsFoundation: require('./gulp/paths/js.libs.js'),
     cssFoundation: require('./gulp/paths/css.foundation.js'),
-    app: require('./gulp/paths/app.js')
+    app: require('./gulp/paths/app.js'),
+    popups: require('./gulp/paths/popup.js')
   },
   gulp: require('gulp'),
   rimraf: require('rimraf'),
@@ -31,6 +32,7 @@ $.gulp.task('default', $.gulp.series(
     'js:foundation',
     'js:libs',
     'js:process',
+    'js:process.popups',
     'copy:image',
     'copy:picture',
     'copy:audio',

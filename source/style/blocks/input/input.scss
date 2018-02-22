@@ -1,0 +1,230 @@
+/* Styles Start*/
+	.input {
+
+		&__label {
+			font-weight: 700;
+		}
+
+		&__label_hidden {
+			@include link-text-indent;
+		}
+
+		&__input-wrp {
+			position: relative;
+		}
+
+		
+		&__input-wrp img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		&__input-wrp:not(.input__input-wrp_rating) {
+			input {
+				border-radius: 3px;
+				border: 1px solid $silver;
+				width: 100%;
+				padding: 9px 10px 9px 10px;
+			}
+
+			input,
+			textarea {
+				border-radius: 3px;
+				border: 1px solid $silver;
+				width: 100%;
+				padding: 10px 10px 10px 10px;
+			}
+
+			textarea {
+				min-height: 100px;
+			}
+
+			input:invalid {
+				border-color: #FF6868;
+				& + .input__error-msg {
+					display: block;
+				}
+			}
+		}
+
+		&__input-wrp_rating {
+			@include clearfix;
+		}
+
+		&__input-wrp_ord {
+			position: relative;
+			input {
+				padding-left: 50px!important;
+				outline: none;
+			}
+		}
+
+		&__tel-prefix {
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			border-right: 1px solid $silver;
+		}
+
+		&__btn_f {
+			padding-left: 40px;
+			padding-right: 40px;
+			display: inline-block;
+		}
+
+		&__btn_ord {
+			display: block;
+			width: 100%;
+		}
+
+		&__btn {
+			position: relative;
+		}
+
+		&__btn-text {
+			transition: all .3s;
+		}
+
+		&__btn.is-sending {
+			&::before {
+				content: '';
+				width: 25px;
+				height: 25px;
+				@include img-center;
+				border-radius: 50%;
+				border: 2px solid #fff;
+				z-index: 2;
+				border-top-color: rgba(#fff, .5);
+				animation: spin 1s infinite linear;
+			}
+
+			.input__btn-text {
+				opacity: 0;
+			}
+		}
+
+		&__error-msg {
+			position: absolute;
+			color: #FF6868;
+			font-weight: 700;
+			font-size: 1.3rem;
+			bottom: -18px;
+			left: 0;
+			display: none;
+		}
+	}
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	.input {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+
+		&__input-wrp {
+
+		}
+		&__label {
+			margin-bottom: 10px;
+		}
+
+		&__btn {
+			display: table;
+			margin-left: auto;
+			margin-right: auto;
+			padding-top: 11px;
+			padding-bottom: 11px;
+		}
+		
+	}
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+	.input {
+
+	}
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.input {
+
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.input {
+		&_f {
+			width: 594px;
+			margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+
+		&__input-wrp_f {
+			width: 450px;
+		}
+
+		&_ord {
+			label {
+				margin-bottom: 8px;
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+
+		&__btn {
+			padding-top: 16px;
+			padding-bottom: 16px;
+			// height: 50px;
+			// line-height: 50px;
+			// position: relative;
+		}
+
+
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.input {
+
+	}
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

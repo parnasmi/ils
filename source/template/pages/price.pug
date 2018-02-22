@@ -48,7 +48,7 @@ block content
 								+e.TD.col-cell_cost
 									+e.price_buttoned бесплатно
 								+e.TD.col-cell_time
-									+e.time_btn.btn_blue(href="#") Отправить заявку
+									+e.time_btn.btn_blue(href="#order-form") Отправить заявку
 							+e.TR.row
 								+e.TD.col-cell_ser-name
 									+e.col-cell-title Диагностика
@@ -330,7 +330,9 @@ block content
 		+b.section-head_with-buttons
 			+e.H1.title_feedbacks Отзывы наших клиентов
 			+e.button-group_feedbacks
-				+e.btn_all-fdbs.btn_grey-thin-bd(href="#") Посмотреть все отзывы
+				+e.all-fdbs(href="#")
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 40"><path d="M160 40H20C9 40 0 31 0 20S9 0 20 0h140c11 0 20 9 20 20s-9 20-20 20z" fill="#231f20"/></svg>
+					span <i>Посмотреть</i> все отзывы
 				+e.btn_write-fdb.btn_blue(href="#") Написать отзыв
 		include ../blocks/feedbacks
 	+b.price-seo
@@ -345,8 +347,45 @@ block content
 					|Чиним неисправности материнских плат. Меняем микросхемы и восстанавливаем элементы — <a href="#">резисторы</a>, <a href="#">конденсаторы</a>, <a href="#">разъемы</a> и <a href="#">проводники</a>.
 	SECTION.depart-b-section
 		include ../blocks/depart-b
-
-
+	+b.form_ord#order-form.mfp-hide
+		+e.main_order-writer
+			+e.close-btn(href='#')
+			+e.main-inner
+				form(method="POST" action="myajax")
+					+e.title_ord Форма заказа консультации
+					+e.ord-icon: img(src="./assets/img/icon-call-request.svg")
+					+b.input_ord
+						+e.LABEL.label(for="ord-name") Ваше имя
+						+e.input-wrp_ord
+							input(type="text", id="ord-name")
+					+b.input_ord
+						+e.LABEL.label(for="ord-tel") Телефон номер для связи
+						+e.input-wrp_ord
+							+e.tel-prefix +7
+							input(type="tel" id="ord-tel")
+					+b.input_ord
+						+e.label_hidden Каптча
+						+e.input-wrp_ord: img(src="./assets/img/captcha.png")
+					+b.input_ord
+						+e.label_hidden Отправить
+						+e.input-wrp_ord
+							+e.BUTTON.btn_ord.btn_blue(type="submit")
+								+e.btn-text Отправить
+		+e.success_ord
+			+e.close-btn(href='#')
+			+e.succes-inner
+				+e.title_ord Форма заказа консультации
+				+e.ord-icon: img(src="./assets/img/icon-call-request.svg")
+				+e.ord-info
+					+e.ord-info-text Ваша заявка принята на обработку.
+					+e.ord-info-text Скоро мы вам позвоним на ваш номер
+					+e.ord-info-text +7(495)123-45-67
+				+e.ord-worktime
+					+e.H4.ord-worktime-title Режим обработки заявок
+					+e.ord-worktime-text Пн-Пт с 10.00 до 20.00
+					+e.ord-worktime-text Выходные с 11.00 до 20.00
+				+e.BUTTON.again-btn.btn_blue(type="submit") Отправить повторно заявку
+				+e.BUTTON.success-btn_ord.btn.btn_grey-thick-bd(type="submit") Закрыть форму
 
 
 

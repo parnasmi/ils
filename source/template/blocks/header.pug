@@ -8,7 +8,12 @@
 					+e.menu-item: +e.menu-link(href="#") Блог
 					+e.menu-item: +e.menu-link(href="#") Контакты
 					+e.menu-item: +e.menu-link(href="#") Отзывы
-				+e.go-btn(href="#") Выезной ремонт
+				+e.go-btn(href="#")
+					//- <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewbox="0 0 151 30">
+					//- 	<path d="M175,50H25C11.2,50,0,38.8,0,25v0C0,11.2,11.2,0,25,0h150c13.7,0,25,11.2,25,25v0C200,38.8,188.8,50,175,50z" class="path" fill="transparent" stroke="#ffffff" />
+					//- </svg>
+					<svg width="155" height="34" xmlns="http://www.w3.org/2000/svg"><path d="M138 2c8.25 0 15 6.75 15 15s-6.75 15-15 15H17C8.75 32 2 25.25 2 17S8.75 2 17 2h121z" ></svg>
+					span Выездной ремонт
 			+e.mob-logo
 			+e.hamburger
 				span
@@ -21,6 +26,9 @@
 						svg(class="icon",width="22",height="24")
 							use(xlink:href='#icon-device')
 					.device-close
+			+b.notif
+				+e.text Выбор устройства для ремонта
+				+e.btn
 	+b.mid-bar
 		+e.inner
 			+e.logo-wrapper
@@ -66,7 +74,7 @@
 		+e.inner
 			+e.descr
 				+e.descr-inner
-					|Какому устройству требуется помощь?
+					|Какому устройству<br> требуется помощь?
 			+e.mob-title Выбор устройства для ремонта
 			+b.menu
 				+e.UL.list
@@ -302,7 +310,7 @@
 										|Выберите слева модель вашего тефона и мы покажем все наши услуги
 					+e.item
 						+e.item-link(href="#") Samsung, Meizu, Xiaomi и др.
-						+e.submenu
+						//- +e.submenu
 							+e.submenu-inner
 								+e.submenu-mobile-nav
 									//- Заголовок

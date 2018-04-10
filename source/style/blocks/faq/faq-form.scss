@@ -1,0 +1,138 @@
+/* Styles Start*/
+.faq-form {
+	background-color: #fff;
+	position: relative;
+	label {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+		input {
+			outline: none;
+		}
+
+		strong {
+			display: block;
+			margin-bottom: 7px;
+		}
+
+		select {
+			width: 100%;
+			outline: none;
+
+			border-radius: 3px;
+			background-color: #ffffff;
+			border: solid 1px #dfe1ea;
+
+			&:invalid {
+				border-color: #FF6868;
+				border-width: 2px;
+			}
+		}
+
+		textarea {
+			min-height: 100px;
+			outline: none;
+		}
+	}
+
+	&__inp-txt,
+	textarea {
+		border-radius: 3px;
+		background-color: #ffffff;
+		border: solid 1px #dfe1ea;
+		width: 100%;
+		padding: 10px 10px;
+
+		&:invalid {
+			border-color: #FF6868;
+			border-width: 2px;
+			& + .input__error-msg {
+				display: block;
+			}
+		}
+
+		& + .input__error-msg {
+			position: static;
+		}
+	}
+
+	&__inp-txt {
+
+	}
+
+	&__btn {
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 16px 25px;
+		outline: none;
+	}
+}
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	.faq-form {
+		padding: 20px;
+		border-radius: 8px;
+
+		.mfp-close {
+			display: none;
+		}
+	}
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+	.faq-form {
+
+	}
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.faq-form {
+
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.faq-form {
+		display: block !important;
+		.form__close-btn {
+			display: none;
+		}
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.faq-form {
+
+	}
+} // (min-width: 1042px)
+
+/*  End*/
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

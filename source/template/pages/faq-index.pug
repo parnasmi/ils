@@ -1,0 +1,256 @@
+extends ../tpl/_template-blog
+
+block variables
+	- var title = 'Faq Main'
+
+block content
+	//- +b.breadcrumbs
+		+e.inner 
+			+e.UL.list
+				+e.item: +e.link(href="#") Главная
+				+e.item: +e.link(href="#") Статьи
+	+b.ARTILCE.bl-inside
+		+e.inner
+			H1.blog__title.blog__title_faq Вопросы и ответы
+			+e.wrapper
+				+e.content_faq
+					+b.faq
+						+e.top
+							+e.count В базе 80 вопросов и ответов
+							+e.ask-btn.btn_blue(href="#faq-form") Отправить вопрос
+							+e.search
+								form
+									+e.search-input
+										input(type="text")
+									+e.BUTTON.search-btn(type="submit")
+										svg(class="icon",width="16",height="16")
+											use(xlink:href='#icon-search')
+						+e.content
+							+e.item_single
+								+b.qr
+									+e.header
+										+e.user
+											+e.user-avatar
+												img(src="./assets/img/icon-user-1.svg", alt)
+											+e.user-info
+												+e.user-name Иван
+												+e.user-device Устройства: Iphone X
+										+e.id
+											+e.id-text Номер вопроса:
+											+e.id-num(href="#") #345
+									+e.field_question
+										+e.text-field Здравствуйте! Вы осуществляете ГАРАНТИЙНЫЙ ремонт аппаратов "6s"? Предположительно вышел из строя контроллер питания на плате - аккумулятор перестал подзаряжаться, а после полной разрядки - соответственно, уже и не включается.
+									+e.info
+										+e.reply-owner Ответ i<span>Like</span>Service
+										+e.rtg
+											+e.rtg-txt Оцените ответ
+											+e.rtg-like
+												+e.rtg-icon(href="#")
+													svg(class="icon",width="16",height="16")
+														use(xlink:href='#icon-like')
+												+e.rtg-count 1
+									+e.field_answer
+										+e.text-field
+											| Здравствуйте!<br>
+											| Гарантийным ремонтом iPhone мы не занимаемся, только платным. Скорее всего вы правы и проблема либо в самом 
+											a(href="#") контроллере питания
+											|, либо в микросхеме U2 tristar.
+									+e.tags
+										+e.tag-title Теги:
+										+e.UL.tag-list
+											+e.tag-item
+												+e.tag-link(href="#") Не работает экран
+											+e.tag-item
+												+e.tag-link(href="#") Iphone 5
+											+e.tag-item
+												+e.tag-link(href="#") Замена экрана
+							+e.item_single
+								+b.qr
+									+e.header
+										+e.user
+											+e.user-avatar
+												img(src="./assets/img/icon-user-2.svg", alt)
+											+e.user-info
+												+e.user-name Александр
+												+e.user-device Устройства: Macbook Pro 2018 Retina
+										+e.id
+											+e.id-text Номер вопроса:
+											+e.id-num(href="#") #2
+									+e.field_question
+										+e.text-field Здравствуйте. На сколько я знаю Ipad 3 и Ipad 4 различаются только разъемами usb.Подойдет ли системная плата от Ipad 4 к ipad 3?
+									+e.info
+										+e.reply-owner Ответ i<span>Like</span>Service
+										+e.rtg
+											+e.rtg-txt Оцените ответ
+											+e.rtg-like
+												+e.rtg-icon(href="#")
+													svg(class="icon",width="16",height="16")
+														use(xlink:href='#icon-like')
+												+e.rtg-count 100
+									+e.field_answer
+										+e.text-field
+											| Здравствуйте!<br>
+											| В целом устройства почти идентичные, но сказать о совместимости плат увы ничего не можем, т.к. Мы такую операцию не производили. Как минимум вероятно, что 
+											a(href="#") распиновка разъема зарядки 
+											| на плате будет другой и разъем от 4 к 3 и наоборот не подойдет. Если вы хотите сделать апгрейд... 
+											+e.read-more(href="#") читать полностью
+									+e.tags
+										+e.tag-title Теги:
+										+e.UL.tag-list
+											+e.tag-item
+												+e.tag-link(href="#") Macbook Pro 2016
+											+e.tag-item
+												+e.tag-link(href="#") ремонт Макбук
+											+e.tag-item
+												+e.tag-link(href="#") ремонт материнской платы
+							+e.item_single
+								+b.qr
+									+e.header
+										+e.user
+											+e.user-avatar
+												img(src="./assets/img/icon-user-3.svg", alt)
+											+e.user-info
+												+e.user-name Малина-Алина Санта Лючита
+												+e.user-device Устройства: iPhone 6S
+										+e.id
+											+e.id-text Номер вопроса:
+											+e.id-num(href="#") #2
+									+e.field_question
+										+e.text-field пчему когда я ставлю нано 6 на блок. музыка идет на паузу сразу?
+									+e.info
+										+e.reply-owner Ответ i<span>Like</span>Service
+										+e.rtg
+											+e.rtg-txt Оцените ответ
+											+e.rtg-like
+												+e.rtg-icon(href="#")
+													svg(class="icon",width="16",height="16")
+														use(xlink:href='#icon-like')
+												+e.rtg-count 100
+									+e.field_answer
+										+e.text-field
+											| Здравствуйте!<br>
+											| Попробуйте сделать сброс настроек или прошивку Вашего iPod через iTunes
+									+e.tags
+										+e.tag-title Теги:
+										+e.UL.tag-list
+											+e.tag-item
+												+e.tag-link(href="#") iPhone 6S
+											+e.tag-item
+												+e.tag-link(href="#") ремонт айфон
+											+e.tag-item
+												+e.tag-link(href="#") контроллер питание iPhone
+							+e.item_single
+								+b.qr
+									+e.header
+										+e.user
+											+e.user-avatar
+												img(src="./assets/img/icon-user-4.svg", alt)
+											+e.user-info
+												+e.user-name Агата
+												+e.user-device Устройства: Xiaomi Mi Redi 5
+										+e.id
+											+e.id-text Номер вопроса:
+											+e.id-num(href="#") #2
+									+e.field_question
+										+e.text-field Добрый день помогите, пожалуйста, сять пароль (читал в сети, похоже на EFI , ноут с рук, ) после обновления системы требует пароль / Макбук последнего поколения 12 дюймов читал про ХЭШ, даже нашел его (много цифр и букв) после включения ноута с зажатыми несколькими клавишами, но никакой генератог в сети мне не помог надеюсь на помощь! Спасибо! сколько будет стоить?
+									+e.info
+										+e.reply-owner Ответ i<span>Like</span>Service
+										+e.rtg
+											+e.rtg-txt Оцените ответ
+											+e.rtg-like
+												+e.rtg-icon(href="#")
+													svg(class="icon",width="16",height="16")
+														use(xlink:href='#icon-like')
+												+e.rtg-count 10
+									+e.field_answer
+										+e.text-field
+											| Здравствуйте!
+											| Можем помочь Вам, снятие пароля с efi будет стоить 9 990 рублей, по времени обычно занимает 5-7 дней.
+									+e.tags
+										+e.tag-title Теги:
+										+e.UL.tag-list
+											+e.tag-item
+												+e.tag-link(href="#") Meizu
+											+e.tag-item
+												+e.tag-link(href="#") Xioami
+											+e.tag-item
+												+e.tag-link(href="#") ремонт
+					+b.pagination
+						+e.UL.list_margin-for-demo
+							+e.item.active: +e.link(href="#") 1
+							+e.item: +e.link(href="#") 2
+							+e.item: +e.link(href="#") 3
+							+e.item_nav: +e.link(href="#") следующая страница
+								svg(class="icon",width="5",height="8")
+									use(xlink:href='#arrow-right')
+				+e.sidebar
+					+b.faq-aside
+						+b.faq-form(id="faq-form")
+							.faq-aside__header
+								.faq-aside__title Задать вопрос
+								.faq-aside__descr Задайте вопрос прямо сейчас и наши специалисты ответят на них.
+							.form__close-btn
+							form
+								label
+									strong Ваше имя
+									+e.INPUT.inp-txt(type="text" required)
+									<span class="input__error-msg">Это поля объязательно для заполнения</span>
+								label
+									strong Email 
+									+e.INPUT.inp-txt(type="email" required)
+								label
+									strong Модель Устройства
+									select(required)
+										option(value="") Выберите модель
+										option(value="Iphone5") Iphone 5
+										option(value="Iphone5") Iphone 5
+										option(value="Iphone5") Iphone 5
+										option(value="Iphone5") Iphone 5
+								label
+									strong Текст
+									textarea У меня такой вопрос
+								label
+									input(type="checkbox")
+									|Оповестить по e-mail
+								label
+									input(type="checkbox")
+									|Требуется консультация по телефону
+								label
+									strong Телефон номер
+									+e.INPUT.inp-txt(type="tel")
+								+e.btn.BUTTON.btn_blue Отправить вопрос
+							.faq-form-success
+								.faq-form-success__text Ваш вопрос отправлен
+								a.faq-form-success__btn.btn.btn_grey-thick-bd(href="#") Отправить еще вопрос
+					+b.faq-aside
+						.faq-aside__header
+							.faq-aside__title Популярные вопросы
+						+b.faq-pops
+							+e.UL.list
+								+e.item
+									+b.qr-pop
+										+e.info
+											+e.user Александр
+											+e.id(href="#") #2
+										+e.text Телефон почему то начинает заряжаться только после перезагрузки ищу причину! подскажите?
+								+e.item
+									+b.qr-pop
+										+e.info
+											+e.user Женя
+											+e.id(href="#") #342
+										+e.text здравствуйте. купил на авито iPhone 5s, пришел домой, а батарейка уже на нуле зарядил до 100%, с утра встал, а она уже села. в режиме ожидания просто исчезает в...
+								+e.item
+									+b.qr-pop
+										+e.info
+											+e.user Маша
+											+e.id(href="#") #60
+										+e.text Такое дело, 5 айфон, 16 гигов, выключился, при включении появляется яблоко, потом нарисован кабель и айтюнс, восстанавливать не дает, пишет ошибка 14...
+								+e.item
+									+b.qr-pop
+										+e.info
+											+e.user Татьяна
+											+e.id(href="#") #23
+										+e.text Телефон почему то начинает заряжаться только после перезагрузки ищу причину! подскажите?
+
+
+

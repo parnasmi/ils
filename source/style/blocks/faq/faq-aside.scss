@@ -1,12 +1,33 @@
 /* Styles Start*/
-.faq-back {
+.faq-aside {
+	border-radius: 8px;
+	background-color: #ffffff;
+	border: solid 1px #dfe1ea;
+	position: relative;
+	
+	&__title {
+		text-align: center;
+		font-weight: 700;
+		font-size: 2rem;
+		line-height: 1;
+	}
 
+	&__header {
+		margin-bottom: 23px;
+	}
+
+	&__descr {
+		margin-top: 10px;
+		color: $grey;
+		text-align: center;
+		line-height: 1.55;
+	}
 }
 //========================================================
 // %mobile
 @media #{$mobileonly} {
-	.faq-back {
-		
+	.faq-aside {
+
 	}
 }//@media (max-width: 767px) 
 
@@ -14,32 +35,33 @@
 
 // %mobtab
 @media #{$mobtabonly} {
-	.faq-back {
-		
+	.faq-aside {
+
 	}
 }//@media (max-width: 1141px) 
 
 //========================================================
 // %tablet
 @media #{$tabonly} {
-	.faq-back {
-		
+	.faq-aside {
+		padding: 20px;
 	}
 }//#{$tabonly}
 
 //========================================================
 // %tabdesk
 @media #{$tabdeskonly} {
-	.faq-back {
-		
+	.faq-aside {
+		margin-bottom: 30px;
+
 	}
 } //(min-width: 768px)
 
 //========================================================
 // %desktop
 @media #{$deskonly} {
-	.faq-back {
-		
+	.faq-aside {
+		padding: 32px 28px 30px 28px;
 	}
 } // (min-width: 1042px)
 

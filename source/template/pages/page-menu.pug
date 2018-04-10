@@ -1,0 +1,22 @@
+extends ../tpl/_template-blog
+
+block variables
+	- var title = 'Меню страниц'
+
+block content
+	+b.blog.page-menu
+		+e.inner
+			+e.H1.title Меню Html страниц
+			ul
+				li: a(href="index.html" target="_blank") Главная
+				li: a(href="device.html"  target="_blank") Выбор устройства
+				li: a(href="price.html"  target="_blank") Прайс
+				li: a(href="services.html"  target="_blank") Сервис
+				li: a(href="shop.html"  target="_blank") Магазин
+				li: a(href="catalog.html"  target="_blank") Каталог
+				li: a(href="item-page.html"  target="_blank") Страница товара
+				li: a(href="article-index.html"  target="_blank") Статьи главная
+				li: a(href="article-inside.html"  target="_blank") Статьи полная
+				li: a(href="news-index.html"  target="_blank") Новости главная
+				li: a(href="info-page.html"  target="_blank") Инфо страница
+				li: a(href="feedbacks-page.html"  target="_blank") Страница отзывы

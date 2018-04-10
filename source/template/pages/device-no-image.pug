@@ -1,0 +1,43 @@
+extends ../tpl/_template
+
+block variables
+	- var title = 'Device'
+
+block content
+	SECTION.device-select-section
+		+b.device
+			+b.H1.sec-title_xl._device Ремонт iPhone
+			+e.banner-wrapper
+				include ../blocks/device-banner
+
+			//- Выберите модель
+			+b.H1.sec-title_l._device-choose Выберите модель iPhone, чтобы узнать стоимость ремонта
+			include ../blocks/choose-model
+
+			//- или укажите проблему
+			+b.H1.sec-title_l._device-choose или укажите проблему
+			include ../blocks/choose-problem
+
+			//- или укажите проблему
+			+b.H1.sec-title_l._device-choose Самые востребованные услуги
+		.device-indemand
+			include ../blocks/indemand_device-no-image
+		SECTION.feedbacks-section.feedbacks-section_general
+			+b.section-head_with-buttons
+				+e.H1.title_feedbacks Отзывы наших клиентов
+				+e.button-group_feedbacks
+					+e.all-fdbs(href="#")
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 40"><path d="M160 40H20C9 40 0 31 0 20S9 0 20 0h140c11 0 20 9 20 20s-9 20-20 20z" fill="#231f20"/></svg>
+						span <i>Посмотреть</i> все отзывы
+					+e.btn_write-fdb.btn_blue(href="#") Написать отзыв
+			include ../blocks/feedbacks
+		SECTION.video-section.video-section_index
+			+b.section-head
+				+e.H1.title_video Посмотрите как мы ремонтируем
+			include ../blocks/video
+		+b.device-bottom
+			+e.inner
+				+b.H2.sec-title_xxl._device-bottom Профессиональный ремонт iPhone
+				+e.descr-title Фирменная гарантия на наши услуги до 6 месяцев
+				p
+					|Согласитесь, сложно представить жизнь без компьютеров, планшетов, телефонов и прочих электронных помощников. Телефоны превратились в нечто большее, а цена на устройства иногда превышает среднюю зарплату. При своей не малой стоимости <a href="#">iPhone еще</a> и очень хрупкий. Чтобы разбить экран даже много усилий прикладывать не нужно, а помимо стекол внутри расположены датчики, модули связи GSM/WiFi, кнопки, антенны и <a href="#">другие элементы.</a> Одним словом ломаться есть чему, поэтому ремонт iPhone и приобрел популярность.

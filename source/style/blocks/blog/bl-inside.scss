@@ -17,6 +17,11 @@
 		background-color: #fff;
 	}
 
+	&__content_faq {
+		border-radius: 0;
+		background-color: transparent;
+	}
+
 	&__date {
 		font-size: 1.4rem;
 		color: $grey;
@@ -185,8 +190,9 @@
 // %mobile
 @media #{$mobileonly} {
 	.bl-inside {
-		padding-left: 10px;
-		padding-right: 10px;
+		// padding-left: 10px;
+		// padding-right: 10px;
+		// width: 100%;
 
 		&__inner {
 			padding-left: 10px;
@@ -205,6 +211,10 @@
 
 		&__content {
 			padding: 10px;
+		}
+
+		&__content_faq {
+			padding: 0;
 		}
 
 		&__date {
@@ -324,10 +334,15 @@
 			display: flex;
 			align-items: flex-start;
 			justify-content: space-between;
+			// flex-wrap: wrap;
 		}
 
 		&__content {
 			padding: 20px;
+		}
+
+		&__content_faq {
+			padding: 0;
 		}
 
 		&__image {
@@ -363,6 +378,8 @@
 		&__content {
 			flex-basis: 870px;
 		}
+
+
 
 		&__title {
 			margin-bottom: 15px;

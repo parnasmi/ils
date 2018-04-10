@@ -5,20 +5,8 @@ else { var tap = 'click'; }
 //Indemand tablet version items equilheights
 (function(){
 	if (window.matchMedia('(min-width: 768px)').matches && window.matchMedia('(max-width: 1279px)').matches) {
-
-		$('.indemand__item:not(.indemand__item_index-main)').equalHeights();
 		$('.indemand__item-title:not(.indemand__item-title_index-main)').equalHeights();
-
 	}
-
-	if (window.matchMedia('(max-width: 767px)').matches) {
-		// $('.footer__address').equalHeights();
-	}
-
-	if (window.matchMedia('(min-width: 1280px)').matches) {
-		$('.indemand__col').equalHeights();
-	}
-
 })();
 
 //Videos block "show more videos" button cloning for mobile
@@ -69,7 +57,7 @@ if (window.matchMedia('(max-width: 767px)').matches) {
 		$(window).on('load', function(){
 			setTimeout(function(){
 				$('.notif').addClass('active');
-			},1000);
+			},500);
 		})
 	}
 
@@ -77,6 +65,32 @@ if (window.matchMedia('(max-width: 767px)').matches) {
 		$('.notif').removeClass('active');
 	});
 }
+
+//Remove wrapper if there is no image in device page services
+(function(){
+	$('.indemand__col_device').each(function(i,v){
+		var $this = $(v),
+				wrapper = $this.find('.indemand__item-img'),
+				img = $(this).find('.indemand__item-img img');
+
+		if(!img.length) {
+			wrapper.remove();
+			$this.addClass('has-no-image');
+		}
+
+	})
+	.promise()
+	.done(function(){
+		if (window.matchMedia('(min-width: 1280px)').matches) {
+			$('.indemand__col:not(.has-no-image)').equalHeights();
+		}
+
+		if (window.matchMedia('(min-width: 768px)').matches && window.matchMedia('(max-width: 1279px)').matches) {
+			$('.indemand__col_device:not(.has-no-image) .indemand__item:not(.indemand__item_index-main').equalHeights();
+		}
+	});
+})();
+
 
 
 //----- Cloning some header blocks for adaptive -----
@@ -339,16 +353,17 @@ if (window.matchMedia('(max-width: 767px)').matches) {
 
 (function(){
 	//Videos block slider
-	$('.video__player_js').flickity({
-		// // options
-		// cellAlign: 'left',
+	var $vp = $('.video__player_js'),
+			$vpList = $('.video__playlist-list_js');
+
+	$vp.flickity({
 		contain: true,
 		setGallerySize: false,
 		prevNextButtons: false,
-		touchVerticalScroll: true
+		touchVerticalScroll: true,
 	});
 
-	$('.video__playlist-list_js').flickity({
+	$vpList.flickity({
 			asNavFor: '.video__player_js',
 			contain: true,
 			prevNextButtons: false,
@@ -356,18 +371,39 @@ if (window.matchMedia('(max-width: 767px)').matches) {
 			touchVerticalScroll: true
 	});
 
+	//Stop playing previous youtube video
+	$('.video__playlist-list_js').on('click', '.video__playlist-item', function(){
+
+		var container = $('.video'),
+				$this = $(this),
+				player = container.find('.video__player'),
+				playerItems = player.find('.video__player-item');
+
+			playerItems.each(function(i,v){
+				var current = $(v);
+
+				if(!current.hasClass('is-selected') && current.find('iframe').length) {
+					var iframe = $(this).find('iframe')[0].contentWindow;
+					iframe.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+				}
+			});
+	});
+
+	var $indexItems = $('.index-items__wrapper_js');
 	// Index items
-	$('.index-items__wrapper_js').flickity({
+	$indexItems.flickity({
 		// options
 		cellAlign: 'left',
 		contain: true,
 		pageDots: false,
 		groupCells: true,
-		// friction: 0.15,
-		// selectedAttraction: 0.3,
 		selectedAttraction: 0.15,
 		friction: 0.8,
 		touchVerticalScroll: true
+	});
+
+	$indexItems.on( 'change.flickity', function() {
+		console.log('changed');
 	});
 	
 	if (window.matchMedia('(max-width: 767px)').matches) {
@@ -379,7 +415,6 @@ if (window.matchMedia('(max-width: 767px)').matches) {
 					pageDots: false,
 					cellAlign: 'left',
 					contain: true,
-					//setGallerySize: false
 			});
 		}
 	}
@@ -417,8 +452,10 @@ if (window.matchMedia('(max-width: 767px)').matches) {
 			});
 		}
 	}
-	
 })();
+
+
+
 
 //Deviding title and other texts into separate tags
 
@@ -646,3 +683,64 @@ if (window.matchMedia('(max-width: 767px)').matches) {
 			return false;
 	});
 })();
+jQuery(document).ready(function($){
+	$('.qr__tag-link').on('click', function(e){
+		e.preventDefault();
+
+		var $this = $(this);
+		var tagText = ' - ' + $this.text();
+		var faqTitle = $('.blog__title_faq');
+
+		if(!faqTitle.find('span').length) {
+			$('.blog__title_faq').append('<span>' + tagText + '</span>');
+		} else {
+			$('.blog__title_faq').find('span').remove();
+			$('.blog__title_faq').append('<span>' + tagText + '</span>');
+		}
+		
+	});
+});
+jQuery(document).ready(function($){
+	if (window.matchMedia('(max-width: 767px)').matches) {
+		$('.faq__search-btn').on('click', function(e){
+			var $this = $(this);
+			if(!$this.is('.active')) {
+				e.preventDefault();
+				$this.addClass('active');
+			}
+			
+			$('.faq__search')
+				// .add('.quick-panel__search-close')
+				.addClass('active');
+			
+			$this.siblings('.faq__search-input').find('input')
+				.focus()
+				.attr('placeholder', 'Поиск по ключевым словам');
+
+			$('.faq__search-input').prepend('<div class="faq__search-close"></div>');
+
+		});
+		$('.faq__search').on('click', '.faq__search-close',function(){
+			$('.faq__search')
+				.add('.faq__search-btn')
+				.removeClass('active');
+			$('.faq__search-input input').removeAttr('placeholder');
+			$(this).remove();
+		});
+	}
+});
+jQuery(document).ready(function($){
+	if (window.matchMedia('(min-width: 768px)').matches) {
+		$(window).on('load', function(){
+			$('.faq__search-input input').attr('placeholder', 'Поиск по ключевым словам');
+		})
+	}
+});
+// Styling checkboxes and radio
+jQuery(document).ready(function($){
+	!function(t,s){function i(s,n){var e=this;e.$e=t(s),e.options=t.extend({},i.default,n),e.init()}i.default={stylize_class:"form"},i.prototype.init=function(){var s=this;if(s.$e.hasClass(s.options.stylize_class+"-uni-input"))return!1;s.$e.addClass(s.options.stylize_class+"-uni-input"),s.$p=s.$e.parent(),s.$p.is("label")?s.$p.addClass(s.options.stylize_class+"-label"):(s.$p=t('<label class="'+s.options.stylize_class+'-label"></label>'),s.$e.wrap(s.$p)),s.$e.after('<span class="'+s.options.stylize_class+'-stylized-option"></span>')},t.fn.stylizeInput=function(s){return this.each(function(){t(this).data("stylizeInput")||t(this).data("stylizeInput",new i(this,s))})},t.fn.stylizeInput.Constructor=i}(jQuery);
+	
+	$('.faq-form input[type=checkbox],.faq-form input[type=radio]').stylizeInput();
+});
+
+

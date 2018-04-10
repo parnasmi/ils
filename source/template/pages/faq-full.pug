@@ -1,0 +1,100 @@
+extends ../tpl/_template-blog
+
+block variables
+	- var title = 'Faq Full'
+
+block content
+	//- +b.breadcrumbs
+		+e.inner 
+			+e.UL.list
+				+e.item: +e.link(href="#") Главная
+				+e.item: +e.link(href="#") Статьи
+	+b.ARTILCE.bl-inside
+		+e.inner
+			H1.blog__title.blog__title_faq Вопросы и ответы <span>- #345</span>
+			+e.wrapper
+				+e.content_faq
+					+b.faq
+						+e.content
+							+e.item_single
+								+b.qr
+									+e.header
+										+e.user
+											+e.user-avatar
+												img(src="./assets/img/icon-user-1.svg", alt)
+											+e.user-info
+												+e.user-name Иван
+												+e.user-device Устройства: Iphone X
+										+e.id
+											+e.id-text Номер вопроса:
+											+e.id-num(href="#") #345
+									+e.field_question
+										+e.text-field Здравствуйте! Вы осуществляете ГАРАНТИЙНЫЙ ремонт аппаратов "6s"? Предположительно вышел из строя контроллер питания на плате - аккумулятор перестал подзаряжаться, а после полной разрядки - соответственно, уже и не включается.
+									+e.info
+										+e.reply-owner Ответ i<span>Like</span>Service
+										+e.rtg
+											+e.rtg-txt Оцените ответ
+											+e.rtg-like
+												+e.rtg-icon(href="#")
+													svg(class="icon",width="16",height="16")
+														use(xlink:href='#icon-like')
+												+e.rtg-count 1
+									+e.field_answer
+										+e.text-field
+											| Здравствуйте!<br>
+											| Гарантийным ремонтом iPhone мы не занимаемся, только платным. Скорее всего вы правы и проблема либо в самом 
+											a(href="#") контроллере питания
+											|, либо в микросхеме U2 tristar.
+									+e.tags
+										+e.tag-title Теги:
+										+e.UL.tag-list
+											+e.tag-item
+												+e.tag-link(href="#") Не работает экран
+											+e.tag-item
+												+e.tag-link(href="#") Iphone 5
+											+e.tag-item
+												+e.tag-link(href="#") Замена экрана
+					+b.faq-back
+						+e.btn.btn_blue(href="#") Назад к вопросам
+				+e.sidebar
+					+b.faq-aside
+						+b.faq-form.is-form-sent(id="faq-form")
+							.faq-aside__header
+								.faq-aside__title Задать вопрос
+								.faq-aside__descr Задайте вопрос прямо сейчас и наши специалисты ответят на них.
+							.form__close-btn
+							form
+								label
+									strong Ваше имя
+									+e.INPUT.inp-txt(type="text")
+								label
+									strong Email 
+									+e.INPUT.inp-txt(type="email")
+								label
+									strong Модель Устройства
+									select
+										option Выберите модель
+										option Iphone 5
+										option Iphone 5
+										option Iphone 5
+										option Iphone 5
+								label
+									strong Текст
+									textarea У меня такой вопрос
+								label
+									input(type="checkbox")
+									|Оповестить по e-mail
+								label
+									input(type="checkbox")
+									|Требуется консультация по телефону
+								label
+									strong Телефон номер
+									+e.INPUT.inp-txt(type="tel")
+								+e.btn.BUTTON.btn_blue Отправить вопрос
+							.faq-form-success
+								.faq-form-success__text Ваш вопрос отправлен
+								a.faq-form-success__btn.btn.btn_grey-thick-bd(href="#") Отправить еще вопрос
+
+
+
+

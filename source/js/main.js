@@ -5,20 +5,8 @@ else { var tap = 'click'; }
 //Indemand tablet version items equilheights
 (function(){
 	if (window.matchMedia('(min-width: 768px)').matches && window.matchMedia('(max-width: 1279px)').matches) {
-
-		$('.indemand__item:not(.indemand__item_index-main)').equalHeights();
 		$('.indemand__item-title:not(.indemand__item-title_index-main)').equalHeights();
-
 	}
-
-	if (window.matchMedia('(max-width: 767px)').matches) {
-		// $('.footer__address').equalHeights();
-	}
-
-	if (window.matchMedia('(min-width: 1280px)').matches) {
-		$('.indemand__col').equalHeights();
-	}
-
 })();
 
 //Videos block "show more videos" button cloning for mobile
@@ -69,7 +57,7 @@ if (window.matchMedia('(max-width: 767px)').matches) {
 		$(window).on('load', function(){
 			setTimeout(function(){
 				$('.notif').addClass('active');
-			},1000);
+			},500);
 		})
 	}
 
@@ -77,3 +65,29 @@ if (window.matchMedia('(max-width: 767px)').matches) {
 		$('.notif').removeClass('active');
 	});
 }
+
+//Remove wrapper if there is no image in device page services
+(function(){
+	$('.indemand__col_device').each(function(i,v){
+		var $this = $(v),
+				wrapper = $this.find('.indemand__item-img'),
+				img = $(this).find('.indemand__item-img img');
+
+		if(!img.length) {
+			wrapper.remove();
+			$this.addClass('has-no-image');
+		}
+
+	})
+	.promise()
+	.done(function(){
+		if (window.matchMedia('(min-width: 1280px)').matches) {
+			$('.indemand__col:not(.has-no-image)').equalHeights();
+		}
+
+		if (window.matchMedia('(min-width: 768px)').matches && window.matchMedia('(max-width: 1279px)').matches) {
+			$('.indemand__col_device:not(.has-no-image) .indemand__item:not(.indemand__item_index-main').equalHeights();
+		}
+	});
+})();
+

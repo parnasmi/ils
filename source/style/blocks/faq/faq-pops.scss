@@ -1,12 +1,25 @@
 /* Styles Start*/
-.faq-back {
+.faq-pops {
+	&__item {
 
+		&:not(:first-child) {
+			padding-top: 20px;
+		}
+
+		&:not(:last-child) {
+			border-bottom: 1px solid $silver;
+			padding-bottom: 20px;
+		}
+
+		
+
+	}
 }
 //========================================================
 // %mobile
 @media #{$mobileonly} {
-	.faq-back {
-		
+	.faq-pops {
+
 	}
 }//@media (max-width: 767px) 
 
@@ -14,32 +27,32 @@
 
 // %mobtab
 @media #{$mobtabonly} {
-	.faq-back {
-		
+	.faq-pops {
+
 	}
 }//@media (max-width: 1141px) 
 
 //========================================================
 // %tablet
 @media #{$tabonly} {
-	.faq-back {
-		
+	.faq-pops {
+
 	}
 }//#{$tabonly}
 
 //========================================================
 // %tabdesk
 @media #{$tabdeskonly} {
-	.faq-back {
-		
+	.faq-pops {
+
 	}
 } //(min-width: 768px)
 
 //========================================================
 // %desktop
 @media #{$deskonly} {
-	.faq-back {
-		
+	.faq-pops {
+
 	}
 } // (min-width: 1042px)
 

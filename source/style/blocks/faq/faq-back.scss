@@ -1,6 +1,9 @@
 /* Styles Start*/
 .faq-back {
-
+	&__btn {
+		display: inline-block;
+		padding: 16px 25px;
+	}
 }
 //========================================================
 // %mobile

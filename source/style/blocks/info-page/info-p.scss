@@ -80,6 +80,7 @@
 
 	&__gallery-link {
 		
+
 		font-size: 1.4rem;
 		display: flex;
 		align-items: center;
@@ -100,6 +101,8 @@
 				opacity: 1;
 			}
 		}
+
+		display: none;
 	}
 
 	&__gallery-icon {
@@ -143,7 +146,8 @@
 	}
 
 	&__gallery {
-		display: none;
+		// display: none;
+		margin-top: 20px;
 	}
 
 	&__gallery-item {
@@ -695,6 +699,11 @@
 		&__contacts-item_schedule {
 			margin-bottom: 0;
 		}
+	}
+
+	.yandex-map {
+		width: 250px !important;
+		max-height: 100%;
 	}
 } // (min-width: 1042px)
 

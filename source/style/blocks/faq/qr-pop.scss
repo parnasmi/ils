@@ -1,11 +1,32 @@
 /* Styles Start*/
-.faq-back {
+.qr-pop {
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 10px;
+	}
 
+	&__user {
+		font-weight: 700;
+	}
+
+	&__text {
+		line-height: 1.4;
+	}
+
+	&__id {
+		font-size: 1.3rem;
+
+		&:hover {
+			color: $grey;
+		}
+	}
 }
 //========================================================
 // %mobile
 @media #{$mobileonly} {
-	.faq-back {
+	.qr-pop {
 		
 	}
 }//@media (max-width: 767px) 
@@ -14,7 +35,7 @@
 
 // %mobtab
 @media #{$mobtabonly} {
-	.faq-back {
+	.qr-pop {
 		
 	}
 }//@media (max-width: 1141px) 
@@ -22,7 +43,7 @@
 //========================================================
 // %tablet
 @media #{$tabonly} {
-	.faq-back {
+	.qr-pop {
 		
 	}
 }//#{$tabonly}
@@ -30,7 +51,7 @@
 //========================================================
 // %tabdesk
 @media #{$tabdeskonly} {
-	.faq-back {
+	.qr-pop {
 		
 	}
 } //(min-width: 768px)
@@ -38,7 +59,7 @@
 //========================================================
 // %desktop
 @media #{$deskonly} {
-	.faq-back {
+	.qr-pop {
 		
 	}
 } // (min-width: 1042px)

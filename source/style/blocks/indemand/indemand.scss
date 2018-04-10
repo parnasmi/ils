@@ -112,6 +112,14 @@
 		text-align: center;
 	}
 }
+
+.indemand__col_device.has-no-image {
+	.indemand__item-inner {
+		display: block;
+	}
+}
+
+
 //========================================================
 // %mobile
 @media #{$mobileonly} {

@@ -55,6 +55,10 @@ $('.info-p__gallery-wrapper').magnificPopup({
 		callbacks: {
 			open: function() {
 				// $('.form').height($('.form__main_f-writer').innerHeight());
+				$('html').addClass('no-scroll');
+			},
+			close: function(){
+				$('html').removeClass('no-scroll');
 			}
 		}
 	});

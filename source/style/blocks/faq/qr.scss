@@ -171,7 +171,7 @@
 
 	&__tags {
 		color: $grey;
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 		display: flex;
 		align-items: center;
 		// flex-wrap: wrap;
@@ -198,7 +198,7 @@
 		background-color: #ffffff;
 		padding: 3px 10px;
 		display: block;
-
+		font-size: 1.2rem;
 		&:hover {
 			background-color: $blue;
 			color: #fff;
@@ -267,7 +267,14 @@
 // %mobtab
 @media #{$mobtabonly} {
 	.qr {
+		&__tags {
+			align-items: flex-start;
+		}
 
+		&__tag-title {
+			position: relative;
+			top: 2px;
+		}
 	}
 }//@media (max-width: 1141px) 
 

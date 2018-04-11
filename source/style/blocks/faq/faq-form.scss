@@ -67,6 +67,10 @@
 		padding: 16px 25px;
 		outline: none;
 	}
+
+	.tel-input {
+		display: none;
+	}
 }
 //========================================================
 // %mobile
@@ -77,6 +81,16 @@
 
 		.mfp-close {
 			display: none;
+		}
+	}
+
+	.no-scroll {
+		overflow: hidden;
+
+		.mfp-container {
+			overflow: auto;
+			padding-top: 10px;
+			padding-bottom: 10px;
 		}
 	}
 }//@media (max-width: 767px) 

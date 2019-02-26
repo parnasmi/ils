@@ -36,6 +36,43 @@
 											svg(class="icon",width="16",height="10")
 												use(xlink:href='#icon-metro')
 										+e.address-text Римская, ул. С. Радонежского д 23-25
+				//- .main-banner__item
+					+b.main-banner(href="#")
+						+e.DIV.left
+							+e.DIV.left-inner
+								+e.H2.title
+									+e.title-accent Мы ремонтируем
+									+e.title-common всю линейку техники Apple
+								+e.DIV.secondary
+									+e.secondary-text А так же Samsung, Meizu и Xiaomi*
+									+e.secondary-icon
+										img(src="./assets/img/icon-smile.svg", alt)
+								+e.comment <sup>*</sup>определенные модели, заранее уточняйте модель у нашего оператора
+						+e.DIV.right
+							+e.DIV.right-inner
+								+e.DIV.icons
+									+e.DIV.icon_phone
+										svg(class="icon")
+											use(xlink:href='#icon-phone-slider')
+									+e.DIV.icon_screwdriver
+										svg(class="icon")
+											use(xlink:href='#icon-screwdriver')
+								+e.button
+									+e.button-text Диагностика бесплатно
+								+e.address
+									+e.address-item
+										+e.address-icon
+											svg(class="icon",width="16",height="10")
+												use(xlink:href='#icon-metro')
+										+e.address-text Сокольники, ул. Русаковская 22
+									+e.address-item
+										+e.address-icon
+											svg(class="icon",width="16",height="10")
+												use(xlink:href='#icon-metro')
+										+e.address-text Римская, ул. С. Радонежского д 23-25
+				.main-banner__item
+					+b.picture-banner(href="#")
+						img(src="./assets/pics/banner-2.png", alt)
 		+e.col_services
 			+b.accented-services
 				+e.item(href="#")

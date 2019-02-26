@@ -2,11 +2,13 @@
 //====================================================
 
 // Main-screen banner slider
-// $('.main-banner__wrapper').flickity({
-//   // options
-//   cellAlign: 'left',
-//   contain: true
-// });
+$('.main-banner__wrapper').flickity({
+  // options
+  cellAlign: 'left',
+  contain: true,
+  autoPlay: true,
+  wrapAround: true
+});
 
 (function(){
 	//Videos block slider

@@ -1,0 +1,154 @@
+.fdb {
+	background: #FFFFFF;
+	border: 1px solid #DFE1EA;
+	border-radius: 5px;
+	padding: 3rem;
+	
+	@include respond(phone) {
+		padding: 2rem 1.5rem;
+	}
+}
+
+.fdb__top {
+	margin-bottom: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
+	@include respond(phone) {
+		display: block;
+		margin-bottom: 2rem;
+	}
+}
+
+.fdb__cust {
+	display: flex;
+	align-items: center;
+}
+
+.fdb__image {
+	position: relative;
+	flex-shrink: 0;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-right: 1.5rem;
+	img {
+		height: 100%;
+		max-width: 100%;
+	}
+}
+
+.fdb__name {
+	font-size: 1.8rem;
+	font-weight: bold;
+	margin-right: 1.5rem;
+	line-height: 1;
+}
+
+.fdb__date {
+	font-size: 1.3rem;
+	color: #757887;
+	
+	@include respond(phone) {
+		margin-top: 2rem;
+	}
+}
+
+.fdb__pros {
+	margin-bottom: 3rem;
+	
+	@include respond(phone) {
+		margin-bottom: 2rem;
+	}
+}
+
+.fdb__type-title {
+	margin-bottom: 1rem;
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+}
+
+.fdb__type-icon {
+	width: 20px;
+	height: 20px;
+	margin-right: 1rem;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+	
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		background-color: #fff;
+		border-radius: 1px;
+	}
+	
+}
+
+
+.fdb__type-icon_plus {
+	background-color: rgb(103, 201, 103);
+	
+	&::before {
+		width: 3px;
+		height: 9px;
+	}
+	
+	&::after {
+		height: 3px;
+		width: 9px;
+	}
+}
+
+.fdb__type-icon_minus {
+		background-color: rgb(226, 190, 190);
+		
+	&::after {
+		height: 3px;
+		width: 9px;
+	}
+}
+
+.fdb__content-video {
+	
+	@include respond(tabdesk) {
+		width: 57rem;
+	}
+}
+
+.fdb__content-audio {
+	
+	margin-top: 2rem;
+	
+	@include respond(tabdesk) {
+		display: flex;
+		align-items: center;
+		margin-top: 3rem;
+	}
+	
+	.mejs__container {
+		width: 100%!important;
+		@include respond(tabdesk) {
+			width: 31rem!important;
+		}
+	}
+}
+
+.fdb__content-audio-title {
+	white-space: nowrap;
+	font-weight: bold;
+	@include respond(phone) {
+		margin-bottom: 1rem;
+	}
+	@include respond(tabdesk) {
+		margin-right: 2rem;
+	}
+	
+}

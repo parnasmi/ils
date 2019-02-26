@@ -1,0 +1,174 @@
+//Global styles
+.layout-center {
+	margin: 0 auto;
+	@include respond(phone) {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	@include respond(tabonly) {
+		width: $sm-container-width;
+	}
+	
+	@include respond(desktop) {
+		width: $md-container-width;
+	}
+}
+
+@media (max-width: 900px) {
+	.mfp-container {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+//Global styles end
+
+.fdb-page {
+	@include respond(phone) {
+		margin-bottom: 7.5rem;
+	}
+	
+	@include respond(desktop) {
+		margin-bottom: 9rem;
+	}
+}
+
+.fdb-page_write {
+	margin-bottom: 8rem;
+}
+
+.fdb-page__title {
+	font-size: 3rem;
+	font-weight: bold;
+	margin-bottom: 2.5rem;
+	@include respond(phone) {
+		font-size: 2rem;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+}
+
+.fdb-page__descr,
+.fdb-page__descr-text {
+	
+	@include respond(tabdesk) {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.fdb-page__descr {
+	justify-content: space-between;
+	margin-bottom: 4rem;
+	
+	@include respond(phone) {
+		margin-bottom: 2rem;
+	}
+}
+
+.fdb-page__descr-text {
+	@include respond(phone) {
+		display: flex;
+		align-items: center;
+		margin-bottom: 2rem;
+	}
+}
+
+.fdb-page__icon {
+	margin-right: 4rem;
+	flex-shrink: 0;
+	@include respond(tabonly) {
+		margin-right: 2rem;
+	}
+	
+	@include respond(phone) {
+		margin-right: 1.5rem;
+		width: 5.6rem;
+		height: 5.6rem;
+		position: relative;
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+}
+
+.fdb-page__icon + span {
+	font-size: 1.6rem;
+	@include respond(phone) {
+		font-size: 1.4rem;
+	}
+}
+
+.fdb-page__btn {
+	background-color: #ffe228;
+	
+	@include respond(tabonly) {
+		margin-left: 2rem;
+	}
+	
+	@include respond(desktop) {
+		margin-left: 27rem;
+	}
+	
+	@include respond(phone) {
+		padding-top: 1.3rem;
+		padding-bottom: 1.3rem;
+		width: 100%;
+	}
+	
+	&:hover {
+		background-color: rgba(#ffe228, .6);
+	}
+}
+
+.fdb-page__locations {
+	margin-bottom: 4rem;
+	
+	@include respond(phone) {
+		margin-bottom: 2rem;
+	}
+}
+
+.fdb-page__feedbacks {
+	
+	margin-bottom: 4rem;
+}
+
+.fdb-page__feedbacks-item:not(:last-child) {
+	margin-bottom: 3rem;
+	@include respond(phone) {
+		margin-bottom: 2rem;
+	}
+}
+
+.fdb-page__form {
+	
+	@include respond(tabdesk) {
+		width: 72.8rem;
+		margin: 0 auto;
+	}
+}
+
+.fdb-page_write {
+	
+	.fdb-page__title {
+		text-align: center;
+	}
+	
+	.fdb-page__descr {
+		@include respond(tabdesk) {
+			width: 72.8rem;
+			margin: 0 auto;
+			margin-bottom: 3rem;
+		}
+	}
+}
+
+.fdb-page_success {
+	margin-bottom: 10rem;
+}
+
+.fdb-page .form {
+	text-align: center;
+}

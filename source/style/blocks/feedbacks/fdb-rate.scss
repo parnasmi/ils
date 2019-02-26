@@ -1,0 +1,31 @@
+.fdb-rate {
+	background: #FFFFFF;
+	border: 1px solid #ECEDF3;
+	border-radius: 5px;
+	padding: 1.9rem;
+	
+	@include respond(phone) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1.5rem;
+	}
+}
+
+.fdb-rate__title {
+	line-height: 1;
+	
+	@include respond(tabdesk) {
+		margin-bottom: 1.5rem;
+	}
+}
+
+.fdb-rate__stars {
+	height: 1.9rem;
+}
+
+.fdb-rate .rating > label {
+	width: 2rem;
+	height: 1.9rem;
+	margin: 0 2px;
+}

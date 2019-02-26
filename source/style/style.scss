@@ -40,6 +40,7 @@
 //Main screen
 @import "blocks/main-screen/main-screen";
 @import "blocks/main-screen/main-banner";
+@import "blocks/main-screen/picture-banner";
 @import "blocks/main-screen/accented-services";
 
 //Selecting device model
@@ -112,6 +113,14 @@
 //========================
 @import "blocks/feedbacks/f-page";
 @import "blocks/feedbacks/f-write";
+@import "blocks/feedbacks/fdb-page";
+@import "blocks/feedbacks/fdb-locations";
+@import "blocks/feedbacks/fdb-loc";
+@import "blocks/feedbacks/fdb";
+@import "blocks/feedbacks/fdb-form";
+@import "blocks/feedbacks/fdb-rate";
+@import "blocks/feedbacks/sale-popup";
+@import "blocks/feedbacks/sale-popup-res";
 
 //Forms & rating
 @import "blocks/form/form";

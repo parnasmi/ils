@@ -47,10 +47,14 @@ fieldset, label { margin: 0; padding: 0; }
 		background-size: cover;
 		left: 0;
 		top: 0;
-		transition: all .3s ease .2s;
+		// transition: all .3s ease .2s;
 	}
 
 } /* hover previous stars in list */
+
+.rating.active label::before {
+	background: url("../img/star-checked.svg") 0 0 no-repeat;
+}
 
 
 // .rating > input:checked + label:hover, /* hover current star when changing rating */

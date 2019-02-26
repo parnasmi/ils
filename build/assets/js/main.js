@@ -91,6 +91,14 @@ if (window.matchMedia('(max-width: 767px)').matches) {
 	});
 })();
 
+// Check all ratings
+
+$('.fdb-form__check-all').on('click', function(e){
+	e.preventDefault();
+
+	$('.fdb-rate input[type="radio"]').val('5').attr('checked', 'checked');
+	$('.fdb-form .rating').toggleClass('active');
+});
 
 
 //----- Cloning some header blocks for adaptive -----
@@ -345,11 +353,13 @@ if (window.matchMedia('(max-width: 767px)').matches) {
 //====================================================
 
 // Main-screen banner slider
-// $('.main-banner__wrapper').flickity({
-//   // options
-//   cellAlign: 'left',
-//   contain: true
-// });
+$('.main-banner__wrapper').flickity({
+  // options
+  cellAlign: 'left',
+  contain: true,
+  autoPlay: true,
+  wrapAround: true
+});
 
 (function(){
 	//Videos block slider
@@ -473,10 +483,15 @@ if (window.matchMedia('(max-width: 767px)').matches) {
 
 		$('.section-head__title_video').html(function (i, html) {
 			return html.replace(/(\S+)\s*$/, '<strong>$1</strong>')});
-
+		
+			
 		$('.section-head__title_shop-items').html(function (i, html) {
-		    return html.replace(/(\S+\s\S+\s\S+)\s*$/, '<strong>$1</strong><br/>')
+			return html.replace(/(\S+\s\S+\s\S+)\s*$/, '<strong>$1</strong><br/>')
 		})
+		
+		$('.fdb-loc__title').html(function (i, html) {
+			return html.replace(/(\S+)\s*$/, '<strong>$1</strong>')
+		});
 	})();
 
 

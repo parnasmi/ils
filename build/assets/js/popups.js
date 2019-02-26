@@ -69,6 +69,81 @@ $('.info-p__gallery-wrapper').magnificPopup({
 	 });
 })();
 
+// Попап скидки
+	(function($) {
+		var isSubscribed = false;
+		var delayTime = $('#sale-form').data('delay');
+		if (firstImpression('ilsPopup', 7)) {// цифр означает количество дней в течении которых сохраниться куки
+				$(window).on('load', function(){
+					setTimeout(function(){
+						if ($('#sale-form').length) {
+							$.magnificPopup.open({
+								items: {
+									src: '#sale-form' 
+								},
+								type: 'inline',
+								removalDelay: 300,
+								mainClass: 'mfp-zoom-in',
+							});
+						}
+					}, delayTime);
+				})
+			
+				$('.sale-popup__input-wrapper > input').focus(function(){
+					isSubscribed = true;
+					//Если пользователь взял скидку. Следующий раз эту скидку будем показывать через 30 дней. Иначе через 7
+					//https://github.com/js-cookie/js-cookie
+					Cookies.set('ilsPopup', true, { expires: 30 });
+				});
+		}
+			//Это попап появляется при уходе из страницы
+			//когда польз. не подписался на скидку.
+		if (firstImpression('ilsPopupOnExit', 7)) {// цифр означает количество дней в течении которых сохраниться куки
+				$(window).mouseleave(function (e) {
+				var modalSeen = sessionStorage.getItem("modalSeen");
+				if ($('#sale-form').length) {
+					if (e.toElement == null && !modalSeen && !isSubscribed) {
+						$.magnificPopup.open({
+							items: {
+								src: '#sale-form' 
+							},
+							type: 'inline',
+							removalDelay: 300,
+							mainClass: 'mfp-zoom-in',
+							callbacks: {
+								open: function() {
+									$('#sale-form').addClass('on-exit-popup');
+								}
+							}
+						});
+					}
+					
+					$('.sale-popup__input-wrapper > input').focus(function(){
+						//Если пользователь взял скидку. Следующий раз эту скидку будем показывать через 30 дней. Иначе через 7
+						//https://github.com/js-cookie/js-cookie
+						Cookies.set('ilsPopupOnExit', true, { expires: 30 });
+					});
+				}
+				});
+			}
+	
+		
+		
+		$('.form__close-btn_conf').click(function(){
+			
+			if (!$('#sale-form').hasClass('on-exit-popup')) {
+				firstImpression('ilsPopupOnExit', null);
+			}
+			$.magnificPopup.close();
+			
+			if ($('#sale-form').hasClass('on-exit-popup')) {
+				sessionStorage.setItem("modalSeen", true);
+			}
+			return false;
+		});
+	})(jQuery);
+
+
 
 
 

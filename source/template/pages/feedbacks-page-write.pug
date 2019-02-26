@@ -1,0 +1,76 @@
+extends ../tpl/_template
+
+block variables
+	- var title = 'Feedbacks page'
+
+block content
+	.layout-center
+		+b.fdb-page_write
+			+e.inner
+				+e.H1.title Написать отзыв
+				+e.descr
+					+e.descr-text
+						+e.icon: img(src="./assets/img/icon-feedbacks.svg", width="86", heigh="88", alt)
+						span Если вам понравился результат работы наших специалистов - оставьте отзыв о нашей работе и сервисе. Для нас это очень важно. Спасибо!
+				+e.locations
+					+b.fdb-locations
+						+e.list
+							each fdbloc in fdbLocations
+								+e.item
+									+b.fdb-loc(href="#")
+										+e.image: img(src=`./assets/img/icon-${fdbloc.icon}.svg`, alt)
+										+e.title= fdbloc.title
+				+e.form
+					+b.fdb-form
+						+e.title Если решились написать на сайте, ниже наша форма
+						form
+							+e.inner
+								+e.rating-wrapper
+									each rating, index in ['Цена', 'Обслуживание', 'Скорость', 'Качество ремонта']
+										+e.rating-item
+											+b.fdb-rate
+												+e.title= rating
+												+e.stars
+													fieldset.rating
+														input(type="radio",id=`star5-${index+1}`,name=`rating-${index+1}`,value="5")
+														label.full(for=`star5-${index+1}`,title="Здорово - 5 звезд")
+														input(type="radio",id=`star4-${index+1}`,name=`rating-${index+1}`,value="4")
+														label.full(for=`star4-${index+1}`,title="Довольно хорошо - 4 звезд")
+														input(type="radio",id=`star3-${index+1}`,name=`rating-${index+1}`,value="3")
+														label.full(for=`star3-${index+1}`,title="Пойдет - 3 звезд")
+														input(type="radio",id=`star2-${index+1}`,name=`rating-${index+1}`,value="2")
+														label.full(for=`star2-${index+1}`,title="Плохо - 2 звезд")
+														input(type="radio",id=`star1-${index+1}`,name=`rating-${index+1}`,value="1")
+														label.full(for=`star1-${index+1}`,title="Отстой - 1 звезд")
+								+e.check-all(href="#") Поставить 5 звезды всем пунктам 😎
+								+e.input-row_multi
+									+e.input
+										label Ваше имя
+											input(type="text", required)
+											span.f-error ошибка
+									+e.input
+										label Номер заказа
+											input.is-errored(type="text", placeholder="Номер заказа отправлен вам смской")
+											span.f-error ошибка
+								+e.input-row
+									+e.input
+										label Что вам понравился
+											textarea
+								+e.input-row
+									+e.input
+										label Что вам не понравился
+											textarea
+											span.f-error ошибка
+								+e.info
+									+b.f-writer-footer
+										+e.icon: img(src="./assets/img/img-youtube-hover.png")
+										+e.text Если вы желаете написать видео или аудио отзыв, запишите отзыв и отправьте нам на Telegram номер <a href="tel:+74951234567">+7 (495) 123-45-67</a> или на <a href="mailto:info@ilikeservice.ru">e-mail info@ilikeservice.ru</a>
+								+e.captcha: img(src="./assets/img/captcha.png")
+								+e.BUTTON.btn.btn_blue(type="submit")
+									+e.btn-text Добавить отзыв
+								+e.agreement Нажимая кнопку вы даете согласие на <a href="#">обработку персональных данных</a>
+		//- SECTION.depart-b-section
+			include ../blocks/depart-b
+										
+										
+									

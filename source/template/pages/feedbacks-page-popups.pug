@@ -1,0 +1,34 @@
+extends ../tpl/_template
+
+block variables
+	- var title = 'Скидка popup'
+
+block content
+	.layout-center
+		+b.fdb-page_write
+			+b.form_f-form#sale-form.mfp-hide.mfp-with-anim(data-delay="1000")
+				+e.main_f-writer
+					+e.close-btn_conf(href='#')
+					form(method="POST" action="myajax")
+						+b.sale-popup
+							+e.limited-text ограниченная акция
+							+e.discount
+								strong 500
+								span руб.
+							+e.discount-text скидка на первый ремонт!
+							+e.form
+								+e.input-wrapper
+									input(type="email", placeholder="Введите e-mail")
+									+e.BUTTON.btn.btn_blue: div Получить 500 руб. скидку
+								+e.form-error Введите E-mail
+				+e.success_f
+					+e.close-btn_conf(href='#')
+					+b.sale-popup-res
+						+e.icon %
+						+e.title Теперь у вас есть скидка на первый ремонт.
+						+e.notif Код скидки, мы отправили на вашу почту.
+		SECTION.depart-b-section
+			include ../blocks/depart-b
+										
+										
+									

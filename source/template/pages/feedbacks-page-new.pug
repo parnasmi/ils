@@ -1,0 +1,83 @@
+extends ../tpl/_template
+
+block variables
+	- var title = 'Feedbacks page'
+
+block content
+	.layout-center
+		+b.fdb-page
+			+e.inner
+				+e.H1.title Отзывы сервисного центра iLikeService.ru
+				+e.descr
+					+e.descr-text
+						+e.icon: img(src="./assets/img/icon-feedbacks.svg", width="86", heigh="88", alt)
+						span Если вам понравился результат работы наших специалистов - оставьте отзыв о нашей работе и сервисе. Для нас это очень важно. Спасибо!
+					+e.btn.btn-new(href="#") Написать отзыв на сайте
+				+e.locations
+					+b.fdb-locations
+						+e.title Наши отзывы в социальных сетях
+						+e.list
+							each fdbloc in fdbLocations
+								+e.item
+									+b.fdb-loc(href="#")
+										+e.image: img(src=`./assets/img/icon-${fdbloc.icon}.svg`, alt)
+										+e.title= fdbloc.title
+				+e.feedbacks
+					+e.feedbacks-list
+						each fdb in fdbContent
+							+e.feedbacks-item
+								+b.fdb
+									+e.top
+										+e.cust
+											+e.image: img(src=`./assets/pics/pic-user-${fdb.pic}.png`, alt)
+											+e.name= fdb.name
+											+e.rating
+												if fdb.rating == "half"
+													+b.UL.stars
+														+e.item.check
+														+e.item.check
+														+e.item.check
+														+e.item.check
+														+e.item.half
+												if fdb.rating == "one"
+													+b.UL.stars
+														+e.item.check
+														+e.item.unchecked
+														+e.item.unchecked
+														+e.item.unchecked
+														+e.item.unchecked
+										+e.date 11 сенятбрь 2017
+									+e.content
+										if fdb.text
+											+e.pros
+												+e.type
+													+e.type-title
+														+e.type-icon_plus
+														+e.type-text Достоинства
+													+e.type-text= fdb.pros
+											+e.cons
+												+e.type
+													+e.type-title
+														+e.type-icon_minus
+														+e.type-text Недостатки
+													+e.type-text= fdb.cons
+										if fdb.video
+											+e.content-video
+												<div class="youtube-player" data-id="Y8I21WzKZHU" data-related="0" data-control="1" data-info="1" data-fullscreen="1" style="width:100%;display: block; position: relative;cursor: pointer;max-height:172px;height:100%; overflow:hidden;padding-bottom:56.25%;margin:0 auto"> <img src="//i.ytimg.com/vi/Y8I21WzKZHU/hqdefault.jpg" style="bottom: -100%; display: block; left: 0; margin: auto; max-width: 100%; width: 100%;height:auto; position: absolute; right: 0; top: -100%;"> <div style="height: 47px; width: 67px; left: 50%; top: 50%; margin-left: -33px; margin-top: -24px; position: absolute; background: url('./assets/img/icon-youtube.png') no-repeat;"></div> </div> 
+										if fdb.audio
+											+e.content-audio
+												+e.content-audio-title Аудио отзыв клиента
+												<audio class="player" controls>
+													<source src="./assets/audio/1.mp3" type="audio/mp3">
+												</audio>
+				+e.pagination
+					+b.pagination
+						+e.UL.list_margin-for-demo
+							+e.item.active: +e.link(href="#") 1
+							+e.item: +e.link(href="#") 2
+							+e.item: +e.link(href="#") 3
+							+e.item_nav: +e.link(href="#") следующая страница
+								svg(class="icon",width="5",height="8")
+									use(xlink:href='#arrow-right')
+		SECTION.depart-b-section
+			include ../blocks/depart-b

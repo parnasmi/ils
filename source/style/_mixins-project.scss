@@ -113,7 +113,49 @@
 	box-shadow: 3px 0px 13px 0 rgba(0,0,0,.32);
 }
 
+@mixin respond($breakpoint) {
+	@if $breakpoint == tablet {
+		@media #{$mobtabonly} {
+			@content
+		}
+	}
 
+	@if $breakpoint == phone {
+		@media #{$mobileonly} {
+			@content
+		}
+	}
+	
+	@if $breakpoint == tabonly {
+		@media #{$tabonly} {
+			@content
+		}
+	}
+	
+	@if $breakpoint == porttab {
+		@media #{$porttab} {
+			@content
+		}
+	}
+	
+	@if $breakpoint == landtab {
+		@media #{$landtab} {
+			@content
+		}
+	}
+	
+	@if $breakpoint == tabdesk {
+		@media #{$tabdeskonly} {
+			@content
+		}
+	}
+	
+	@if $breakpoint == desktop {
+		@media #{$deskonly} {
+			@content
+		}
+	}
+}
 
 //Placeholder
 

@@ -1,0 +1,80 @@
+/* Styles Start*/
+.picture-banner {
+	border: 1px solid #f6f7f9;
+	border-radius: 5px;
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+
+	img {
+		width: 100%;
+		max-height: 100%;
+		// height: auto;
+		display: inline-block;
+	}
+}
+//========================================================
+// %mobile
+@media #{$mobileonly} {
+	
+}//@media (max-width: 767px) 
+
+//========================================================
+
+// %mobtab
+@media #{$mobtabonly} {
+	.picture-banner {
+
+	}
+}//@media (max-width: 1141px) 
+
+//========================================================
+// %tablet
+@media #{$tabonly} {
+	.picture-banner {
+
+
+	}
+}//#{$tabonly}
+
+//========================================================
+// %tabdesk
+@media #{$tabdeskonly} {
+	.picture-banner {
+		
+
+
+	}
+} //(min-width: 768px)
+
+//========================================================
+// %desktop
+@media #{$deskonly} {
+	.picture-banner {
+
+		
+	}
+} // (min-width: 1042px)
+
+/*  End*/
+
+//F4F4F4
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+
+}// 5" phone
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+} // 4.7"
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+	
+}//5.5"

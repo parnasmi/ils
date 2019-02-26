@@ -91,3 +91,11 @@ if (window.matchMedia('(max-width: 767px)').matches) {
 	});
 })();
 
+// Check all ratings
+
+$('.fdb-form__check-all').on('click', function(e){
+	e.preventDefault();
+
+	$('.fdb-rate input[type="radio"]').val('5').attr('checked', 'checked');
+	$('.fdb-form .rating').toggleClass('active');
+});

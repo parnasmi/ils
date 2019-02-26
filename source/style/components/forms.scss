@@ -37,6 +37,18 @@ input[type=text] {
 	z-index: 1;
 }
 
+input[type=text]:disabled,
+input[type=email]:disabled,
+input[type=tel]:disabled,
+input[disabled],
+input[disabled="disabled"],
+input:disabled {
+	background-color: #F6F7FA;
+	color: #757887;
+	border-color: #DFE1EA;
+	opacity: 1 !important;
+}
+
 
 
 // select {

@@ -15,10 +15,15 @@
 
 		$('.section-head__title_video').html(function (i, html) {
 			return html.replace(/(\S+)\s*$/, '<strong>$1</strong>')});
-
+		
+			
 		$('.section-head__title_shop-items').html(function (i, html) {
-		    return html.replace(/(\S+\s\S+\s\S+)\s*$/, '<strong>$1</strong><br/>')
+			return html.replace(/(\S+\s\S+\s\S+)\s*$/, '<strong>$1</strong><br/>')
 		})
+		
+		$('.fdb-loc__title').html(function (i, html) {
+			return html.replace(/(\S+)\s*$/, '<strong>$1</strong>')
+		});
 	})();
 
 

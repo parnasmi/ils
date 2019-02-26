@@ -1,0 +1,191 @@
+.fdb-form {
+	
+}
+
+.fdb-form__title {
+	text-align: center;
+	margin-bottom: 3rem;
+	font-size: 1.5rem;
+	
+	@include respond(phone) {
+		margin-bottom: 2rem;
+	}
+}
+
+.fdb-form__rating-wrapper {
+	
+	
+	@include respond(tabdesk) {
+		margin-right: -2.9rem;
+		display: flex;
+		align-items: flex-start;
+	}
+}
+
+.fdb-form__rating-item {
+	@include respond(phone) {
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+	
+	@include respond(tabdesk) {
+		width: 16rem;
+		margin-right: 2.9rem;
+	}
+}
+
+.fdb-form__rating-wrapper {
+	margin-bottom: 2rem;
+}
+
+.fdb-form__check-all {
+	display: block;
+	text-align: center;
+	font-size: 15px;
+	color: #1F7ADC;
+	text-align: center;
+	border-radius: 5px;
+	border: 1px solid #000;
+	border: 1px solid #ECEDF3;
+	padding: 1rem 0;
+	margin-bottom: 3rem;
+	font-weight: bold;
+	
+	&:hover {
+		box-shadow: 4px 4px 5px 0 rgba(138,152,164,0.16);
+	}
+}
+
+.fdb-form__info,
+.fdb-form__input-row {
+	margin-bottom: 3rem;
+}
+
+.fdb-form__input label {
+	font-weight: bold;
+	line-height: 1;
+}
+.fdb-form__input textarea,
+.fdb-form__input input {
+	display: block;
+	width: 100%;
+	margin-top: 1rem;
+}
+
+.fdb-form__input textarea {
+	min-height: 11rem;
+}
+
+.fdb-form__input-row_multi {
+	@include respond(tabdesk) {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+}
+
+.fdb-form__input-row_multi .fdb-form__input:first-child {
+	@include respond(phone) {
+		margin-bottom: 2rem;
+	}
+	@include respond(tabdesk) {
+		margin-right: 3rem;
+	}
+}
+
+.fdb-form__input-row_multi .fdb-form__input {
+	
+	@include respond(tabdesk) {
+		width: calc((100% - 3rem) / 2);
+	}
+}
+.fdb-form__btn,
+.fdb-form__captcha {
+	display: table;
+	margin: 0 auto;
+}
+
+.fdb-form__captcha {
+	margin-bottom: 3rem;
+}
+
+.fdb-form__btn {
+	padding: 16px 30px;
+}
+
+.fdb-form__agreement {
+	text-align: center;
+	margin-top: 3rem;
+	@include respond(phone) {
+	margin-top: 2rem;
+	}
+}
+textarea,
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+	background: #FFFFFF;
+	border: 1px solid #DFE1EA;
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+.f-error {
+	display: none;
+}
+
+textarea:invalid,
+input[type="text"]:invalid,
+input[type="tel"]:invalid,
+input[type="email"]:invalid {
+	border-color: #FF6868;
+}
+
+textarea:invalid + span,
+input[type="text"]:invalid + span,
+input[type="tel"]:invalid + span,
+input[type="email"]:invalid + span {
+	display: inline-block;
+}
+
+textarea:valid + span,
+input[type="text"]:valid + span,
+input[type="tel"]:valid + span,
+input[type="email"]:valid + span {
+	display: none;
+}
+
+textarea.is-errored,
+input.is-errored[type="text"],
+input.is-errored[type="tel"],
+input.is-errored[type="email"] {
+	border-color: #ff6868;
+}
+
+textarea.is-errored + span,
+input.is-errored[type="text"] + span,
+input.is-errored[type="tel"] + span,
+input.is-errored[type="email"] + span {
+	display: inline-block;
+}
+
+.f-error {
+	color: #ff6868;
+	font-size: 1.3rem;
+	margin-top: 1rem;
+	display: inline-block;
+}
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label {
+	&:before {
+		transition: all .3s ease;
+	}
+} /* hover previous stars in list */
+
+.rating.active label::before {
+	background: url("../img/star-checked.svg") 0 0 no-repeat;
+	transition: unset;
+}

@@ -1,0 +1,96 @@
+
+#sale-form {
+	.form__success {
+		opacity: 0;
+		visibility: hidden;
+	}
+	
+	&.is-sent {
+		.form__success {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+.sale-popup {
+	text-align: center;
+	padding: 5rem 2rem 2rem;
+}
+
+.sale-popup__limited-text {
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: #757887;
+	font-weight: 300;
+	font-size: 1.2rem;
+}
+
+.sale-popup__discount {
+	font-weight: bold;
+	
+	strong {
+		font-size: 8rem;
+		margin-right: 1rem;
+	}
+}
+
+.sale-popup__discount-text {
+	font-size: 2rem;
+	margin-bottom: 3rem;
+}
+
+.sale-popup__form {
+	
+}
+
+.sale-popup__discount,
+.sale-popup__input-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sale-popup__input-wrapper {
+	@include respond(phone) {
+		display: block;
+		text-align: left;
+	}	
+}
+
+.sale-popup__input-wrapper > input {
+	padding: 1.5rem;
+	border-radius: 50px;
+	outline: none;
+	
+	@include respond(phone) {
+		width: 100%;
+	}
+	@include respond(tabdesk) {
+		padding-left: 2rem;
+		padding-right: 10rem;
+		width: 35rem;
+		margin-right: -8rem;
+	}
+}
+
+.sale-popup__input-wrapper > button {
+	@include respond(phone) {
+		width: 100%;
+		margin-top: 1rem;
+	}
+	
+	padding: 1.5rem 2rem 1.6rem 2rem;
+	@include respond(tabdesk) {
+		// top: -1px;
+	}
+}
+
+.sale-popup__form-error {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #ff6868;
+	margin-top: 1rem;
+}
+
+//757887

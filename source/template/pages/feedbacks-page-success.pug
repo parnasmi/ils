@@ -1,0 +1,18 @@
+extends ../tpl/_template
+
+block variables
+	- var title = 'Feedbacks page'
+
+block content
+	.layout-center
+		+b.fdb-page_success
+			+b.form
+				+e.icon-success
+					img(src="./assets/img/icon-chat-blue.svg", alt)
+				+e.success-thanks Спасибо за ваш отзыв!
+				+e.success-mod Мы опубликуем ваш отзыв после проверки модератора.
+		SECTION.depart-b-section
+			include ../blocks/depart-b
+										
+										
+									

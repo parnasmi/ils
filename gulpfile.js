@@ -22,13 +22,13 @@ $.path.task.forEach(function(taskPath) {
 });
 
 $.gulp.task('default', $.gulp.series(
-  'clean',
+  // 'clean',
   $.gulp.parallel(
     'sass',
     'sass-vendor',
     // 'sass-fonts',
-    'pug',
-    // 'pug:one',
+    // 'pug',
+    'pug:one',
     'js:foundation',
     'js:libs',
     'js:process',

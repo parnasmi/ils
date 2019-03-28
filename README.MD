@@ -1,8 +1,5 @@
 Адаптивной верстка сайта iLikeService
 ===================
 
-### Мини документация
-Бла-бла-бла
-
-1. Установить node.js
-
+Вживую можно посмотреть [туть](https://ilikeservice.ru)
+Статичная верстка [тут](http://html.designmyshop.ru/ils/new/page-menu.html)
